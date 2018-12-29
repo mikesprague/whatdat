@@ -1,6 +1,4 @@
 const appFrame = document.querySelector('.frame');
-const photoWidth = 800;
-const photoHeight = 600;
 let streaming = false;
 
 /* eslint-disable no-undef */
@@ -18,14 +16,15 @@ const startUi = `
   <p class="text-center text-muted">This application is 100% accurate 60% of the time</p>
 `;
 
+
 const cameraUi = `
-  <button type="button" class="btnTakePhoto btn btn-primary btn-block btn-lg text-center mb-3">Take Photo</button>
   <div class="row">
     <div class="col">
-      <div class="results d-none"></div>
-      <video class="player img-fluid" controls autoplay></video>
+      <button type="button" class="btnTakePhoto btn btn-outline-primary btn-block btn-lg text-center mb-3"><i class="fal fa-camera"></i> Take Photo</button>
+      <div class="results d-none ml-2"></div>
+      <video class="player img-fluid center" controls autoplay></video>
       <canvas class="canvas d-none"></canvas>
-      <img class="photo img-fluid d-none" alt="The screen capture will appear in this box.">
+      <img class="photo img-fluid d-none center" alt="The screen capture will appear in this box.">
     </div>
   </div>
 `;
@@ -49,16 +48,15 @@ function takePhoto() {
   const photo = document.querySelector('.photo');
   const player = document.querySelector('.player');
   const context = canvas.getContext('2d');
+  const screenWidth = player.offsetWidth;
+  const screenHeight = player.offsetHeight;
 
-  if (photoWidth && photoHeight) {
-    canvas.width = photoWidth;
-    canvas.height = photoHeight;
-    context.drawImage(player, 0, 0, photoWidth, photoHeight);
-    const data = canvas.toDataURL('image/png');
-    photo.setAttribute('src', data);
-  } else {
-    clearphoto();
-  }
+  canvas.width = screenWidth;
+  canvas.height = screenHeight;
+  context.drawImage(player, 0, 0, player.offsetWidth, player.offsetWidth * player.offsetHeight / player.offsetWidth);
+  const data = canvas.toDataURL('image/png');
+  photo.setAttribute('src', data);
+  photo.setAttribute('style', 'width: 100%; height: auto;');
 }
 
 function clearPhoto() {
@@ -81,51 +79,61 @@ function startCamera() {
   navigator.mediaDevices.getUserMedia(constraints).then((stream) => {
     player.srcObject = stream;
     player.play();
+    player.setAttribute('style', 'width: 100%; height: auto;');
   }).catch((error) => {
     console.error('We have a problem', error);
   });
 
   player.addEventListener('canplay', () => {
     if (!streaming) {
-      canvas.setAttribute('width', photoWidth);
-      canvas.setAttribute('height', photoHeight);
+      canvas.setAttribute('width', player.offsetWidth);
+      canvas.setAttribute('height', player.offsetHeight);
       streaming = true;
     }
   }, false);
 
-  btnTakePhoto.addEventListener('click', async (clickEvent) => {
+  async function takePhotoClickHandler() {
     takePhoto();
     player.srcObject.getVideoTracks().forEach(track => track.stop());
     player.classList.add('d-none');
     photo.classList.remove('d-none');
     results.classList.remove('d-none');
     disableButton('.btnTakePhoto', '<i class="fas fa-sync fa-spin"></i> identifying ...');
-    const model1 = await mobilenet.load();
-    const model2 = await cocoSsd.load();
-    const predictions1 = await model1.classify(photo);
-    const predictions2 = await model2.detect(photo);
-    const resultsUi = `
-    <ol>
-      <li class="list-item">${predictions2[0].class} ${Math.round(predictions2[0].score * 100)}%</li>
-      <li class="list-item">${predictions1[0].className} ${Math.round(predictions1[0].probability * 100)}%</li>
-      <li class="list-item">${predictions1[1].className} ${Math.round(predictions1[1].probability * 100)}%</li>
-      <li class="list-item">${predictions1[2].className} ${Math.round(predictions1[2].probability * 100)}%</li>
-    </ol>
-    <button type="button" class="btnStartOver btn btn-outline-primary btn-block btn-lg text-center mb-2 mt-1">Start Over</button>
-    `;
-    btnTakePhoto.classList.add('d-none');
-    results.innerHTML = resultsUi;
-    const btnStartOver = document.querySelector('.btnStartOver');
-    // console.log(predictions1);
-    // console.log(predictions2);
-    btnStartOver.addEventListener('click', () => {
-      window.location.reload(true);
-    });
-  });
-}
+    try {
+      const model1 = await mobilenet.load();
+      // const model2 = await cocoSsd.load();
+      const predictions1 = await model1.classify(photo);
 
-function outputResults(data1, data2) {
-  const newDiv = new Element('div');
+      // const predictions2 = await model2.detect(photo);
+      // `<li class="list-item">${predictions2[0].class} ${Math.round(predictions2[0].score * 100)}%</li>`
+      const resultsUi = `
+      <button type="button" class="btnStartOver btn btn-outline-primary btn-block btn-lg text-center mb-2 mt-1">Start Over</button>
+      <ol>
+        <li class="list-item">${predictions1[0].className} ${Math.round(predictions1[0].probability * 100)}%</li>
+        <li class="list-item">${predictions1[1].className} ${Math.round(predictions1[1].probability * 100)}%</li>
+        <li class="list-item">${predictions1[2].className} ${Math.round(predictions1[2].probability * 100)}%</li>
+      </ol>
+      `;
+      btnTakePhoto.classList.add('d-none');
+      results.innerHTML = resultsUi;
+      const btnStartOver = document.querySelector('.btnStartOver');
+      // console.log(predictions1);
+      // console.log(predictions2);
+      btnStartOver.addEventListener('click', () => {
+        window.location.reload(true);
+      });
+    } catch (error) {
+      console.error(error);
+      results.textContent = error;
+    }
+  }
+
+  btnTakePhoto.addEventListener('click', () => {
+    takePhotoClickHandler();
+  });
+  player.addEventListener('click', () => {
+    takePhotoClickHandler();
+  });
 }
 
 function initApp() {
