@@ -21,6 +21,7 @@
         <div class="results"></div>
         <img class="img-fluid animal-photo">
       </div>
+      <input type="file" capture="camera" accept="image/*" id="cameraInput" name="cameraInput">
     </div>
   </div>
   <script>
@@ -105,6 +106,61 @@
     animal.addEventListener('load', loadEvent => {
       initButton();
     });
+    // Sample code to modify
+    // function readFile(file) {                                                       
+    //   var reader = new FileReader();
+    //   reader.onload = readSuccess;
+    //   function readSuccess(evt) {
+    //     document.getElementById("your_img_id").src = evt.target.result
+    //   };
+    //   reader.readAsDataURL(file);
+    // }
+
+    // document.getElementById('cameraInput').onchange = function(e) {
+    //   readFile(e.srcElement.files[0]);
+    // };
+    // also try...
+    // function takeSnapshot(){
+
+    //   var hidden_canvas = document.querySelector('canvas'),
+    //       video = document.querySelector('video.camera_stream'),
+    //       image = document.querySelector('img.photo'),
+
+    //       // Get the exact size of the video element.
+    //       width = video.videoWidth,
+    //       height = video.videoHeight,
+
+    //       // Context object for working with the canvas.
+    //       context = hidden_canvas.getContext('2d');
+
+    //   // Set the canvas to the same dimensions as the video.
+    //   hidden_canvas.width = width;
+    //   hidden_canvas.height = height;
+
+    //   // Draw a copy of the current frame from the video on the canvas.
+    //   context.drawImage(video, 0, 0, width, height);
+
+    //   // Get an image dataURL from the canvas.
+    //   var imageDataURL = hidden_canvas.toDataURL('image/png');
+
+    //   // Set the dataURL as source of an image element, showing the captured photo.
+    //   image.setAttribute('src', imageDataURL); 
+
+    // }
+    //
+    // Above code modified to save photo (or give option to)
+    //
+    // <a id="dl-btn" href="#" download="glorious_selfie.png">Save Photo</a>
+    // function takeSnapshot(){
+
+    // //...
+
+    // // Get an image dataURL from the canvas.
+    // var imageDataURL = hidden_canvas.toDataURL('image/png');
+
+    // // Set the href attribute of the download button.
+    // document.querySelector('#dl-btn').href = imageDataURL;
+    // }
   </script>
 </body>
 </html>
