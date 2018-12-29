@@ -4,30 +4,28 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>What Dat?!</title>
-  <link href="https://stackpath.bootstrapcdn.com/bootswatch/4.1.1/sandstone/bootstrap.min.css" rel="stylesheet" integrity="sha384-7MvlWCBuyFQHTibL0ta2jXuoCAaC8s2FIwWC/olSTVZ2OBod2DVHIXQcvUKdfJSA" crossorigin="anonymous">
+  <title>What Dat?!?</title>
+  <link href="https://stackpath.bootstrapcdn.com/bootswatch/4.2.1/sketchy/bootstrap.min.css" rel="stylesheet" integrity="sha384-Yr9hLdz4zKsdMcB2IUf0I2Y+KFalEfJez2d0H2rgQoAYjvm/mzbm2egxZ9Gc9kkg" crossorigin="anonymous">
+  <!-- <link href="https://stackpath.bootstrapcdn.com/bootswatch/4.2.1/superhero/bootstrap.min.css" rel="stylesheet" integrity="sha384-3C9izce+NThLmHHj0Gt0VSOFFr0FCxoyLNcCB+uYxTGXDdw64SxJ34SI/rnKRnvu" crossorigin="anonymous"> -->
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-LRlmVvLKVApDVGuspQFnRQJjkv0P7/YFrw84YYQtmYG4nK8c+M+NlmYDCv0rKWpG" crossorigin="anonymous">
   <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@0.14.1"></script>
   <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/mobilenet@0.2.2"></script>
   <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/coco-ssd@0.1.1"></script>
   <style>
+    .btnStartApp {
+      font-size: 4em;
+      line-height: 1.2;
+    }
 
+    .headingAppTitle {
+      line-height: 0.9;
+    }
   </style>
 </head>
 <body>
-  <div class="container mt-5">
-    <div class="row">
-      <button type="button" class="btnTakePhoto btn btn-dark btn-block btn-lg mb-3">Take Photo</button>
-      <div class="col-sm">
-        <div class="results"></div>
-        <video class="player" controls autoplay></video>
-        <canvas class="canvas" hidden></canvas>
-      </div>
-      <div class="col-sm">
-        <div class="output">
-          <img class="photo img-fluid" alt="The screen capture will appear in this box.">
-        </div>
-      </div>
-    </div>
+  <div class="container">
+    <h1 class="headingAppTitle display-1 text-muted text-center text-uppercase mt-1 mb-2">What Dat?!?</h1>
+    <div class="frame"></div>
   </div>
   <script src="js/app.js"></script>
 </body>
