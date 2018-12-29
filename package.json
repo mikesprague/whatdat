@@ -1,0 +1,32 @@
+{
+  "name": "whatdat",
+  "version": "0.0.0",
+  "description": "",
+  "main": "",
+  "private": true,
+  "scripts": {
+    "serve": "browser-sync start --server --directory --files \"*.css, *.html, *.js\""
+  },
+  "author": {
+    "name": "Michael Sprague",
+    "email": "mikesprague@gmail.coms"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "@tensorflow-models/coco-ssd": "^0.1.1",
+    "@tensorflow-models/mobilenet": "^0.2.2",
+    "@tensorflow/tfjs": "^0.14.1"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.26.3",
+    "cross-env": "^5.2.0",
+    "eslint": "^5.11.1",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-html": "^5.0.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-jsx-a11y": "^6.1.2",
+    "eslint-plugin-markdown": "^1.0.0-rc.0",
+    "eslint-plugin-react": "^7.12.0"
+  }
+}

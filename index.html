@@ -1,166 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <title></title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>What Dat?!</title>
   <link href="https://stackpath.bootstrapcdn.com/bootswatch/4.1.1/sandstone/bootstrap.min.css" rel="stylesheet" integrity="sha384-7MvlWCBuyFQHTibL0ta2jXuoCAaC8s2FIwWC/olSTVZ2OBod2DVHIXQcvUKdfJSA" crossorigin="anonymous">
-  <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@0.11.7"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/mobilenet@0.1.1"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@0.14.1"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/mobilenet@0.2.2"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/coco-ssd@0.1.1"></script>
   <style>
-    .animal-photo {
-      width: 100%;
-    }
+
   </style>
 </head>
 <body>
   <div class="container mt-5">
     <div class="row">
+      <button type="button" class="btnTakePhoto btn btn-dark btn-block btn-lg mb-3">Take Photo</button>
       <div class="col-sm">
-        <button type="button" class="btnIdentify btn btn-dark btn-block btn-lg mb-3" disabled>Loading...</button>
         <div class="results"></div>
-        <img class="img-fluid animal-photo">
+        <video class="player" controls autoplay></video>
+        <canvas class="canvas" hidden></canvas>
       </div>
-      <input type="file" capture="camera" accept="image/*" id="cameraInput" name="cameraInput">
+      <div class="col-sm">
+        <div class="output">
+          <img class="photo img-fluid" alt="The screen capture will appear in this box.">
+        </div>
+      </div>
     </div>
   </div>
-  <script>
-    const animalImages = [
-      "1.jpg", "2.jpg", "3.jpg", "4.jpg", "5.jpg", "6.jpg"
-    ];
-    const button = document.querySelector('.btnIdentify');
-    const animal = document.querySelector('.animal-photo');
-    const results = document.querySelector('.results');
-
-    const getRandomImage = imageArray => {
-      return imageArray[Math.floor(Math.random() * imageArray.length)];
-    };
-
-    animal.setAttribute('src', `assets/images/${getRandomImage(animalImages)}`);
-
-    const enableButton = buttonText => {
-      button.removeAttribute('disabled');
-      button.textContent = buttonText;
-    };
-
-    const disableButton = buttonText => {
-      button.textContent = buttonText;
-      button.setAttribute('disabled', true);
-    };
-
-    const refreshPage = () => {
-      window.location.reload(true);
-    };
-
-    const populateResults = resultsData => {
-      let resultOutput = '';
-      let resultHeading = '';
-      let resultIndex = 0;
-      let btnStartOver = `
-        <button type="button" class="btnStartOver btn btn-primary btn-block btn-lg mb-3" onclick="refreshPage();">Start Over</button>
-      `;
-      resultsData.forEach(result => {
-        let nameParts = result.className.split(',');
-        let generalName = nameParts[0].trim();
-        // let scientificName = nameParts.length > 1 ? ` <em class="font-italic text-capitalize">${nameParts[1].trim()}</em>` : '';
-        let probability = Math.round(result.probability * 100);
-        let badgeColor = 'success';
-        if (!resultIndex) {
-          let congratsText = `Congratulations, you have a ${generalName}!`;
-          resultHeading = `<h3 class="font-weight-bold">${congratsText}</h3>`;
-        } else {
-          badgeColor = 'secondary';
-        }
-        resultOutput += `
-          <li class="list-item">
-            <span class="badge badge-pill badge-${badgeColor}">${probability} %</span>
-            <strong class="text-capitalize">${generalName}</strong>
-          </li>
-        `;
-        resultIndex++;
-      });
-      button.remove();
-      results.innerHTML = `
-        ${btnStartOver}
-        ${resultHeading}
-        <ol class="list-unstyled">
-          ${resultOutput}
-        </ol>
-      `;
-    };
-
-    const initButton = () => {
-      enableButton('Identify Animal');
-      button.addEventListener('click', clickEvent => {
-        disableButton('Identifying...');
-        mobilenet.load().then(model => {
-          model.classify(animal).then(predictions => {
-            populateResults(predictions);
-          });
-        }).catch(error => {
-          enableButton('Oops! Something went wrong :( Click to try again');
-        });
-      });
-    };
-
-    animal.addEventListener('load', loadEvent => {
-      initButton();
-    });
-    // Sample code to modify
-    // function readFile(file) {                                                       
-    //   var reader = new FileReader();
-    //   reader.onload = readSuccess;
-    //   function readSuccess(evt) {
-    //     document.getElementById("your_img_id").src = evt.target.result
-    //   };
-    //   reader.readAsDataURL(file);
-    // }
-
-    // document.getElementById('cameraInput').onchange = function(e) {
-    //   readFile(e.srcElement.files[0]);
-    // };
-    // also try...
-    // function takeSnapshot(){
-
-    //   var hidden_canvas = document.querySelector('canvas'),
-    //       video = document.querySelector('video.camera_stream'),
-    //       image = document.querySelector('img.photo'),
-
-    //       // Get the exact size of the video element.
-    //       width = video.videoWidth,
-    //       height = video.videoHeight,
-
-    //       // Context object for working with the canvas.
-    //       context = hidden_canvas.getContext('2d');
-
-    //   // Set the canvas to the same dimensions as the video.
-    //   hidden_canvas.width = width;
-    //   hidden_canvas.height = height;
-
-    //   // Draw a copy of the current frame from the video on the canvas.
-    //   context.drawImage(video, 0, 0, width, height);
-
-    //   // Get an image dataURL from the canvas.
-    //   var imageDataURL = hidden_canvas.toDataURL('image/png');
-
-    //   // Set the dataURL as source of an image element, showing the captured photo.
-    //   image.setAttribute('src', imageDataURL); 
-
-    // }
-    //
-    // Above code modified to save photo (or give option to)
-    //
-    // <a id="dl-btn" href="#" download="glorious_selfie.png">Save Photo</a>
-    // function takeSnapshot(){
-
-    // //...
-
-    // // Get an image dataURL from the canvas.
-    // var imageDataURL = hidden_canvas.toDataURL('image/png');
-
-    // // Set the href attribute of the download button.
-    // document.querySelector('#dl-btn').href = imageDataURL;
-    // }
-  </script>
+  <script src="js/app.js"></script>
 </body>
 </html>
