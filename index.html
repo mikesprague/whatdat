@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link href="https://stackpath.bootstrapcdn.com/bootswatch/4.1.1/sandstone/bootstrap.min.css" rel="stylesheet" integrity="sha384-7MvlWCBuyFQHTibL0ta2jXuoCAaC8s2FIwWC/olSTVZ2OBod2DVHIXQcvUKdfJSA" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@0.11.7"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/mobilenet@0.1.1"></script>
+  <style>
+    .animal-photo {
+      width: 100%;
+    }
+  </style>
+</head>
+<body>
+  <div class="container mt-5">
+    <div class="row">
+      <div class="col-sm">
+        <button type="button" class="btnIdentify btn btn-dark btn-block btn-lg mb-3" disabled>Loading...</button>
+        <div class="results"></div>
+        <img class="img-fluid animal-photo">
+      </div>
+    </div>
+  </div>
+  <script>
+    const animalImages = [
+      "1.jpg", "2.jpg", "3.jpg", "4.jpg", "5.jpg", "6.jpg"
+    ];
+    const button = document.querySelector('.btnIdentify');
+    const animal = document.querySelector('.animal-photo');
+    const results = document.querySelector('.results');
+
+    const getRandomImage = imageArray => {
+      return imageArray[Math.floor(Math.random() * imageArray.length)];
+    };
+
+    animal.setAttribute('src', `assets/images/${getRandomImage(animalImages)}`);
+
+    const enableButton = buttonText => {
+      button.removeAttribute('disabled');
+      button.textContent = buttonText;
+    };
+
+    const disableButton = buttonText => {
+      button.textContent = buttonText;
+      button.setAttribute('disabled', true);
+    };
+
+    const refreshPage = () => {
+      window.location.reload(true);
+    };
+
+    const populateResults = resultsData => {
+      let resultOutput = '';
+      let resultHeading = '';
+      let resultIndex = 0;
+      let btnStartOver = `
+        <button type="button" class="btnStartOver btn btn-primary btn-block btn-lg mb-3" onclick="refreshPage();">Start Over</button>
+      `;
+      resultsData.forEach(result => {
+        let nameParts = result.className.split(',');
+        let generalName = nameParts[0].trim();
+        // let scientificName = nameParts.length > 1 ? ` <em class="font-italic text-capitalize">${nameParts[1].trim()}</em>` : '';
+        let probability = Math.round(result.probability * 100);
+        let badgeColor = 'success';
+        if (!resultIndex) {
+          let congratsText = `Congratulations, you have a ${generalName}!`;
+          resultHeading = `<h3 class="font-weight-bold">${congratsText}</h3>`;
+        } else {
+          badgeColor = 'secondary';
+        }
+        resultOutput += `
+          <li class="list-item">
+            <span class="badge badge-pill badge-${badgeColor}">${probability} %</span>
+            <strong class="text-capitalize">${generalName}</strong>
+          </li>
+        `;
+        resultIndex++;
+      });
+      button.remove();
+      results.innerHTML = `
+        ${btnStartOver}
+        ${resultHeading}
+        <ol class="list-unstyled">
+          ${resultOutput}
+        </ol>
+      `;
+    };
+
+    const initButton = () => {
+      enableButton('Identify Animal');
+      button.addEventListener('click', clickEvent => {
+        disableButton('Identifying...');
+        mobilenet.load().then(model => {
+          model.classify(animal).then(predictions => {
+            populateResults(predictions);
+          });
+        }).catch(error => {
+          enableButton('Oops! Something went wrong :( Click to try again');
+        });
+      });
+    };
+
+    animal.addEventListener('load', loadEvent => {
+      initButton();
+    });
+  </script>
+</body>
+</html>
