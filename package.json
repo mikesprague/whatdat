@@ -76,8 +76,8 @@
   "staticPath": "src/static",
   "browserslist": "last 2 versions",
   "compress": {
-    "test": "css|html|js|!map",
-    "threshold": 128000
+    "test": "(css|html|js|!map)",
+    "threshold": 144000
   },
   "eslintConfig": {
     "env": {
