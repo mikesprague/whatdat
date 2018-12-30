@@ -1,1 +1,16 @@
+@import "node_modules/bootswatch/dist/superhero/_variables"; //sketchy is other them in use
 @import "node_modules/bootstrap/scss/bootstrap";
+@import "node_modules/bootswatch/dist/superhero/_bootswatch"; //sketchy is other them in use
+
+.btnStartApp {
+  font-size: 4em;
+  line-height: 1.2;
+}
+
+.headingAppTitle {
+  line-height: 0.9;
+}
+
+.player {
+  cursor: pointer;
+}
