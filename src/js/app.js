@@ -1,5 +1,5 @@
 import '@babel/polyfill';
-import * as tf from '@tensorflow/tfjs';
+// import * as tf from '@tensorflow/tfjs';
 import * as mobilenet from '@tensorflow-models/mobilenet';
 // import * as cocoSsd from '@tensorflow-models/coco-ssd';
 
@@ -127,7 +127,7 @@ function startCamera() {
         <h2 class="lead-1 text-center">dat's a ${predictions1[0].className.toLowerCase().replace(', ', '/')}!</h2>
         <div class="center">
         <details>
-          <summary>Expand to view full results</summary>
+          <summary class="text-muted text-center">Expand to view full results</summary>
           <table class="table table-striped table-bordered table-hover">
             <thead>
               <tr>
