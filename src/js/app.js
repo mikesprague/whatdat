@@ -1,8 +1,7 @@
 import '@babel/polyfill';
 import * as tf from '@tensorflow/tfjs';
 import * as mobilenet from '@tensorflow-models/mobilenet';
-import * as cocoSsd from '@tensorflow-models/coco-ssd';
-import { Domain } from 'domain';
+// import * as cocoSsd from '@tensorflow-models/coco-ssd';
 
 /* eslint-disable max-len */
 /* eslint-disable no-console */
