@@ -1,11 +1,6 @@
-import '@babel/polyfill';
-// import * as tf from '@tensorflow/tfjs';
 import * as mobilenet from '@tensorflow-models/mobilenet';
 // import * as cocoSsd from '@tensorflow-models/coco-ssd';
 
-/* eslint-disable max-len */
-/* eslint-disable no-console */
-/* eslint-disable no-unused-vars */
 const appFrame = document.querySelector('.app');
 let streaming = false;
 
