@@ -123,8 +123,10 @@ function startCamera() {
           </tr>
         `).join('\n');
       btnTakePhoto.classList.add('d-none');
+      const startsWithVowel = predictions1[0].className.toLowerCase().split('')[0].search(/[aeiou]/);
+      // console.log(startsWithVowel);
       results.innerHTML = `
-        <h2 class="lead-1 text-center">dat's a ${predictions1[0].className.toLowerCase().replace(', ', '/')}!</h2>
+        <h2 class="lead-1 text-center">dat might be ${startsWithVowel === -1 ? 'a' : 'an'} ${predictions1[0].className.toLowerCase().replace(', ', '/')}!</h2>
         <div class="center">
         <details>
           <summary class="text-muted text-center">Expand to view full results</summary>
@@ -140,9 +142,10 @@ function startCamera() {
             </tbody>
           </table>
         </details>
+        ${startOverButtonMarkup}
         </div>
       `;
-      photo.insertAdjacentHTML('afterend', startOverButtonMarkup);
+      // photo.insertAdjacentHTML('afterend', startOverButtonMarkup);
       const btnStartOver = document.querySelector('.btnStartOver');
       btnStartOver.addEventListener('click', () => {
         window.location.reload(true);
