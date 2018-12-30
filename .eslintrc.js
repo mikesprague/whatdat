@@ -14,5 +14,6 @@ module.exports = {
         "argsIgnorePattern": "res|next|^err"
       }
     ],
+    "max-len": "off",
   },
 };
