@@ -1,11 +1,13 @@
 import '@babel/polyfill';
-import '@tensorflow/tfjs';
-import '@tensorflow-models/mobilenet';
+import * as tf from '@tensorflow/tfjs';
+import * as mobilenet from '@tensorflow-models/mobilenet';
+import * as cocoSsd from '@tensorflow-models/coco-ssd';
+import { Domain } from 'domain';
 
 /* eslint-disable max-len */
 /* eslint-disable no-console */
 /* eslint-disable no-unused-vars */
-const appFrame = document.querySelector('.frame');
+const appFrame = document.querySelector('.app');
 let streaming = false;
 
 /* eslint-disable no-undef */
@@ -20,7 +22,6 @@ const constraints = {
 const startMarkup = `
   <div class="text-center"><button class="btnStartApp btn btn-large btn-danger text-center rounded-circle mb-5"><i class="fas fa-camera"></i></button></div>
   <p class="text-center"><strong><em>Note: this app uses your phone's camera and you will be asked for permission if this is your first time using the app</em></strong></p>
-  <p class="text-center text-muted small">What Dat?!? is 100% accurate 60% of the time</p>
 `;
 
 const startOverButtonMarkup = `
@@ -31,7 +32,7 @@ const cameraMarkup = `
   <div class="row">
     <div class="col">
       <button type="button" class="btnTakePhoto btn btn-outline-primary btn-block btn-lg text-center mb-3"><i class="fal fa-camera"></i> Take Photo</button>
-      <div class="results d-none ml-2"></div>
+      <div class="results d-none mb-2"></div>
       <video class="player img-fluid center" autoplay title="Tap/click to take photo"></video>
       <canvas class="canvas d-none"></canvas>
       <img class="photo img-fluid d-none center" alt="The screen capture will appear in this box.">
@@ -110,20 +111,42 @@ function startCamera() {
     results.classList.remove('d-none');
     disableButton('.btnTakePhoto', '<i class="fas fa-sync fa-spin"></i> identifying ...');
     try {
-      const model1 = await mobilenet.load();
-      // const model2 = await cocoSsd.load();
+      const model1 = await mobilenet.load(1, 1.0);
       const predictions1 = await model1.classify(photo, 10);
-      // const predictions2 = await model2.detect(photo);
-      // `<li class="list-item">${predictions2[0].class} ${Math.round(predictions2[0].score * 100)}%</li>`
-      const resultsMarkup = predictions1.map(prediction => `<li class="list-item">${prediction.className} ${Math.round(prediction.probability * 100)}%</li>`).join('\n');
+      const resultsMarkup = predictions1.map(prediction => `
+          <tr>
+            <td>
+              ${Math.round(prediction.probability * 100)}%
+            </td>
+            <td>
+              ${prediction.className}
+            </td>
+          </tr>
+        `).join('\n');
       btnTakePhoto.classList.add('d-none');
-      results.innerHTML = resultsMarkup + startOverButtonMarkup;
+      results.innerHTML = `
+        <table class="table table-striped table-bordered table-hover">
+          <thead>
+            <tr>
+              <th scope="col">Probability</th>
+              <th scope="col">Prediction</th>
+            </tr>
+          </thead>
+          <tbody>
+            ${resultsMarkup}
+          </tbody>
+        </table>
+      `;
+      photo.insertAdjacentHTML('afterend', startOverButtonMarkup);
       const btnStartOver = document.querySelector('.btnStartOver');
       // console.log(predictions1);
       // console.log(predictions2);
       btnStartOver.addEventListener('click', () => {
         window.location.reload(true);
       });
+      // const model2 = await cocoSsd.load('mobilenet_v2');
+      // const predictions2 = await model2.detect(photo);
+      // console.log(predictions2);
     } catch (error) {
       console.error(error);
       results.textContent = error;

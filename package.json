@@ -4,9 +4,9 @@
   "description": "",
   "private": true,
   "scripts": {
+    "serve": "parcel serve src/index.html src/js/* --no-cache --target browser --port 5000 --open",
     "build": "parcel build src/index.html src/js/* --no-cache --target browser",
     "clean": "rm -rf ./dist",
-    "serve": "parcel serve src/index.html src/js/* --no-cache --target browser --port 5000",
     "watch": "parcel watch src/index.html src/js/* --no-cache --target browser"
   },
   "author": {
@@ -16,8 +16,9 @@
   "license": "MIT",
   "dependencies": {
     "@babel/polyfill": "^7.2.5",
-    "@tensorflow-models/mobilenet": "^0.2.2",
-    "@tensorflow/tfjs": "^0.12.7"
+    "@tensorflow/tfjs": "^0.14.1",
+    "@tensorflow-models/coco-ssd": "^0.1.1",
+    "@tensorflow-models/mobilenet": "^0.2.2"
   },
   "devDependencies": {
     "acorn": "^6.0.4",
