@@ -80,7 +80,7 @@ typings/
 .dynamodb/
 
 # Build folder
-dist/
+dist
 
 # VS Code Stuff
 .code
@@ -90,3 +90,4 @@ dist/
 
 # Misc
 ~*.*
+tmp
