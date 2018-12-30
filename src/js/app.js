@@ -24,7 +24,7 @@ const startMarkup = `
 `;
 
 const startOverButtonMarkup = `
-  <button type="button" class="btnStartOver btn btn-outline-primary btn-block btn-lg text-center mb-2 mt-1">Start Over</button>
+  <button type="button" class="btnStartOver btn btn-outline-primary btn-block btn-lg text-center mb-2 mt-3">Start Over</button>
 `;
 
 const cameraMarkup = `
@@ -124,22 +124,26 @@ function startCamera() {
         `).join('\n');
       btnTakePhoto.classList.add('d-none');
       results.innerHTML = `
-        <table class="table table-striped table-bordered table-hover">
-          <thead>
-            <tr>
-              <th scope="col">Probability</th>
-              <th scope="col">Prediction</th>
-            </tr>
-          </thead>
-          <tbody>
-            ${resultsMarkup}
-          </tbody>
-        </table>
+        <h2 class="lead-1 text-center">dat's a ${predictions1[0].className.toLowerCase().replace(', ', '/')}!</h2>
+        <div class="center">
+        <details>
+          <summary>Expand to view full results</summary>
+          <table class="table table-striped table-bordered table-hover">
+            <thead>
+              <tr>
+                <th scope="col">Probability</th>
+                <th scope="col">Prediction</th>
+              </tr>
+            </thead>
+            <tbody>
+              ${resultsMarkup}
+            </tbody>
+          </table>
+        </details>
+        </div>
       `;
       photo.insertAdjacentHTML('afterend', startOverButtonMarkup);
       const btnStartOver = document.querySelector('.btnStartOver');
-      // console.log(predictions1);
-      // console.log(predictions2);
       btnStartOver.addEventListener('click', () => {
         window.location.reload(true);
       });
