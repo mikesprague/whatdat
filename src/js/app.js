@@ -1,3 +1,10 @@
+import '@babel/polyfill';
+import '@tensorflow/tfjs';
+import '@tensorflow-models/mobilenet';
+
+/* eslint-disable max-len */
+/* eslint-disable no-console */
+/* eslint-disable no-unused-vars */
 const appFrame = document.querySelector('.frame');
 let streaming = false;
 
@@ -10,19 +17,22 @@ const constraints = {
 };
 /* eslint-disable no-undef */
 
-const startUi = `
+const startMarkup = `
   <div class="text-center"><button class="btnStartApp btn btn-large btn-danger text-center rounded-circle mb-5"><i class="fas fa-camera"></i></button></div>
   <p class="text-center"><strong><em>Note: this app uses your phone's camera and you will be asked for permission if this is your first time using the app</em></strong></p>
-  <p class="text-center text-muted">This application is 100% accurate 60% of the time</p>
+  <p class="text-center text-muted small">What Dat?!? is 100% accurate 60% of the time</p>
 `;
 
+const startOverButtonMarkup = `
+  <button type="button" class="btnStartOver btn btn-outline-primary btn-block btn-lg text-center mb-2 mt-1">Start Over</button>
+`;
 
-const cameraUi = `
+const cameraMarkup = `
   <div class="row">
     <div class="col">
       <button type="button" class="btnTakePhoto btn btn-outline-primary btn-block btn-lg text-center mb-3"><i class="fal fa-camera"></i> Take Photo</button>
       <div class="results d-none ml-2"></div>
-      <video class="player img-fluid center" controls autoplay></video>
+      <video class="player img-fluid center" autoplay title="Tap/click to take photo"></video>
       <canvas class="canvas d-none"></canvas>
       <img class="photo img-fluid d-none center" alt="The screen capture will appear in this box.">
     </div>
@@ -68,7 +78,7 @@ function clearPhoto() {
 }
 
 function startCamera() {
-  appFrame.innerHTML = cameraUi;
+  appFrame.innerHTML = cameraMarkup;
 
   const player = document.querySelector('.player');
   const canvas = document.querySelector('.canvas');
@@ -102,20 +112,12 @@ function startCamera() {
     try {
       const model1 = await mobilenet.load();
       // const model2 = await cocoSsd.load();
-      const predictions1 = await model1.classify(photo);
-
+      const predictions1 = await model1.classify(photo, 10);
       // const predictions2 = await model2.detect(photo);
       // `<li class="list-item">${predictions2[0].class} ${Math.round(predictions2[0].score * 100)}%</li>`
-      const resultsUi = `
-      <button type="button" class="btnStartOver btn btn-outline-primary btn-block btn-lg text-center mb-2 mt-1">Start Over</button>
-      <ol>
-        <li class="list-item">${predictions1[0].className} ${Math.round(predictions1[0].probability * 100)}%</li>
-        <li class="list-item">${predictions1[1].className} ${Math.round(predictions1[1].probability * 100)}%</li>
-        <li class="list-item">${predictions1[2].className} ${Math.round(predictions1[2].probability * 100)}%</li>
-      </ol>
-      `;
+      const resultsMarkup = predictions1.map(prediction => `<li class="list-item">${prediction.className} ${Math.round(prediction.probability * 100)}%</li>`).join('\n');
       btnTakePhoto.classList.add('d-none');
-      results.innerHTML = resultsUi;
+      results.innerHTML = resultsMarkup + startOverButtonMarkup;
       const btnStartOver = document.querySelector('.btnStartOver');
       // console.log(predictions1);
       // console.log(predictions2);
@@ -137,7 +139,7 @@ function startCamera() {
 }
 
 function initApp() {
-  appFrame.innerHTML = startUi;
+  appFrame.innerHTML = startMarkup;
   const btnStartApp = document.querySelector('.btnStartApp');
   btnStartApp.addEventListener('click', () => {
     startCamera();

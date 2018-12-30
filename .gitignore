@@ -79,6 +79,9 @@ typings/
 # DynamoDB Local files
 .dynamodb/
 
+# Build folder
+dist/
+
 # VS Code Stuff
 .code
 .code-insiders

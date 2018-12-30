@@ -1,11 +1,13 @@
 {
-  "name": "whatdat",
-  "version": "0.0.0",
+  "name": "whatdat.app",
+  "version": "0.0.1",
   "description": "",
-  "main": "",
   "private": true,
   "scripts": {
-    "serve": "browser-sync start --server --directory --files \"*.css, *.html, *.js\""
+    "build": "parcel build src/index.html src/js/* --no-cache --target browser",
+    "clean": "rm -rf ./dist",
+    "serve": "parcel serve src/index.html src/js/* --no-cache --target browser --port 5000",
+    "watch": "parcel watch src/index.html src/js/* --no-cache --target browser"
   },
   "author": {
     "name": "Michael Sprague",
@@ -13,12 +15,12 @@
   },
   "license": "MIT",
   "dependencies": {
-    "@tensorflow-models/coco-ssd": "^0.1.1",
+    "@babel/polyfill": "^7.2.5",
     "@tensorflow-models/mobilenet": "^0.2.2",
-    "@tensorflow/tfjs": "^0.14.1"
+    "@tensorflow/tfjs": "^0.12.7"
   },
   "devDependencies": {
-    "browser-sync": "^2.26.3",
+    "acorn": "^6.0.4",
     "cross-env": "^5.2.0",
     "eslint": "^5.11.1",
     "eslint-config-airbnb": "^17.1.0",
@@ -27,6 +29,7 @@
     "eslint-plugin-import": "^2.14.0",
     "eslint-plugin-jsx-a11y": "^6.1.2",
     "eslint-plugin-markdown": "^1.0.0-rc.0",
-    "eslint-plugin-react": "^7.12.0"
+    "eslint-plugin-react": "^7.12.0",
+    "parcel-bundler": "^1.11.0"
   }
 }
