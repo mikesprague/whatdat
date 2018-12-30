@@ -4,10 +4,16 @@
   "description": "",
   "private": true,
   "scripts": {
-    "serve": "parcel serve src/index.html src/js/* --no-cache --target browser --port 5000 --open",
-    "build": "parcel build src/index.html src/js/* --no-cache --target browser",
+    "serve": "parcel serve src/index.html src/js/* --target browser --port 5000 --open",
+    "serve:cache-clean": "yarn clean && yarn serve",
+    "serve:clean": "yarn clean && yarn serve --no-cache",
+    "build": "parcel build src/index.html src/js/* --target browser",
+    "build:cache-clean": "yarn clean && yarn build",
+    "build:clean": "yarn clean && yarn build --no-cache",
     "clean": "rm -rf ./dist",
-    "watch": "parcel watch src/index.html src/js/* --no-cache --target browser"
+    "watch": "parcel watch src/index.html src/js/* --target browser",
+    "watch:cache-clean": "yarn clean && yarn watch",
+    "watch:clean": "yarn clean && yarn watch --no-cache"
   },
   "author": {
     "name": "Michael Sprague",
@@ -15,12 +21,15 @@
   },
   "license": "MIT",
   "dependencies": {
-    "@babel/polyfill": "^7.2.5",
-    "@tensorflow/tfjs": "^0.14.1",
+    "@babel/core": "^7.2.2",
+    "@babel/runtime": "^7.2.0",
     "@tensorflow-models/coco-ssd": "^0.1.1",
-    "@tensorflow-models/mobilenet": "^0.2.2"
+    "@tensorflow-models/mobilenet": "^0.2.2",
+    "@tensorflow/tfjs": "^0.14.1"
   },
   "devDependencies": {
+    "@babel/plugin-transform-runtime": "^7.2.0",
+    "@babel/preset-env": "^7.2.3",
     "acorn": "^6.0.4",
     "cross-env": "^5.2.0",
     "eslint": "^5.11.1",
@@ -32,6 +41,20 @@
     "eslint-plugin-markdown": "^1.0.0-rc.0",
     "eslint-plugin-react": "^7.12.0",
     "parcel-bundler": "^1.11.0",
+    "parcel-plugin-bundle-visualiser": "^1.2.0",
     "parcel-plugin-compress": "^1.0.6"
+  },
+  "babel": {
+    "presets": [
+      [
+        "@babel/preset-env",
+        {
+          "browserslist": "last 2 versions"
+        }
+      ]
+    ],
+    "plugins": [
+      "@babel/plugin-transform-runtime"
+    ]
   }
 }
