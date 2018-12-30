@@ -86,3 +86,4 @@ dist/
 .code
 .code-insiders
 .history
+*.code-workspace
