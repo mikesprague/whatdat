@@ -5,15 +5,15 @@
   "main": "src/index.html",
   "private": true,
   "scripts": {
-    "serve": "parcel serve src/index.html src/css/* src/js/* --target browser --port 5000 --open",
+    "serve": "parcel serve src/index.html src/css/*.scss src/js/*.js --target browser --port 5000 --open",
     "serve:cache-clean": "yarn clean && yarn serve",
     "serve:clean": "yarn clean && yarn serve --no-cache",
-    "build": "parcel build src/index.html src/css/* src/js/* --target browser",
+    "build": "parcel build src/index.html src/css/*.scss src/js/*.js --target browser",
     "build:cache-clean": "yarn clean && yarn build",
     "build:clean": "yarn clean && yarn build --no-cache",
     "build:no-cache": "yarn build --no-cache",
     "clean": "rm -rf ./dist",
-    "watch": "parcel watch src/index.html src/css/* src/js/* --target browser",
+    "watch": "parcel watch src/index.html src/css/*.scss src/js/*.js --target browser",
     "watch:cache-clean": "yarn clean && yarn watch",
     "watch:clean": "yarn clean && yarn watch --no-cache"
   },
