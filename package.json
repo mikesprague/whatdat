@@ -60,7 +60,7 @@
     "parcel-plugin-bundle-visualiser": "^1.2.0",
     "parcel-plugin-compress": "^1.0.6",
     "parcel-plugin-purifycss": "^1.0.2",
-    "parcel-plugin-static-files-copy": "^1.2.4",
+    "parcel-plugin-static-files-copy": "^2.0.0",
     "sass-lint": "^1.12.1"
   },
   "babel": {
