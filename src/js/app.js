@@ -1,3 +1,4 @@
+import '../scss/styles.scss';
 import { startMarkup } from './modules/templates';
 import { startCamera } from './modules/camera';
 import {
