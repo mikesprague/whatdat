@@ -37,7 +37,7 @@
     "@fortawesome/pro-solid-svg-icons": "^5.7.2",
     "@fullhuman/postcss-purgecss": "^1.1.0",
     "@tensorflow-models/mobilenet": "^0.2.2",
-    "@tensorflow/tfjs": "^0.12.7",
+    "@tensorflow/tfjs": "^0.15.2",
     "autoprefixer": "^9.4.7",
     "bootstrap": "^4.3.1",
     "bootswatch": "^4.2.1",
