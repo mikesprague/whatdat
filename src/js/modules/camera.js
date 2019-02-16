@@ -52,7 +52,7 @@ async function takePhotoClickHandler() {
     ui.populateElementWithMarkup('.results', resultsMarkup);
     ui.initElementEventHandler('.btnStartOver', 'click', ui.reloadWindow);
   } catch (error) {
-    console.error(error);
+    bugsnagClient.notify(error);
     // results.textContent = error;
   }
 }
@@ -75,7 +75,7 @@ export async function startCamera() {
     player.play();
     player.setAttribute('style', 'width: 100%; height: auto;');
   } catch (error) {
-    console.error(error);
+    bugsnagClient.notify(error);
   }
 
   ui.initElementEventHandler('.player', 'canplay', () => {
