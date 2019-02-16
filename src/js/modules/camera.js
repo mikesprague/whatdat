@@ -52,8 +52,9 @@ async function takePhotoClickHandler() {
     ui.populateElementWithMarkup('.results', resultsMarkup);
     ui.initElementEventHandler('.btnStartOver', 'click', ui.reloadWindow);
   } catch (error) {
+    /* eslint-disable no-undef */
     bugsnagClient.notify(error);
-    // results.textContent = error;
+    /* eslint-enable no-undef */
   }
 }
 
@@ -75,7 +76,9 @@ export async function startCamera() {
     player.play();
     player.setAttribute('style', 'width: 100%; height: auto;');
   } catch (error) {
+    /* eslint-disable no-undef */
     bugsnagClient.notify(error);
+    /* eslint-enable no-undef */
   }
 
   ui.initElementEventHandler('.player', 'canplay', () => {
