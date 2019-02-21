@@ -51,7 +51,7 @@
     "@tensorflow-models/mobilenet": "^0.2.2",
     "babel-loader": "^8.0.5",
     "compression-webpack-plugin": "^2.0.0",
-    "copy-webpack-plugin": "^4.6.0",
+    "copy-webpack-plugin": "^5.0.0",
     "css-loader": "^2.1.0",
     "eslint": "^5.14.1",
     "eslint-config-airbnb-base": "^13.1.0",
