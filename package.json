@@ -22,8 +22,8 @@
   "repository": "github:mikesprague/whatdat",
   "license": "MIT",
   "engines": {
-    "node": ">= 11.10.0",
-    "npm": ">= 6.8.0",
+    "node": ">= 11.6.0",
+    "npm": ">= 6.5.0",
     "yarn": ">=1.13.0"
   },
   "dependencies": {
