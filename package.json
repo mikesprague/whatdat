@@ -48,7 +48,7 @@
     "@babel/preset-env": "^7.3.4",
     "@babel/runtime": "^7.3.4",
     "@tensorflow/tfjs": "0.12.7",
-    "@tensorflow-models/mobilenet": "^0.2.2",
+    "@tensorflow-models/mobilenet": "^1.0.0",
     "babel-loader": "^8.0.5",
     "compression-webpack-plugin": "^2.0.0",
     "copy-webpack-plugin": "^5.0.0",
