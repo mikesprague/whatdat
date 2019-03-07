@@ -11,6 +11,8 @@ import {
 
 LogRocket.init('skxlwh/whatdat');
 
+window.bugsnagClient = bugsnag('723fa77654c41aae8632bace87a7939f');
+
 bugsnag.beforeNotify = (data) => {
   /* eslint-disable no-param-reassign */
   data.metaData.sessionURL = LogRocket.sessionURL;
@@ -18,7 +20,6 @@ bugsnag.beforeNotify = (data) => {
   return data;
 };
 
-window.bugsnagClient = bugsnag('723fa77654c41aae8632bace87a7939f');
 
 function initApp() {
   populateElementWithMarkup('.app', startMarkup);
