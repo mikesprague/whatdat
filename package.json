@@ -84,15 +84,7 @@
       "@babel/plugin-transform-object-assign"
     ],
     "presets": [
-      "@babel/preset-env", {
-        "targets": {
-          "browsers": [
-            "last 3 years",
-            "safari >= 8",
-            "IE 10"
-          ]
-        }
-      }
+      "@babel/preset-env"
     ]
   },
   "browserslist": [
