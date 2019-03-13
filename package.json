@@ -22,9 +22,9 @@
   "repository": "github:mikesprague/whatdat",
   "license": "MIT",
   "engines": {
-    "node": ">= 11.10.0",
-    "npm": ">= 6.7.0",
-    "yarn": ">=1.13.0"
+    "node": ">= 11.x",
+    "npm": ">= 6.x",
+    "yarn": ">=1.x"
   },
   "dependencies": {
     "@bugsnag/js": "^6.0.0",
