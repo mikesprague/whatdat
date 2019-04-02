@@ -13,7 +13,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "webpack": "webpack --config ./webpack.config.js -p --colors --display minimal",
     "webpack:dev": "webpack --config ./webpack.config.js -d --colors --display minimal",
-    "webpack:serve": "webpack-serve ./webpack.config.js --port 3000"
+    "webpack:serve": "webpack-dev-server --port 3000"
   },
   "author": {
     "name": "Michael Sprague",
@@ -44,13 +44,13 @@
     "logrocket": "^0.6.20"
   },
   "devDependencies": {
-    "@babel/cli": "^7.2.3",
-    "@babel/core": "^7.4.0",
+    "@babel/cli": "^7.4.3",
+    "@babel/core": "^7.4.3",
     "@babel/plugin-proposal-class-properties": "^7.4.0",
     "@babel/plugin-transform-object-assign": "^7.2.0",
-    "@babel/plugin-transform-runtime": "^7.4.0",
-    "@babel/preset-env": "^7.4.2",
-    "@babel/runtime": "^7.4.2",
+    "@babel/plugin-transform-runtime": "^7.4.3",
+    "@babel/preset-env": "^7.4.3",
+    "@babel/runtime": "^7.4.3",
     "babel-loader": "^8.0.5",
     "compression-webpack-plugin": "^2.0.0",
     "copy-webpack-plugin": "^5.0.2",
@@ -74,7 +74,7 @@
     "webpack": "^4.29.6",
     "webpack-bugsnag-plugins": "^1.4.0",
     "webpack-cli": "^3.3.0",
-    "webpack-serve": "^2.0.3",
+    "webpack-dev-server": "^3.2.1",
     "webpackbar": "^3.1.5"
   },
   "babel": {
