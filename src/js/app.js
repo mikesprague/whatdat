@@ -37,7 +37,7 @@ register('/service-worker.js', {
   //   console.log('New content is downloading.', registration);
   // },
   updated() { // updated(registration)
-    // need to add some sort of notification and/or forced refresh
+    // need to add some sort of notification and remove forced refresh
     console.log('What Dat?!? has been updated to the latest version.');
     reloadWindow();
   },
