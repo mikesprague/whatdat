@@ -9,6 +9,7 @@ const cacheAlways = [
   './css/styles.css',
   './js/bundle.js',
   './js/vendors~main.bundle.js',
+  './js/vendors~main.bundle.js.gz',
 ];
 const cacheWhenPossible = [
   'https://fonts.gstatic.com/s/lato/v15/S6u9w4BMUTPHh7USSwiPGQ3q5d0.woff2',
