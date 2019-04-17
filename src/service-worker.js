@@ -41,7 +41,7 @@ addEventListener('install', (installEvent) => {
       // Must have cached
       return staticCache.addAll(cacheAlways).then(() => {
         // console.info('[SW] Cached the 'must haves'');
-        // console.info(`[SW] Finished Updating LocalWeather.io ${CACHE_NAME}`);
+        // console.info(`[SW] Finished Updating ${CACHE_NAME}`);
       }); // end return addAll/then
     }) // end open then
   ); // end waitUntil
