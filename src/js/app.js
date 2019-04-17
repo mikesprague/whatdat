@@ -24,18 +24,6 @@ bugsnag.beforeNotify = (data) => {
 };
 
 register('/service-worker.js', {
-  // ready() {
-  //   console.log('Service worker is active.');
-  // },
-  // registered(registration) {
-  //   console.log('Service worker has been registered.', registration);
-  // },
-  // cached(registration) {
-  //   console.log('Content has been cached for offline use.', registration);
-  // },
-  // updatefound(registration) {
-  //   console.log('New content is downloading.', registration);
-  // },
   updated() { // updated(registration)
     // need to add some sort of notification and remove forced refresh
     console.log('What Dat?!? has been updated to the latest version.');
