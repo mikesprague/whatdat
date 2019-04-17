@@ -36,11 +36,8 @@ export function stopVideoCamera(videoPlayerSelector) {
 
 async function takePhotoClickHandler() {
   takePhoto();
+
   stopVideoCamera('.player');
-
-  const model = await mobilenet.load(1, 1.0);
-  // const model2 = await cocoSsd.load('lite_mobilenet_v2');
-
   ui.hideElement('.player');
   ui.showElement('.photo');
   ui.showElement('.results');
@@ -48,6 +45,8 @@ async function takePhotoClickHandler() {
 
   try {
     const photo = document.querySelector('.photo');
+    const model = await mobilenet.load(1, 1.0);
+  // const model2 = await cocoSsd.load('lite_mobilenet_v2');
     const predictions = await model.classify(photo, 10);
     // const predictions2 = await model2.detect(photo);
     const resultsMarkup = templates.getResultsMarkup(predictions);
