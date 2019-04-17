@@ -12,6 +12,7 @@ const cacheAlways = [
   './js/vendors~main.bundle.js.gz',
 ];
 const cacheWhenPossible = [
+  'https://fonts.googleapis.com/css?family=Lato:300,400,700',
   'https://fonts.gstatic.com/s/lato/v15/S6u9w4BMUTPHh7USSwiPGQ3q5d0.woff2',
   'https://fonts.gstatic.com/s/lato/v15/S6u9w4BMUTPHh7USSwaPGQ3q5d0N7w.woff2',
   'https://fonts.gstatic.com/s/lato/v15/S6uyw4BMUTPHjxAwXiWtFCfQ7A.woff2',
