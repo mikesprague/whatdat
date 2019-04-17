@@ -3,7 +3,7 @@ import {
   faCamera, faSync,
 } from '@fortawesome/pro-solid-svg-icons';
 import {
-  faCamera as faCameraLight,
+  faCamera as faCameraLight, faWifiSlash,
 } from '@fortawesome/pro-light-svg-icons';
 
 export function initFontAwesomeIcons() {
@@ -11,6 +11,7 @@ export function initFontAwesomeIcons() {
     faCamera,
     faCameraLight,
     faSync,
+    faWifiSlash,
   );
   dom.watch();
 }

@@ -65,8 +65,20 @@ const webpackPlugins = [
     chunkFilename: './css/[id].css',
   }),
   new CopyWebpackPlugin([{
+    from: './src/*.js*',
+    to: './',
+    flatten: true,
+    force: true,
+  }]),
+  new CopyWebpackPlugin([{
     from: './src/_redirects',
     to: './',
+    force: true,
+  }]),
+  new CopyWebpackPlugin([{
+    from: './src/images/**/*',
+    to: './images',
+    flatten: true,
     force: true,
   }]),
   new CopyWebpackPlugin([{

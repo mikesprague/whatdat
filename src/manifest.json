@@ -1,0 +1,48 @@
+{
+  "name": "What Dat?!?",
+  "short_name": "What Dat?!?",
+  "description": "What Dat?!?",
+  "icons": [
+    {
+      "src": "./images/whatdat-icon-32.png",
+      "type": "image/png",
+      "sizes": "32x32"
+    },
+    {
+      "src": "./images/whatdat-icon-48.png",
+      "type": "image/png",
+      "sizes": "48x48"
+    },
+    {
+      "src": "./images/whatdat-icon-64.png",
+      "type": "image/png",
+      "sizes": "64x64"
+    },
+    {
+      "src": "./images/whatdat-icon-72.png",
+      "type": "image/png",
+      "sizes": "72x72"
+    },
+    {
+      "src": "./images/whatdat-icon-96.png",
+      "type": "image/png",
+      "sizes": "96x96"
+    },
+    {
+      "src": "./images/whatdat-icon-128.png",
+      "type": "image/png",
+      "sizes": "128x128"
+    },
+    {
+      "src": "./images/whatdat-icon-512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "homepage_url": "https://whatdat.app/",
+  "scope": "/",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#2b3e50",
+  "theme_color": "#d9534f"
+}
