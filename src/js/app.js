@@ -10,6 +10,7 @@ import {
   initElementEventHandler,
   initFontAwesomeIcons,
   showInstallAlert,
+  showUpdatedToast,
 } from './modules/ui';
 
 LogRocket.init('skxlwh/whatdat');
@@ -51,6 +52,7 @@ function initApp() {
   populateElementWithMarkup('.app', startMarkup);
   initFontAwesomeIcons();
   initElementEventHandler('.btnStartApp', 'click', startCamera);
+  showUpdatedToast();
 }
 
 function initOffline() {

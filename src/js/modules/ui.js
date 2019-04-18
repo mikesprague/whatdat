@@ -71,3 +71,23 @@ export function showInstallAlert() {
     },
   });
 }
+
+export function showUpdatedToast() {
+  const hasUpdated = JSON.parse(localStorage.getItem('updateInstalled'));
+  if (hasUpdated) {
+    const releaseNotesLink = '<a href="https://github.com/mikesprague/whatdat/releases/latest" rel="nofollow" target="_blank">view changelog</a>';
+    const Toast = swal.mixin({
+      toast: true,
+      position: 'top-end',
+      showCloseButton: true,
+      showConfirmButton: false,
+      timer: 10000,
+    });
+
+    Toast.fire({
+      type: 'success',
+      title: `Successfully updated (${releaseNotesLink})`,
+    });
+    localStorage.removeItem('updateInstalled');
+  }
+}
