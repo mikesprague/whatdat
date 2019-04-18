@@ -1,3 +1,4 @@
+import swal from 'sweetalert2';
 import { reloadWindow } from './helpers';
 import { library, dom } from '@fortawesome/fontawesome-svg-core';
 import {
@@ -53,4 +54,16 @@ export function disableButton(btnSelector, btnText = '') {
 export function initElementEventHandler(elementSelector, event, eventHandler) {
   const el = document.querySelector(elementSelector);
   el.addEventListener(event, eventHandler, false);
+}
+
+export function showInstallAlert() {
+  swal.fire({
+    title: 'What Dat?!?',
+    text: 'Latest Version Installed',
+    confirmButtonText: 'Reload for Latest Updates',
+    type: 'success',
+    onClose: () => {
+      reloadWindow();
+    },
+  });
 }
