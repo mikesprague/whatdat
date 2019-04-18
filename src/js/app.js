@@ -9,7 +9,7 @@ import {
   populateElementWithMarkup,
   initElementEventHandler,
   initFontAwesomeIcons,
-  reloadWindow,
+  showInstallAlert,
 } from './modules/ui';
 
 LogRocket.init('skxlwh/whatdat');
@@ -27,7 +27,7 @@ register('/service-worker.js', {
   updated() { // updated(registration)
     // need to add some sort of notification and remove forced refresh
     console.log('What Dat?!? has been updated to the latest version.');
-    reloadWindow();
+    showInstallAlert();
   },
   offline() {
     console.info('No internet connection found. App is running in offline mode.');
