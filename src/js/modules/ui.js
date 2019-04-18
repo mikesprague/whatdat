@@ -57,10 +57,14 @@ export function initElementEventHandler(elementSelector, event, eventHandler) {
 }
 
 export function showInstallAlert() {
+  const updateMessage = 'Latest Version Installed';
+  const releaseNotesLink = '<a href="https://github.com/mikesprague/whatdat/releases/latest" rel="nofollow" target="_blank">View Release Notes</a>';
+  localStorage.setItem('updateInstalled', JSON.stringify(1));
   swal.fire({
     title: 'What Dat?!?',
-    text: 'Latest Version Installed',
+    text: `${updateMessage}`,
     confirmButtonText: 'Reload for Latest Updates',
+    footer: `${releaseNotesLink}`,
     type: 'success',
     onClose: () => {
       reloadWindow();
