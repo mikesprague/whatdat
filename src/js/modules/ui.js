@@ -1,5 +1,4 @@
 import swal from 'sweetalert2';
-import { reloadWindow } from './helpers';
 import { library, dom } from '@fortawesome/fontawesome-svg-core';
 import {
   faCamera, faSync,
@@ -7,6 +6,7 @@ import {
 import {
   faCamera as faCameraLight, faWifiSlash,
 } from '@fortawesome/pro-light-svg-icons';
+import { reloadWindow } from './helpers';
 
 export function initFontAwesomeIcons() {
   library.add(
