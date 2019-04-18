@@ -1,3 +1,4 @@
+import { reloadWindow } from './helpers';
 import { library, dom } from '@fortawesome/fontawesome-svg-core';
 import {
   faCamera, faSync,
@@ -47,10 +48,6 @@ export function enableButton(btnSelector, btnText = '') {
 export function disableButton(btnSelector, btnText = '') {
   enableElement(btnSelector);
   populateElementWithMarkup(btnSelector, btnText);
-}
-
-export function reloadWindow() {
-  window.location.reload(true);
 }
 
 export function initElementEventHandler(elementSelector, event, eventHandler) {

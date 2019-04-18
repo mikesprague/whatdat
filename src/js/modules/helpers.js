@@ -8,6 +8,10 @@ export function isOnline() {
   return navigator.onLine;
 }
 
+export function reloadWindow() {
+  window.location.reload(true);
+}
+
 export function registerServiceWorker() {
   register('/service-worker.js', {
     // ready() {
