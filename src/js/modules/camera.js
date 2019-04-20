@@ -2,6 +2,7 @@ import * as mobilenet from '@tensorflow-models/mobilenet';
 // import * as cocoSsd from '@tensorflow-models/coco-ssd';
 import * as templates from './templates';
 import * as ui from './ui';
+import { reloadWindow } from './helpers';
 
 export function clearPhoto() {
   const canvas = document.querySelector('.canvas');
@@ -55,7 +56,7 @@ async function takePhotoClickHandler() {
 
     ui.hideElement('.btnTakePhoto');
     ui.populateElementWithMarkup('.results', resultsMarkup);
-    ui.initElementEventHandler('.btnStartOver', 'click', ui.reloadWindow);
+    ui.initElementEventHandler('.btnStartOver', 'click', reloadWindow);
   } catch (error) {
     /* eslint-disable no-undef */
     bugsnagClient.notify(error);
