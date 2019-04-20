@@ -30,12 +30,12 @@ export const cameraMarkup = `
 
 function getResultsTableMarkup(data) {
   const tableRowMarkup = data.map(prediction => `
-    <tr>
+    <tr class="objectPrediction" data-bbox="${prediction.bbox.join()}">
       <td>
-        ${Math.round(prediction.probability * 100)}%
+        ${Math.round(prediction.score * 100)}%
       </td>
       <td>
-        ${prediction.className}
+        ${prediction.class}
       </td>
     </tr>
   `).join('\n');
@@ -45,25 +45,25 @@ function getResultsTableMarkup(data) {
 
 export function getResultsMarkup(data) {
   const resultsTableMarkup = getResultsTableMarkup(data);
-  const firstPrediction = data[0].className.toLowerCase().split(',')[0];
+  const firstPrediction = data[0].class.toLowerCase();
   const startsWithVowel = firstPrediction.split('')[0].search(/[aeiou]/);
   const resultsMarkup = `
-    <h2 class="lead-1 text-center">dat might be ${startsWithVowel === -1 ? 'a' : 'an'} ${firstPrediction}!</h2>
+    <h2 class="lead-1 text-center">dat's ${startsWithVowel === -1 ? 'a' : 'an'} ${firstPrediction}!</h2>
     <div class="center">
-    <details>
-      <summary class="text-muted text-center">Expand to view full results</summary>
+    <!-- <details>
+      <summary class="text-muted text-center">View all objects identified<br><small>(tap/click on a row to highlight object)</small></summary>
       <table class="table table-striped table-bordered table-hover">
         <thead>
           <tr>
             <th scope="col">Probability</th>
-            <th scope="col">Prediction</th>
+            <th scope="col">Object</th>
           </tr>
         </thead>
         <tbody>
           ${resultsTableMarkup}
         </tbody>
       </table>
-    </details>
+    </details> -->
     ${startOverButtonMarkup}
     </div>
   `;

@@ -1,8 +1,7 @@
-import * as mobilenet from '@tensorflow-models/mobilenet';
-// import * as cocoSsd from '@tensorflow-models/coco-ssd';
+// import * as mobilenet from '@tensorflow-models/mobilenet';
+import * as cocoSsd from '@tensorflow-models/coco-ssd';
 import * as templates from './templates';
 import * as ui from './ui';
-import { reloadWindow } from './helpers';
 
 export function clearPhoto() {
   const canvas = document.querySelector('.canvas');
@@ -35,35 +34,6 @@ export function stopVideoCamera(videoPlayerSelector) {
   videoPlayer.srcObject.getVideoTracks().forEach(track => track.stop());
 }
 
-async function takePhotoClickHandler() {
-  takePhoto();
-
-  stopVideoCamera('.player');
-  ui.hideElement('.player');
-  ui.showElement('.photo');
-  ui.showElement('.results');
-  ui.disableButton('.btnTakePhoto', '<i class="fas fa-sync fa-spin"></i> identifying ...');
-
-  try {
-    const photo = document.querySelector('.photo');
-    const model = await mobilenet.load(1, 1.0);
-    // const model2 = await cocoSsd.load('lite_mobilenet_v2');
-    const predictions = await model.classify(photo, 10);
-    // const predictions2 = await model2.detect(photo);
-    const resultsMarkup = templates.getResultsMarkup(predictions);
-
-    // console.log(predictions2);
-
-    ui.hideElement('.btnTakePhoto');
-    ui.populateElementWithMarkup('.results', resultsMarkup);
-    ui.initElementEventHandler('.btnStartOver', 'click', reloadWindow);
-  } catch (error) {
-    /* eslint-disable no-undef */
-    bugsnagClient.notify(error);
-    /* eslint-enable no-undef */
-  }
-}
-
 export async function startCamera() {
   ui.populateElementWithMarkup('.app', templates.cameraMarkup);
 
@@ -86,6 +56,48 @@ export async function startCamera() {
     bugsnagClient.notify(error);
     /* eslint-enable no-undef */
   }
+
+  const takePhotoClickHandler = async () => {
+    takePhoto();
+
+    stopVideoCamera('.player');
+    ui.hideElement('.player');
+    ui.showElement('.photo');
+    ui.showElement('.results');
+    ui.disableButton('.btnTakePhoto', '<i class="fas fa-sync fa-spin"></i> identifying ...');
+
+    try {
+      const photo = document.querySelector('.photo');
+      // const model = await mobilenet.load(1, 1.0);
+      // const predictions = await model.classify(photo, 10);
+
+      const model = await cocoSsd.load('mobilenet_v2');
+      const predictions = await model.detect(photo);
+      const prediction = predictions[0];
+      const canvas = document.querySelector('.canvas');
+      const context = canvas.getContext('2d');
+      const resultsMarkup = templates.getResultsMarkup(predictions);
+
+      ui.hideElement('.photo');
+      ui.showElement('.canvas');
+      context.beginPath();
+      context.rect(prediction.bbox[0], prediction.bbox[1], prediction.bbox[2], prediction.bbox[3]);
+      context.strokeStyle = 'rgb(0, 0, 0)';
+      context.stroke();
+      context.fillStyle = 'rgba(255, 255, 255, 0.25)';
+      context.fill();
+      context.strokeStyle = 'rgb(255, 0, 0)';
+      context.stroke();
+
+      ui.hideElement('.btnTakePhoto');
+      ui.populateElementWithMarkup('.results', resultsMarkup);
+      ui.initElementEventHandler('.btnStartOver', 'click', startCamera);
+    } catch (error) {
+      /* eslint-disable no-undef */
+      bugsnagClient.notify(error);
+      /* eslint-enable no-undef */
+    }
+  };
 
   ui.initElementEventHandler('.player', 'canplay', () => {
     const player = document.querySelector('.player');
