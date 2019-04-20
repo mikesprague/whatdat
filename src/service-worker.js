@@ -1,4 +1,4 @@
-const VERSION = '0.1.0';
+const VERSION = '0.1.1';
 const CACHE_NAME = `whatdat-app-${VERSION}`;
 const cacheAlways = [
   '.',
