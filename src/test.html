@@ -6,8 +6,8 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title></title>
   <link href="https://stackpath.bootstrapcdn.com/bootswatch/4.2.1/darkly/bootstrap.min.css" rel="stylesheet" integrity="sha384-F7cPHYSdE3FzBKvdxDKyFow9Y28Yq7KGHQOKpOI+rwc8s6jJnp///mpEJAib2EM6" crossorigin="anonymous">
-  <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@0.14.1"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/mobilenet@0.2.2"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.1.0"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/mobilenet@1.0.0"></script>
   <style>
 
   </style>
@@ -17,36 +17,54 @@
     <div class="row">
       <div class="col">
         <input class="file-input" type="file" accept="image/*" capture="environment">
-        <img class="photo-preview" />
+        <img src class="photo-preview" />
         <pre><code class="results code"></code></pre>
       </div>
     </div>
   </div>
 <script>
-  const fileInput = document.querySelector('.file-input');
-  fileInput.addEventListener('change', (changeEvent) => {
-    const [ file ] = changeEvent.target.files;
-    console.log(file);
-    test(file);
-  });
-  function test(file) {
-    const reader  = new FileReader();
-    reader.addEventListener('load', function(loadEvent)  {
-      // const image = document.createElement("img");
-      // image.src = loadEvent.target.result;
-      // document.body.appendChild(image);
-      const image = document.querySelector('.photo-preview');
-      image.src = loadEvent.target.result;
-      image.classList.add('img-fluid');
-    })
-    reader.readAsDataURL(file);
+  function getBase64(file) {
+    return new Promise((resolve, reject) => {
+      const reader = new FileReader();
+      reader.readAsDataURL(file);
+      reader.onload = () => resolve([
+        reader.result,
+        file,
+      ]);
+      reader.onerror = error => reject(error);
+    });
   }
+
+  function setPreviewImage(imgSelector, base64img) {
+    const previewImg = document.querySelector(imgSelector);
+    previewImg.src = base64img;
+  }
+
+  async function getImageFromFileInput(fileInput) {
+    const file = fileInput.files[0];
+    const base64 = await getBase64(file)
+      .then(data => data)
+      .catch((error) => {
+        console.error(error);
+      });
+    return base64;
+  }
+
+  const photoFileElement = document.querySelector('.file-input');
+  photoFileElement.addEventListener('change', async function () {
+    const imageData = await getImageFromFileInput(this);
+    // console.log(imageData);
+    setPreviewImage('.photo-preview', imageData[0]);
+    console.log(imageData[1]);
+  });
 
   const image = document.querySelector('.photo-preview');
   image.addEventListener('load', async (event) => {
     try {
-      const model = await mobilenet.load(1, 1.0);
-      const predictions = await model.classify(image, 10);
+      let tensor = tf.browser.fromPixels(image)
+      console.log(event);
+      const model = await mobilenet.load(2, 1.0);
+      const predictions = await model.classify(tensor, 10);
       console.log(predictions);
       const resultsMarkup = getResultsMarkup(predictions);
       document.querySelector('.results').innerHTML = resultsMarkup;
