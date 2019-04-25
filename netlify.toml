@@ -1,0 +1,19 @@
+[context.production]
+  command = "yarn build"
+  publish = "dist"
+
+[[redirects]]
+  from = "https://whatdat.netlify.com/*"
+  to = "https://whatdat.app/:splat"
+  status = 301
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-XSS-Protection = "1; mode=block"
+    X-Content-Type-Options = "nosniff"
+    Content-Security-Policy = "form-action https:"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Strict-Transport-Security = "max-age=2592000"
+    Feature-Policy = "geolocation 'self'; midi 'none'; notifications 'self'; push 'self'; sync-xhr 'self'; microphone 'self'; camera 'self'; magnetometer 'none'; gyroscope 'none'; speaker 'self'; vibrate 'self'; fullscreen 'self'; payment 'none'"
