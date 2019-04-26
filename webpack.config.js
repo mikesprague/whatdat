@@ -1,5 +1,6 @@
 const path = require('path');
 const WebPackBar = require('webpackbar');
+const WorkboxPlugin = require('workbox-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const TerserPlugin = require('terser-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
@@ -63,6 +64,10 @@ const webpackPlugins = [
   new MiniCssExtractPlugin({
     filename: './css/styles.css',
     chunkFilename: './css/[id].css',
+  }),
+  new WorkboxPlugin.GenerateSW({
+    clientsClaim: true,
+    skipWaiting: true,
   }),
   new CopyWebpackPlugin([{
     from: './src/*.js*',
