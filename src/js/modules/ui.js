@@ -63,12 +63,15 @@ export function showInstallAlert() {
   swal.fire({
     title: 'What Dat?!?',
     text: `${updateMessage}`,
+    cancelButtonText: "No thanks, I'll do it later",
     confirmButtonText: 'Reload for Latest Updates',
     footer: `${releaseNotesLink}`,
+    showCancelButton: true,
     type: 'success',
-    onClose: () => {
+  }).then((result) => {
+    if (result.value === true) {
       reloadWindow();
-    },
+    }
   });
 }
 

@@ -1,12 +1,12 @@
 export const startMarkup = `
   <div class="text-center">
-    <button class="btnStartApp btn btn-large btn-danger text-center rounded-circle mb-5"><i class="fas fa-camera"></i></button>
+    <button class="btnStartApp btn btn-large btn-danger mb-3 mt-3"><i class="fas fa-camera"></i> Start!</button>
   </div>
   <p class="text-center">
-    <strong><em>
-      NOTE: What Dat?!? uses your devices's camera. You will be asked for permission if this is your first
-      time using the app - the app won't work if you don't approve camera access.
-    </em></strong>
+    <em>
+      <strong>PLEASE NOTE:</strong> What Dat?!? uses your devices's camera. You will be asked for permission if this is your first
+      time using the app - this app will NOT work if you don't approve camera access.
+    </em>
   </p>
 `;
 
@@ -28,30 +28,44 @@ export const cameraMarkup = `
   </div>
 `;
 
-function getResultsTableMarkup(data) {
-  const tableRowMarkup = data.map(prediction => `
-    <tr class="objectPrediction" data-bbox="${prediction.bbox.join()}">
-      <td>
-        ${Math.round(prediction.score * 100)}%
-      </td>
-      <td>
-        ${prediction.class}
-      </td>
-    </tr>
-  `).join('\n');
+function getResultsTableMarkup(data, isMobilenet = false) {
+  let tableRowMarkup = '';
+  if (isMobilenet) {
+    tableRowMarkup = data.map(prediction => `
+      <tr class="objectPrediction" data-bbox="">
+        <td>
+          ${Math.round(prediction.probability * 100)}%
+        </td>
+        <td>
+          ${prediction.className}
+        </td>
+      </tr>
+    `).join('\n');
+  } else {
+    tableRowMarkup = data.length ? data.map(prediction => `
+      <tr class="objectPrediction" data-bbox="${prediction.bbox.join()}">
+        <td>
+          ${Math.round(prediction.score * 100)}%
+        </td>
+        <td>
+          ${prediction.class}
+        </td>
+      </tr>
+    `).join('\n') : '';
+  }
 
   return tableRowMarkup;
 }
 
-export function getResultsMarkup(data) {
-  const resultsTableMarkup = getResultsTableMarkup(data);
-  const firstPrediction = data[0].class.toLowerCase();
+export function getResultsMarkup(data, isMobilenet = false) {
+  const resultsTableMarkup = getResultsTableMarkup(data, isMobilenet);
+  const firstPrediction = `${isMobilenet ? data[0].className.toLowerCase().split(', ')[0] : data[0].class.toLowerCase()}`;
   const startsWithVowel = firstPrediction.split('')[0].search(/[aeiou]/);
   const resultsMarkup = `
-    <h2 class="lead-1 text-center">dat's ${startsWithVowel === -1 ? 'a' : 'an'} ${firstPrediction}!</h2>
+    <h2 class="lead-1 text-center">${isMobilenet ? 'dat might be' : "dat's"} ${startsWithVowel === -1 ? 'a' : 'an'} ${firstPrediction}!</h2>
     <div class="center">
-    <!-- <details>
-      <summary class="text-muted text-center">View all objects identified<br><small>(tap/click on a row to highlight object)</small></summary>
+    <details>
+      <summary class="text-muted text-center">View all ${isMobilenet ? 'possibilities' : 'objects identified'}<!--<br><small>(tap/click on a row to highlight object)</small>--></summary>
       <table class="table table-striped table-bordered table-hover">
         <thead>
           <tr>
@@ -63,7 +77,7 @@ export function getResultsMarkup(data) {
           ${resultsTableMarkup}
         </tbody>
       </table>
-    </details> -->
+    </details>
     ${startOverButtonMarkup}
     </div>
   `;

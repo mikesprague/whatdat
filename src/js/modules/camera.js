@@ -1,4 +1,4 @@
-// import * as mobilenet from '@tensorflow-models/mobilenet';
+import * as mobilenet from '@tensorflow-models/mobilenet';
 import * as cocoSsd from '@tensorflow-models/coco-ssd';
 import * as templates from './templates';
 import * as ui from './ui';
@@ -9,14 +9,10 @@ export function clearPhoto() {
   const context = canvas.getContext('2d');
   context.fillStyle = '#aaa';
   context.fillRect(0, 0, canvas.width, canvas.height);
-  const data = canvas.toDataURL('image/png');
-  const photo = document.querySelector('.photo');
-  photo.setAttribute('src', data);
 }
 
 export function takePhoto() {
   const canvas = document.querySelector('.canvas');
-  const photo = document.querySelector('.photo');
   const player = document.querySelector('.player');
   const context = canvas.getContext('2d');
   const playerWidth = player.offsetWidth;
@@ -25,9 +21,7 @@ export function takePhoto() {
   canvas.width = playerWidth;
   canvas.height = playerHeight;
   context.drawImage(player, 0, 0, playerWidth, playerWidth * playerHeight / playerWidth);
-  const data = canvas.toDataURL('image/png');
-  photo.setAttribute('src', data);
-  photo.setAttribute('style', 'width: 100%; height: auto;');
+  canvas.setAttribute('style', 'width: 100%; height: auto;');
 }
 
 export function stopVideoCamera(videoPlayerSelector) {
@@ -56,41 +50,58 @@ export async function startCamera() {
     reportError(error);
   }
 
+  const drawBoundingBox = async (prediction) => {
+    const canvas = document.querySelector('.canvas');
+    const context = canvas.getContext('2d');
+
+    context.beginPath();
+    context.rect(prediction.bbox[0], prediction.bbox[1], prediction.bbox[2], prediction.bbox[3]);
+    context.strokeStyle = 'rgb(0, 0, 0)';
+    context.stroke();
+    context.fillStyle = 'rgba(255, 255, 255, 0.25)';
+    context.fill();
+    context.strokeStyle = 'rgb(255, 0, 0)';
+    context.stroke();
+    return context;
+  };
+
+  const handlePredictions = (predictions, isMobilenet = false) => {
+    const resultsMarkup = templates.getResultsMarkup(predictions, isMobilenet);
+
+    if (!isMobilenet) {
+      // predictions.map(prediction => drawBoundingBox(prediction));
+      drawBoundingBox(predictions[0]);
+    }
+
+    ui.hideElement('.btnTakePhoto');
+    ui.populateElementWithMarkup('.results', resultsMarkup);
+    ui.initElementEventHandler('.btnStartOver', 'click', startCamera);
+  };
+
+  const getAdditionalPossibilities = async () => {
+    const canvas = document.querySelector('.canvas');
+    const model = await mobilenet.load(2, 1.0);
+    const predictions = await model.classify(canvas, 10);
+    handlePredictions(predictions, true);
+  };
+
   const takePhotoClickHandler = async () => {
     takePhoto();
-
     stopVideoCamera('.player');
     ui.hideElement('.player');
-    ui.showElement('.photo');
+    ui.showElement('.canvas');
     ui.showElement('.results');
     ui.disableButton('.btnTakePhoto', '<i class="fas fa-sync fa-spin"></i> identifying ...');
 
     try {
-      const photo = document.querySelector('.photo');
-      // const model = await mobilenet.load(1, 1.0);
-      // const predictions = await model.classify(photo, 10);
-
-      const model = await cocoSsd.load('lite_mobilenet_v2');
-      const predictions = await model.detect(photo);
-      const prediction = predictions[0];
       const canvas = document.querySelector('.canvas');
-      const context = canvas.getContext('2d');
-      const resultsMarkup = templates.getResultsMarkup(predictions);
-
-      ui.hideElement('.photo');
-      ui.showElement('.canvas');
-      context.beginPath();
-      context.rect(prediction.bbox[0], prediction.bbox[1], prediction.bbox[2], prediction.bbox[3]);
-      context.strokeStyle = 'rgb(0, 0, 0)';
-      context.stroke();
-      context.fillStyle = 'rgba(255, 255, 255, 0.25)';
-      context.fill();
-      context.strokeStyle = 'rgb(255, 0, 0)';
-      context.stroke();
-
-      ui.hideElement('.btnTakePhoto');
-      ui.populateElementWithMarkup('.results', resultsMarkup);
-      ui.initElementEventHandler('.btnStartOver', 'click', startCamera);
+      const model = await cocoSsd.load('mobilenet_v2');
+      const predictions = await model.detect(canvas, 10);
+      if (predictions.length) {
+        handlePredictions(predictions);
+      } else {
+        getAdditionalPossibilities();
+      }
     } catch (error) {
       reportError(error);
     }
