@@ -12,6 +12,7 @@ export function reloadWindow() {
   window.location.reload(true);
 }
 
+/* eslint-disable no-console */
 export function registerServiceWorker() {
   register('/service-worker.js', {
     // ready() {
@@ -37,3 +38,15 @@ export function registerServiceWorker() {
     },
   });
 }
+
+export function reportError(error) {
+  const debug = process.env.NODE_ENV === 'development';
+  if (debug) {
+    console.error(error);
+  } else {
+    /* eslint-disable no-undef */
+    bugsnagClient.notify(error);
+    /* eslint-enable no-undef */
+  }
+}
+/* eslint-enable no-console */

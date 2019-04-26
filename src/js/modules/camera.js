@@ -2,6 +2,7 @@
 import * as cocoSsd from '@tensorflow-models/coco-ssd';
 import * as templates from './templates';
 import * as ui from './ui';
+import { reportError } from './helpers';
 
 export function clearPhoto() {
   const canvas = document.querySelector('.canvas');
@@ -52,9 +53,7 @@ export async function startCamera() {
     player.play();
     player.setAttribute('style', 'width: 100%; height: auto;');
   } catch (error) {
-    /* eslint-disable no-undef */
-    bugsnagClient.notify(error);
-    /* eslint-enable no-undef */
+    reportError(error);
   }
 
   const takePhotoClickHandler = async () => {
@@ -93,9 +92,7 @@ export async function startCamera() {
       ui.populateElementWithMarkup('.results', resultsMarkup);
       ui.initElementEventHandler('.btnStartOver', 'click', startCamera);
     } catch (error) {
-      /* eslint-disable no-undef */
-      bugsnagClient.notify(error);
-      /* eslint-enable no-undef */
+      reportError(error);
     }
   };
 
