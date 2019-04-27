@@ -1,6 +1,6 @@
 export const startMarkup = `
   <div class="text-center">
-    <button class="btnStartApp btn btn-large btn-danger mb-3 mt-3"><i class="fas fa-camera"></i> Start!</button>
+    <button class="btnStartApp btn btn-large btn-danger mb-5 mt-5"><i class="fas fa-camera"></i> Start!</button>
   </div>
   <p class="text-center">
     <em>
@@ -37,7 +37,7 @@ function getResultsTableMarkup(data, isMobilenet = false) {
           ${Math.round(prediction.probability * 100)}%
         </td>
         <td>
-          ${prediction.className}
+          ${prediction.className.replace(/\bcat\b/g, 'cack')}
         </td>
       </tr>
     `).join('\n');
@@ -48,7 +48,7 @@ function getResultsTableMarkup(data, isMobilenet = false) {
           ${Math.round(prediction.score * 100)}%
         </td>
         <td>
-          ${prediction.class}
+          ${prediction.class.replace(/\bcat\b/g, 'cack')}
         </td>
       </tr>
     `).join('\n') : '';
@@ -62,7 +62,7 @@ export function getResultsMarkup(data, isMobilenet = false) {
   const firstPrediction = `${isMobilenet ? data[0].className.toLowerCase().split(', ')[0] : data[0].class.toLowerCase()}`;
   const startsWithVowel = firstPrediction.split('')[0].search(/[aeiou]/);
   const resultsMarkup = `
-    <h2 class="lead-1 text-center">${isMobilenet ? 'dat might be' : "dat's"} ${startsWithVowel === -1 ? 'a' : 'an'} ${firstPrediction}!</h2>
+    <h2 class="lead-1 text-center">${isMobilenet ? 'dat might be' : "dat's"} ${startsWithVowel === -1 ? 'a' : 'an'} ${firstPrediction.replace(/\bcat\b/g, 'cack')}!</h2>
     <div class="center">
     <details>
       <summary class="text-muted text-center">View all ${isMobilenet ? 'possibilities' : 'objects identified'}<!--<br><small>(tap/click on a row to highlight object)</small>--></summary>
