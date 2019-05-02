@@ -36,7 +36,7 @@
     "@fullhuman/postcss-purgecss": "^1.2.0",
     "@tensorflow-models/coco-ssd": "^1.0.1",
     "@tensorflow-models/mobilenet": "^1.0.1",
-    "@tensorflow/tfjs": "^1.1.0",
+    "@tensorflow/tfjs": "^1.1.2",
     "autoprefixer": "^9.5.1",
     "bootstrap": "^4.3.1",
     "bootswatch": "^4.3.1",
