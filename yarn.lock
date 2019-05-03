@@ -944,10 +944,10 @@
   resolved "https://registry.yarnpkg.com/@types/node/-/node-11.10.5.tgz#fbaca34086bdc118011e1f05c47688d432f2d571"
   integrity sha512-DuIRlQbX4K+d5I+GMnv+UfnGh+ist0RdlvOp+JZ7ePJ6KQONCFQv/gKYSU1ZzbVdFSUCKZOltjmpFAGGv5MdYA==
 
-"@types/node@^11.13.5":
-  version "11.13.5"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-11.13.5.tgz#266564afa8a6a09dc778dfacc703ed3f09c80516"
-  integrity sha512-/OMMBnjVtDuwX1tg2pkYVSqRIDSmNTnvVvmvP/2xiMAAWf4a5+JozrApCrO4WCAILmXVxfNoQ3E+0HJbNpFVGg==
+"@types/node@^11.13.9":
+  version "11.13.9"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-11.13.9.tgz#f80697caca7f7fb2526527a5c5a2743487f05ccc"
+  integrity sha512-NJ4yuEVw5podZbINp3tEqUIImMSAEHaCXRiWCf3KC32l6hIKf0iPJEh2uZdT0fELfRYk310yLmMXqy2leZQUbg==
 
 "@types/q@^1.5.1":
   version "1.5.1"
@@ -7446,13 +7446,13 @@ rollup-plugin-visualizer@~1.1.1:
     source-map "^0.7.3"
     typeface-oswald "0.0.54"
 
-rollup@^1.10.1:
-  version "1.10.1"
-  resolved "https://registry.yarnpkg.com/rollup/-/rollup-1.10.1.tgz#aeb763bbe98f707dc6496708db88372fa66687e7"
-  integrity sha512-pW353tmBE7QP622ITkGxtqF0d5gSRCVPD9xqM+fcPjudeZfoXMFW2sCzsTe2TU/zU1xamIjiS9xuFCPVT9fESw==
+rollup@^1.11.0:
+  version "1.11.0"
+  resolved "https://registry.yarnpkg.com/rollup/-/rollup-1.11.0.tgz#a4e157759eed90f935ce2827c4beee8a9172386d"
+  integrity sha512-6a/3P64AW7rXNQ3rQrkOoH4Dt1YVXBCX7CRaUDklfioB9mxSQMA9sBctN/8YifDPNeRgLnrSDQRb+5ym+WGCiw==
   dependencies:
     "@types/estree" "0.0.39"
-    "@types/node" "^11.13.5"
+    "@types/node" "^11.13.9"
     acorn "^6.1.1"
 
 run-async@^0.1.0:
@@ -8247,10 +8247,10 @@ svgo@^1.0.0:
     unquote "~1.1.1"
     util.promisify "~1.0.0"
 
-sweetalert2@^8.9.0:
-  version "8.9.0"
-  resolved "https://registry.yarnpkg.com/sweetalert2/-/sweetalert2-8.9.0.tgz#94a46eb79b0cb069f41f0bc7937f020fd843101d"
-  integrity sha512-gI+wL44QRbfd6FvRVB8KKLQPhD/8jP3XUNrvYGcSlU7IA09dQtQw3rrLCbM3c+HY0L3O8VTz1Gvu29n8ryIgag==
+sweetalert2@^8.10.0:
+  version "8.10.0"
+  resolved "https://registry.yarnpkg.com/sweetalert2/-/sweetalert2-8.10.0.tgz#45f3227eaeb2be4dc828f6ab655574413b0cc6e1"
+  integrity sha512-7N1Zld9uEZfy1h5jNGFVmcrb4hQmcZBcpQSZbBgs+gyQr5sy0wrWKMH+8go0WO+IHdzK5YPHNWQGf5NbbCWJOQ==
 
 symbol-observable@1.0.1:
   version "1.0.1"
