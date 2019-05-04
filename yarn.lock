@@ -876,10 +876,10 @@
   dependencies:
     "@hapi/hoek" "6.x.x"
 
-"@tensorflow-models/coco-ssd@^1.0.1":
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/@tensorflow-models/coco-ssd/-/coco-ssd-1.0.1.tgz#7b038f08d7e23528c52491e4e80b946bcf30bae8"
-  integrity sha512-3oHdEYUAvQu6rbCu08K0j2tI3K+C/p9HVi8OWs2mrhAj8/b91nEz/ZKqmRG10AJffOJCFM5T0FWzr5xadBxOdw==
+"@tensorflow-models/coco-ssd@^1.0.2":
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/@tensorflow-models/coco-ssd/-/coco-ssd-1.0.2.tgz#8b755ff7cf6c0baf2bf94a545f60780e3fab0e3e"
+  integrity sha512-WeD6cxSFac99hdf/JzzDYd4dvJVANfwfm5q2XLbCU5UNVC0Sn7eLjq9c+vPu44N9MMESD+v0QgeVEuEv6eTrwA==
 
 "@tensorflow-models/mobilenet@^1.0.1":
   version "1.0.1"
@@ -7446,10 +7446,10 @@ rollup-plugin-visualizer@~1.1.1:
     source-map "^0.7.3"
     typeface-oswald "0.0.54"
 
-rollup@^1.11.0:
-  version "1.11.0"
-  resolved "https://registry.yarnpkg.com/rollup/-/rollup-1.11.0.tgz#a4e157759eed90f935ce2827c4beee8a9172386d"
-  integrity sha512-6a/3P64AW7rXNQ3rQrkOoH4Dt1YVXBCX7CRaUDklfioB9mxSQMA9sBctN/8YifDPNeRgLnrSDQRb+5ym+WGCiw==
+rollup@^1.11.2:
+  version "1.11.2"
+  resolved "https://registry.yarnpkg.com/rollup/-/rollup-1.11.2.tgz#bc5169a85592a45ef3bc4c0ee94e1f931a7fa4b5"
+  integrity sha512-H5sS7GZ/Rn0t119Et8mw0QXtg5HTOI/1FL57EKHk5oduRmGaraOf3KcEt6j+dXJ9tXxWQkG+/FBjPS4dzxo6EA==
   dependencies:
     "@types/estree" "0.0.39"
     "@types/node" "^11.13.9"
@@ -8821,10 +8821,10 @@ webpack-bugsnag-plugins@^1.4.0:
     bugsnag-sourcemaps "^1.0.7"
     run-parallel-limit "^1.0.3"
 
-webpack-cli@^3.3.1:
-  version "3.3.1"
-  resolved "https://registry.yarnpkg.com/webpack-cli/-/webpack-cli-3.3.1.tgz#98b0499c7138ba9ece8898bd99c4f007db59909d"
-  integrity sha512-c2inFU7SM0IttEgF7fK6AaUsbBnORRzminvbyRKS+NlbQHVZdCtzKBlavRL5359bFsywXGRAItA5di/IruC8mg==
+webpack-cli@^3.3.2:
+  version "3.3.2"
+  resolved "https://registry.yarnpkg.com/webpack-cli/-/webpack-cli-3.3.2.tgz#aed2437b0db0a7faa2ad28484e166a5360014a91"
+  integrity sha512-FLkobnaJJ+03j5eplxlI0TUxhGCOdfewspIGuvDVtpOlrAuKMFC57K42Ukxqs1tn8947/PM6tP95gQc0DCzRYA==
   dependencies:
     chalk "^2.4.1"
     cross-spawn "^6.0.5"

@@ -34,7 +34,7 @@
     "@fortawesome/pro-regular-svg-icons": "^5.8.1",
     "@fortawesome/pro-solid-svg-icons": "^5.8.1",
     "@fullhuman/postcss-purgecss": "^1.2.0",
-    "@tensorflow-models/coco-ssd": "^1.0.1",
+    "@tensorflow-models/coco-ssd": "^1.0.2",
     "@tensorflow-models/mobilenet": "^1.0.1",
     "@tensorflow/tfjs": "^1.1.2",
     "autoprefixer": "^9.5.1",
@@ -43,7 +43,7 @@
     "cssnano": "^4.1.10",
     "logrocket": "^0.6.21",
     "register-service-worker": "^1.6.2",
-    "rollup": "^1.11.0",
+    "rollup": "^1.11.2",
     "sweetalert2": "^8.10.0"
   },
   "devDependencies": {
@@ -78,7 +78,7 @@
     "terser-webpack-plugin": "^1.2.3",
     "webpack": "^4.30.0",
     "webpack-bugsnag-plugins": "^1.4.0",
-    "webpack-cli": "^3.3.1",
+    "webpack-cli": "^3.3.2",
     "webpack-dev-server": "^3.3.1",
     "webpackbar": "^3.2.0",
     "workbox-webpack-plugin": "^4.3.1"
