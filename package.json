@@ -1,6 +1,6 @@
 {
   "name": "whatdat.app",
-  "version": "0.2.7",
+  "version": "0.2.8",
   "description": "What Dat?!?",
   "main": "src/index.html",
   "private": true,
@@ -11,8 +11,12 @@
     "serve": "yarn webpack:serve",
     "start": "yarn serve",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "ver:bump": "yarn version --no-git-tag-version --message \":bookmark: Bump version\" --patch",
-    "ver:tag": "APP_VERSION=$(node -p \"require('./package.json').version\") && git tag $APP_VERSION -s -m \"Bump version v{$APP_VERSION}\"",
+    "ver:bump": "yarn version --no-git-tag-version",
+    "ver:patch": "yarn ver:bump --patch && yarn ver:tag && ver:publish",
+    "ver:minor": "yarn ver:bump --minor && yarn ver:tag && ver:publish",
+    "ver:major": "yarn ver:bump --major && yarn ver:tag && ver:publish",
+    "ver:publish": "git push --all && git push --tags",
+    "ver:tag": "APP_VERSION=$(node -p \"require('./package.json').version\") && git add package.json && git commit -s -m \":bookmark: Bump version v$APP_VERSION\" && git tag $APP_VERSION -s -m \"Bump version v$APP_VERSION\"",
     "webpack": "cross-env NODE_ENV=production webpack --config ./webpack.config.js -p --colors --display minimal",
     "webpack:dev": "cross-env NODE_ENV=development webpack --config ./webpack.config.js -d --colors --display minimal",
     "webpack:serve": "cross-env NODE_ENV=development webpack-dev-server --port 3000"
