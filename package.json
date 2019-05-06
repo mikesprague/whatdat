@@ -50,7 +50,7 @@
     "logrocket": "^0.6.21",
     "register-service-worker": "^1.6.2",
     "rollup": "^1.11.3",
-    "sweetalert2": "^8.10.0"
+    "sweetalert2": "^8.10.1"
   },
   "devDependencies": {
     "@babel/cli": "^7.4.4",
