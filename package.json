@@ -19,7 +19,9 @@
     "ver:tag": "APP_VERSION=$(node -p \"require('./package.json').version\") && git add package.json && git commit -s -m \":bookmark: Bump version v$APP_VERSION\" && git tag $APP_VERSION -s -m \"Bump version v$APP_VERSION\"",
     "webpack": "cross-env NODE_ENV=production webpack --config ./webpack.config.js -p --colors --display minimal",
     "webpack:dev": "cross-env NODE_ENV=development webpack --config ./webpack.config.js -d --colors --display minimal",
-    "webpack:serve": "cross-env NODE_ENV=development webpack-dev-server --port 3000"
+    "webpack:serve": "cross-env NODE_ENV=development webpack-dev-server --port 3000",
+    "snyk-protect": "snyk protect",
+    "prepublish": "yarn snyk-protect"
   },
   "author": {
     "name": "Michael Sprague",
@@ -50,6 +52,7 @@
     "logrocket": "^0.6.21",
     "register-service-worker": "^1.6.2",
     "rollup": "^1.11.3",
+    "snyk": "^1.163.0",
     "sweetalert2": "^8.10.2"
   },
   "devDependencies": {
