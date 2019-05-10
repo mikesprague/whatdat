@@ -52,8 +52,8 @@
     "logrocket": "^0.6.21",
     "register-service-worker": "^1.6.2",
     "rollup": "^1.11.3",
-    "snyk": "^1.163.1",
-    "sweetalert2": "^8.10.4"
+    "snyk": "^1.163.2",
+    "sweetalert2": "^8.10.6"
   },
   "devDependencies": {
     "@babel/cli": "^7.4.4",
