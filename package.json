@@ -1,6 +1,6 @@
 {
   "name": "whatdat.app",
-  "version": "0.2.18",
+  "version": "0.2.19",
   "description": "What Dat?!?",
   "main": "src/index.html",
   "private": true,
