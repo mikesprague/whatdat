@@ -51,9 +51,9 @@
     "cssnano": "^4.1.10",
     "logrocket": "^0.6.21",
     "register-service-worker": "^1.6.2",
-    "rollup": "^1.12.0",
-    "snyk": "^1.164.0",
-    "sweetalert2": "^8.10.7"
+    "rollup": "^1.12.1",
+    "snyk": "^1.165.0",
+    "sweetalert2": "^8.11.1"
   },
   "devDependencies": {
     "@babel/cli": "^7.4.4",
