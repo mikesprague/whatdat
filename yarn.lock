@@ -3503,10 +3503,10 @@ eslint-plugin-html@^5.0.5:
   dependencies:
     htmlparser2 "^3.10.0"
 
-eslint-plugin-import@^2.17.2:
-  version "2.17.2"
-  resolved "https://registry.yarnpkg.com/eslint-plugin-import/-/eslint-plugin-import-2.17.2.tgz#d227d5c6dc67eca71eb590d2bb62fb38d86e9fcb"
-  integrity sha512-m+cSVxM7oLsIpmwNn2WXTJoReOF9f/CtLMo7qOVmKd1KntBy0hEcuNZ3erTmWjx+DxRO0Zcrm5KwAvI9wHcV5g==
+eslint-plugin-import@^2.17.3:
+  version "2.17.3"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-import/-/eslint-plugin-import-2.17.3.tgz#00548b4434c18faebaba04b24ae6198f280de189"
+  integrity sha512-qeVf/UwXFJbeyLbxuY8RgqDyEKCkqV7YC+E5S5uOjAp4tOc8zj01JP3ucoBM8JcEqd1qRasJSg6LLlisirfy0Q==
   dependencies:
     array-includes "^3.0.3"
     contains-path "^0.1.0"
@@ -3518,7 +3518,7 @@ eslint-plugin-import@^2.17.2:
     lodash "^4.17.11"
     minimatch "^3.0.4"
     read-pkg-up "^2.0.0"
-    resolve "^1.10.0"
+    resolve "^1.11.0"
 
 eslint-plugin-markdown@^1.0.0:
   version "1.0.0"
@@ -8072,10 +8072,10 @@ resolve-url@^0.2.1:
   resolved "https://registry.yarnpkg.com/resolve-url/-/resolve-url-0.2.1.tgz#2c637fe77c893afd2a663fe21aa9080068e2052a"
   integrity sha1-LGN/53yJOv0qZj/iGqkIAGjiBSo=
 
-resolve@^1.10.0:
-  version "1.10.0"
-  resolved "https://registry.yarnpkg.com/resolve/-/resolve-1.10.0.tgz#3bdaaeaf45cc07f375656dfd2e54ed0810b101ba"
-  integrity sha512-3sUr9aq5OfSg2S9pNtPA9hL1FVEAjvfOC4leW0SNf/mpnaakz2a9femSd6LqAww2RaFctwyf1lCqnTHuF1rxDg==
+resolve@^1.11.0:
+  version "1.11.0"
+  resolved "https://registry.yarnpkg.com/resolve/-/resolve-1.11.0.tgz#4014870ba296176b86343d50b60f3b50609ce232"
+  integrity sha512-WL2pBDjqT6pGUNSUzMw00o4T7If+z4H2x3Gz893WoUQ5KW8Vr9txp00ykiP16VBaZF5+j/OcXJHZ9+PCvdiDKw==
   dependencies:
     path-parse "^1.0.6"
 
@@ -9240,10 +9240,10 @@ svgo@^1.0.0:
     unquote "~1.1.1"
     util.promisify "~1.0.0"
 
-sweetalert2@^8.11.5:
-  version "8.11.5"
-  resolved "https://registry.yarnpkg.com/sweetalert2/-/sweetalert2-8.11.5.tgz#ea1c49a55ffd43187d6bf0e5c6023a3aaa3bec95"
-  integrity sha512-SOuIhuN2MJVFJitJkZzNmckjSeE5xnyOHyNu4yjxlMR56NxhHE1DI7EGH1WGVzvmZGTmuEqhItAA5yTDT+VPig==
+sweetalert2@^8.11.6:
+  version "8.11.6"
+  resolved "https://registry.yarnpkg.com/sweetalert2/-/sweetalert2-8.11.6.tgz#7687c5e5744f216ceae294c10e224bf111479413"
+  integrity sha512-UFtFNdlwk+NgsRIlGMFA/yz9Pq7D8c32Y11TGEc4t3avrn8f0EFlxP2+Q0JLL219w6PsEglZFfVDmIDEr1816Q==
 
 symbol-observable@1.0.1:
   version "1.0.1"
