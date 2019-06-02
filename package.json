@@ -52,7 +52,7 @@
     "logrocket": "^1.0.0",
     "register-service-worker": "^1.6.2",
     "rollup": "^1.13.1",
-    "snyk": "^1.170.0",
+    "snyk": "^1.171.0",
     "sweetalert2": "^8.11.7"
   },
   "devDependencies": {
