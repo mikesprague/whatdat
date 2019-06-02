@@ -1,6 +1,6 @@
 export const startMarkup = `
   <div class="text-center">
-    <button class="btnStartApp btn btn-large btn-danger mb-5 mt-5"><i class="fas fa-camera"></i> Start!</button>
+    <button class="btnStartApp btn btn-large btn-danger mb-5 mt-5"><i class="fas fa-camera"></i> Start</button>
   </div>
   <p class="text-center">
     <em>
@@ -22,7 +22,9 @@ export const cameraMarkup = `
       </button>
       <div class="results d-none mb-2"></div>
       <video class="player img-fluid center" autoplay title="Tap/click to take photo"></video>
-      <canvas class="canvas d-none"></canvas>
+      <div class="canvas-wrapper">
+        <canvas class="canvas d-none"></canvas>
+      </div>
       <img class="photo img-fluid d-none center" alt="image to identify">
     </div>
   </div>
@@ -34,10 +36,10 @@ function getResultsTableMarkup(data, isMobilenet = false) {
     tableRowMarkup = data.map(prediction => `
       <tr class="objectPrediction" data-bbox="">
         <td>
-          ${Math.round(prediction.probability * 100)}%
+          ${prediction.className}
         </td>
         <td>
-          ${prediction.className.replace(/\bcat\b/g, 'cack')}
+          ${Math.round(prediction.probability * 100)}%
         </td>
       </tr>
     `).join('\n');
@@ -45,10 +47,10 @@ function getResultsTableMarkup(data, isMobilenet = false) {
     tableRowMarkup = data.length ? data.map(prediction => `
       <tr class="objectPrediction" data-bbox="${prediction.bbox.join()}">
         <td>
-          ${Math.round(prediction.score * 100)}%
+          ${prediction.class}
         </td>
         <td>
-          ${prediction.class.replace(/\bcat\b/g, 'cack')}
+          ${Math.round(prediction.score * 100)}%
         </td>
       </tr>
     `).join('\n') : '';
@@ -62,15 +64,15 @@ export function getResultsMarkup(data, isMobilenet = false) {
   const firstPrediction = `${isMobilenet ? data[0].className.toLowerCase().split(', ')[0] : data[0].class.toLowerCase()}`;
   const startsWithVowel = firstPrediction.split('')[0].search(/[aeiou]/);
   const resultsMarkup = `
-    <h2 class="lead-1 text-center">${isMobilenet ? 'dat might be' : "dat's"} ${startsWithVowel === -1 ? 'a' : 'an'} ${firstPrediction.replace(/\bcat\b/g, 'cack')}!</h2>
+    <h2 class="lead-1 text-center">${isMobilenet ? 'dat might be' : "dat's"} ${startsWithVowel === -1 ? 'a' : 'an'} ${firstPrediction}!</h2>
     <div class="center">
     <details>
-      <summary class="text-muted text-center">View all ${isMobilenet ? 'possibilities' : 'objects identified'}<!--<br><small>(tap/click on a row to highlight object)</small>--></summary>
+      <summary class="text-muted text-center">All ${isMobilenet ? 'classifications' : 'objects identified'}<!--<br><small>(tap/click on a row to highlight object)</small>--></summary>
       <table class="table table-striped table-bordered table-hover">
         <thead>
           <tr>
-            <th scope="col">Probability</th>
             <th scope="col">Object</th>
+            <th scope="col">Confidence Score</th>
           </tr>
         </thead>
         <tbody>
