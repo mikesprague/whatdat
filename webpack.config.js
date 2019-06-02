@@ -36,7 +36,8 @@ const webpackRules = [
               purgecss({
                 content: ['./src/*.html', './src/js/modules/templates.js'],
                 fontFace: true,
-                // whitelistPatterns: [//],
+                whitelistPatterns: [/tippy/, /badge/, /badge-pill/, /bg-white/, /text-primary/],
+                whitelistPatternsChildren: [/tippy/, /badge/, /badge-pill/],
               }),
             ];
           },
