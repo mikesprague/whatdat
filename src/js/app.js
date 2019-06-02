@@ -1,70 +1,74 @@
 import '../scss/styles.scss';
-import { register } from 'register-service-worker';
 import bugsnag from '@bugsnag/js';
 import LogRocket from 'logrocket';
-import { isOnline } from './modules/helpers';
-import { startMarkup } from './modules/templates';
+import { register } from 'register-service-worker';
 import { startCamera } from './modules/camera';
+import {
+  handleOffline,
+  handleOnline,
+  isOnline,
+  isProduction,
+  reportError,
+} from './modules/helpers';
+import { startMarkup } from './modules/templates';
 import {
   populateElementWithMarkup,
   initElementEventHandler,
   initFontAwesomeIcons,
   showInstallAlert,
-  showUpdatedToast,
 } from './modules/ui';
 
-LogRocket.init('skxlwh/whatdat');
+if (isProduction()) {
+  LogRocket.init('skxlwh/whatdat');
 
-window.bugsnagClient = bugsnag('723fa77654c41aae8632bace87a7939f');
+  window.bugsnagClient = bugsnag('723fa77654c41aae8632bace87a7939f');
 
-bugsnag.beforeNotify = (data) => {
-  /* eslint-disable no-param-reassign */
-  data.metaData.sessionURL = LogRocket.sessionURL;
-  /* eslint-enable no-param-reassign */
-  return data;
-};
-
-register('/service-worker.js', {
-  updated() { // updated(registration)
-    // need to add some sort of notification and remove forced refresh
-    console.log('What Dat?!? has been updated to the latest version.');
-    showInstallAlert();
-  },
-  offline() {
-    console.info('No internet connection found. App is running in offline mode.');
-  },
-  error(error) {
-    console.error('Error during service worker registration:', error);
-  },
-});
+  bugsnag.beforeNotify = (data) => {
+    /* eslint-disable no-param-reassign */
+    data.metaData.sessionURL = LogRocket.sessionURL;
+    /* eslint-enable no-param-reassign */
+    return data;
+  };
+}
 
 window.addEventListener('offline', () => {
-  // console.log('Browser offline');
-  window.location.replace('/offline.html');
+  handleOffline();
 }, false);
 
 window.addEventListener('online', () => {
-  // console.log('Browser online');
-  window.location.replace('/');
+  handleOnline();
 }, false);
 
-function initApp() {
-  populateElementWithMarkup('.app', startMarkup);
-  initFontAwesomeIcons();
-  initElementEventHandler('.btnStartApp', 'click', startCamera);
-  showUpdatedToast();
-}
+register('/service-worker.js', {
+  updated() { // updated(registration)
+    // /* eslint-disable no-console */
+    // console.log('What Dat?!? has been updated to the latest version.');
+    // /* eslint-enable no-console */
+    showInstallAlert();
+  },
+  offline() {
+    /* eslint-disable no-console */
+    console.info('No internet connection found. App is currently offline.');
+    /* eslint-enable no-console */
+  },
+  error(error) {
+    /* eslint-disable no-console */
+    console.error('Error during service worker registration:', error);
+    /* eslint-enable no-console */
+    reportError(error);
+  },
+});
 
-function initOffline() {
+function initApp() {
+  if (isOnline()) {
+    populateElementWithMarkup('.app', startMarkup);
+    initElementEventHandler('.btnStartApp', 'click', startCamera);
+  }
   initFontAwesomeIcons();
 }
 
 document.onreadystatechange = (() => {
   if (document.readyState === 'interactive') {
-    if (isOnline()) {
-      initApp();
-    } else {
-      initOffline();
-    }
+    initApp();
   }
 });
