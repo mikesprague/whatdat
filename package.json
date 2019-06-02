@@ -54,6 +54,7 @@
     "rollup": "^1.13.1",
     "snyk": "^1.171.0",
     "sweetalert2": "^8.11.7",
+    "tippy.js": "^4.3.1",
     "tracking": "^1.1.3"
   },
   "devDependencies": {
