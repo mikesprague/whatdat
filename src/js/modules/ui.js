@@ -1,11 +1,12 @@
-import swal from 'sweetalert2';
-import { library, dom } from '@fortawesome/fontawesome-svg-core';
-import {
-  faCamera, faSync,
-} from '@fortawesome/pro-solid-svg-icons';
 import {
   faCamera as faCameraLight, faWifiSlash,
 } from '@fortawesome/pro-light-svg-icons';
+import {
+  faCamera, faSync,
+} from '@fortawesome/pro-solid-svg-icons';
+import { library, dom } from '@fortawesome/fontawesome-svg-core';
+import swal from 'sweetalert2';
+import tippy from 'tippy.js';
 import { reloadWindow } from './helpers';
 
 export function initFontAwesomeIcons() {
@@ -16,6 +17,31 @@ export function initFontAwesomeIcons() {
     faWifiSlash,
   );
   dom.watch();
+}
+
+export function initTooltips() {
+  tippy('.has-tooltip', {
+    a11y: false,
+    allowHTML: true,
+    arrow: false,
+    boundary: 'scrollParent',
+    distance: -32,
+    hideOnClick: true,
+    showOnInit: false,
+    size: 'regular',
+    touch: true,
+    trigger: 'click', // mouseenter
+  });
+}
+
+export function destroyTooltips() {
+  Array.from(document.querySelectorAll('.tippy-popper'))
+    .map(tooltip => tooltip.remove());
+}
+
+export function showTooltip(tooltipElement) {
+  const el = document.querySelector(tooltipElement);
+  el.click();
 }
 
 export function populateElementWithMarkup(elementSelector, markupTemplate) {

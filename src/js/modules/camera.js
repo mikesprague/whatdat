@@ -1,12 +1,14 @@
 import * as mobilenet from '@tensorflow-models/mobilenet';
 import * as cocoSsd from '@tensorflow-models/coco-ssd';
+// import * as tracking from 'tracking';
+import { reportError } from './helpers';
 import * as templates from './templates';
 import * as ui from './ui';
-import { reportError } from './helpers';
 
 export function clearPhoto() {
   const canvas = document.querySelector('.canvas');
   const context = canvas.getContext('2d');
+  ui.destroyTooltips();
   context.fillStyle = '#aaa';
   context.fillRect(0, 0, canvas.width, canvas.height);
 }
@@ -31,6 +33,7 @@ export function stopVideoCamera(videoPlayerSelector) {
 
 export async function startCamera() {
   ui.populateElementWithMarkup('.app', templates.cameraMarkup);
+  ui.destroyTooltips();
 
   let streaming = false;
 
@@ -50,27 +53,42 @@ export async function startCamera() {
     reportError(error);
   }
 
-  const drawBoundingBox = async (prediction) => {
-    const canvas = document.querySelector('.canvas');
-    const context = canvas.getContext('2d');
-
-    context.beginPath();
-    context.rect(prediction.bbox[0], prediction.bbox[1], prediction.bbox[2], prediction.bbox[3]);
-    context.strokeStyle = 'rgb(0, 0, 0)';
-    context.stroke();
-    context.fillStyle = 'rgba(255, 255, 255, 0.25)';
-    context.fill();
-    context.strokeStyle = 'rgb(255, 0, 0)';
-    context.stroke();
-    return context;
+  const drawBoundingBox = async (prediction, isHidden = false) => {
+    const wrapper = document.querySelector('.canvas-wrapper');
+    const div = document.createElement('div');
+    div.style.position = 'absolute';
+    div.style.border = '2px solid rgb(223, 105, 25)';
+    div.style.backgroundColor = 'rgba(255, 255, 255, 0.25)';
+    div.style.left = `${Math.round(prediction.bbox[0])}px`;
+    div.style.top = `${Math.round(prediction.bbox[1])}px`;
+    div.style.width = `${Math.round(prediction.bbox[2])}px`;
+    div.style.height = `${Math.round(prediction.bbox[3])}px`;
+    div.setAttribute('data-tippy-content', `
+      <span class='badge badge-primary text-uppercase'>
+        ${prediction.class}
+        <span class='bg-white text-primary' style='margin-left: .35em; padding: 0 .5em;'>${Math.round(prediction.score * 100)}%</span>
+      </span>
+    `);
+    div.classList.add('has-tooltip');
+    div.classList.add('identified-object');
+    if (isHidden) {
+      div.classList.add('d-none');
+    }
+    wrapper.appendChild(div);
+    ui.initTooltips();
+    return div;
   };
 
   const handlePredictions = (predictions, isMobilenet = false) => {
     const resultsMarkup = templates.getResultsMarkup(predictions, isMobilenet);
 
     if (!isMobilenet) {
-      // predictions.map(prediction => drawBoundingBox(prediction));
-      drawBoundingBox(predictions[0]);
+      predictions.map(prediction => drawBoundingBox(prediction));
+      // drawBoundingBox(predictions[0]);
+      // predictions.slice(1).map((prediction, true) => {
+      //   drawBoundingBox(prediction);
+      // });
+      ui.showTooltip('.identified-object');
     }
 
     ui.hideElement('.btnTakePhoto');
@@ -95,7 +113,7 @@ export async function startCamera() {
 
     try {
       const canvas = document.querySelector('.canvas');
-      const model = await cocoSsd.load('lite_mobilenet_v2');
+      const model = await cocoSsd.load('mobilenet_v2'); // lite_mobilenet_v2
       const predictions = await model.detect(canvas, 10);
       if (predictions.length) {
         handlePredictions(predictions);
