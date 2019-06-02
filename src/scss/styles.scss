@@ -1,10 +1,11 @@
-@import "node_modules/bootswatch/dist/superhero/_variables"; //sketchy is other them in use
-@import "node_modules/bootstrap/scss/bootstrap";
-@import "node_modules/bootswatch/dist/superhero/_bootswatch"; //sketchy is other them in use
+@import "~bootswatch/dist/superhero/_variables"; //sketchy is other them in use
+@import "~bootstrap/scss/bootstrap";
+@import "~bootswatch/dist/superhero/_bootswatch"; //sketchy is other them in use
 
 .btnStartApp {
-  font-size: 4em;
+  font-size: 3.75em;
   line-height: 1.2;
+  text-transform: uppercase;
 }
 
 .headingAppTitle {
@@ -13,4 +14,24 @@
 
 .player {
   cursor: pointer;
+}
+
+.footer {
+  bottom: 0;
+  width: 100%;
+}
+
+.canvas-wrapper {
+  margin: 0;
+  padding: 0;
+  position: absolute;
+}
+
+.identified-object {
+  background-color: rgba(255, 255, 255, 0.25);
+  border: 2px solid $primary;
+}
+
+.tippy-backdrop {
+  background-color: transparent;
 }
