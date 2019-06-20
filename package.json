@@ -45,6 +45,8 @@
     "@tensorflow-models/coco-ssd": "^1.1.0",
     "@tensorflow-models/mobilenet": "^1.0.1",
     "@tensorflow/tfjs": "^1.2.1",
+    "@tensorflow/tfjs-core": "^1.2.1",
+    "@tensorflow/tfjs-converter": "^1.2.1",
     "autoprefixer": "^9.6.0",
     "bootstrap": "^4.3.1",
     "bootswatch": "^4.3.1",
