@@ -53,8 +53,8 @@
     "cssnano": "^4.1.10",
     "logrocket": "^1.0.1",
     "register-service-worker": "^1.6.2",
-    "rollup": "^1.16.3",
-    "snyk": "^1.186.0",
+    "rollup": "^1.16.4",
+    "snyk": "^1.189.0",
     "sweetalert2": "^8.13.0",
     "tippy.js": "^4.3.4"
   },
