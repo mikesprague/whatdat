@@ -53,8 +53,8 @@
     "cssnano": "^4.1.10",
     "logrocket": "^1.0.1",
     "register-service-worker": "^1.6.2",
-    "rollup": "^1.16.5",
-    "snyk": "^1.192.0",
+    "rollup": "^1.16.6",
+    "snyk": "^1.192.2",
     "sweetalert2": "^8.13.1",
     "tippy.js": "^4.3.4"
   },
@@ -107,14 +107,10 @@
   },
   "browserslist": {
     "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
+      "defaults"
     ],
     "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
+      "last 2 versions"
     ]
   },
   "eslintConfig": {
