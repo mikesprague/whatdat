@@ -21,7 +21,7 @@
     "webpack:dev": "cross-env NODE_ENV=development webpack --config ./webpack.config.js -d --colors --display minimal",
     "webpack:serve": "cross-env NODE_ENV=development webpack-dev-server --port 3000",
     "snyk-protect": "snyk protect",
-    "prepublish": "npm run snyk-protect; yarn snyk-protect"
+    "prepublish": "yarn snyk-protect"
   },
   "author": {
     "name": "Michael Sprague",
@@ -30,7 +30,7 @@
   "repository": "github:mikesprague/whatdat",
   "license": "MIT",
   "engines": {
-    "node": ">= 11.x",
+    "node": ">= 10.x",
     "npm": ">= 6.x",
     "yarn": ">=1.x"
   },
@@ -54,7 +54,7 @@
     "logrocket": "^1.0.1",
     "register-service-worker": "^1.6.2",
     "rollup": "^1.16.7",
-    "snyk": "^1.192.4",
+    "snyk": "^1.193.1",
     "sweetalert2": "^8.13.4",
     "tippy.js": "^4.3.4"
   },
