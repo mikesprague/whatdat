@@ -113,7 +113,7 @@ export async function startCamera() {
 
     try {
       const canvas = document.querySelector('.canvas');
-      const model = await cocoSsd.load('mobilenet_v2'); // lite_mobilenet_v2
+      const model = await cocoSsd.load('lite_mobilenet_v2'); // mobilenet_v2
       const predictions = await model.detect(canvas, 10);
       if (predictions.length) {
         handlePredictions(predictions);
