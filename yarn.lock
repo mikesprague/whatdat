@@ -957,10 +957,10 @@
   resolved "https://registry.yarnpkg.com/@snyk/gemfile/-/gemfile-1.2.0.tgz#919857944973cce74c650e5428aaf11bcd5c0457"
   integrity sha512-nI7ELxukf7pT4/VraL4iabtNNMz8mUo7EXlqCFld8O5z6mIMLX9llps24iPpaIZOwArkY3FWA+4t+ixyvtTSIA==
 
-"@tensorflow-models/coco-ssd@^1.1.1":
-  version "1.1.1"
-  resolved "https://registry.yarnpkg.com/@tensorflow-models/coco-ssd/-/coco-ssd-1.1.1.tgz#b9f66eb0f4713134fb5510c416ea0694dfa8f399"
-  integrity sha512-ot+94F8nYlGwlJvLRsA3z8ufqd7fn6D2Zz9xb3ZdpmYf5dUNyjR7f970ttjyKsiBs7ba5F1Awfgk1tQ6Q2uFgw==
+"@tensorflow-models/coco-ssd@^2.0.0":
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/@tensorflow-models/coco-ssd/-/coco-ssd-2.0.0.tgz#6dbba903a86d5fbd2c65532aa44f821c56516fb4"
+  integrity sha512-JexMswea9a5k8//sdImcxdVaofejkzUzJA8cpDBOZSauBkBM34M3c1YoEUrFuJSa5sKxgMu5TwMPWbJ59A7IVA==
 
 "@tensorflow-models/mobilenet@^2.0.2":
   version "2.0.2"
