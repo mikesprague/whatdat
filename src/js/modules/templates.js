@@ -1,6 +1,6 @@
 export const startMarkup = `
   <div class="text-center">
-    <button class="btnStartApp btn btn-large btn-danger mb-5 mt-5"><i class="fas fa-camera"></i> Start</button>
+    <button class="btnStartApp btn btn-large btn-danger mb-5 mt-5"><i class="fad fa-camera"></i> Start</button>
   </div>
   <p class="text-center">
     <em>
@@ -18,7 +18,7 @@ export const cameraMarkup = `
   <div class="row">
     <div class="col">
       <button type="button" class="btnTakePhoto btn btn-outline-primary btn-block btn-lg text-center mb-3">
-        <i class="fal fa-camera"></i> Take Photo
+        <i class="fad fa-fw fa-camera"></i> Take Photo
       </button>
       <div class="results d-none mb-2"></div>
       <video class="player img-fluid center" autoplay title="Tap/click to take photo"></video>

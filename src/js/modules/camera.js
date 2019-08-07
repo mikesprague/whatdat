@@ -109,7 +109,7 @@ export async function startCamera() {
     ui.hideElement('.player');
     ui.showElement('.canvas');
     ui.showElement('.results');
-    ui.disableButton('.btnTakePhoto', '<i class="fas fa-sync fa-spin"></i> identifying ...');
+    ui.disableButton('.btnTakePhoto', '<i class="fad fa-sync fa-spin"></i> identifying ...');
 
     try {
       const canvas = document.querySelector('.canvas');

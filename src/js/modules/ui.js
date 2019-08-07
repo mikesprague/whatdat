@@ -1,9 +1,8 @@
 import {
-  faCamera as faCameraLight, faWifiSlash,
-} from '@fortawesome/pro-light-svg-icons';
-import {
-  faCamera, faSync,
-} from '@fortawesome/pro-solid-svg-icons';
+  faCamera,
+  faSync,
+  faWifiSlash,
+} from '@fortawesome/pro-duotone-svg-icons';
 import { library, dom } from '@fortawesome/fontawesome-svg-core';
 import swal from 'sweetalert2';
 import tippy from 'tippy.js';
@@ -12,7 +11,6 @@ import { reloadWindow } from './helpers';
 export function initFontAwesomeIcons() {
   library.add(
     faCamera,
-    faCameraLight,
     faSync,
     faWifiSlash,
   );
