@@ -35,7 +35,7 @@
     "yarn": ">=1.x"
   },
   "dependencies": {
-    "@bugsnag/js": "^6.3.2",
+    "@bugsnag/js": "^6.4.0",
     "@fortawesome/fontawesome-svg-core": "^1.2.21",
     "@fortawesome/pro-duotone-svg-icons": "^5.10.1",
     "@fullhuman/postcss-purgecss": "^1.2.0",
@@ -43,7 +43,7 @@
     "@tensorflow-models/mobilenet": "^2.0.3",
     "@tensorflow/tfjs": "^1.2.7",
     "@tensorflow/tfjs-converter": "^1.2.7",
-    "@tensorflow/tfjs-core": "^1.2.7",
+    "@tensorflow/tfjs-core": "^1.2.8",
     "autoprefixer": "^9.6.1",
     "bootstrap": "^4.3.1",
     "bootswatch": "^4.3.1",
@@ -51,7 +51,7 @@
     "logrocket": "^1.0.3",
     "register-service-worker": "^1.6.2",
     "rollup": "^1.19.4",
-    "snyk": "^1.216.0",
+    "snyk": "^1.216.5",
     "sweetalert2": "^8.15.3",
     "tippy.js": "^4.3.5"
   },
@@ -85,7 +85,7 @@
     "seedrandom": "^3.0.3",
     "style-loader": "^1.0.0",
     "terser-webpack-plugin": "^1.4.1",
-    "webpack": "^4.39.1",
+    "webpack": "^4.39.2",
     "webpack-bugsnag-plugins": "^1.4.1",
     "webpack-cli": "^3.3.6",
     "webpack-dev-server": "^3.8.0",
