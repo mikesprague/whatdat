@@ -6,8 +6,6 @@ patch:
   SNYK-JS-LODASH-450202:
     - snyk > snyk-nodejs-lockfile-parser > lodash:
         patched: '2019-07-07T21:35:40.084Z'
-      '@babel/helper-split-export-declaration > @babel/types > lodash':
-        patched: '2019-07-07T21:49:08.119Z'
     - snyk > lodash:
         patched: '2019-07-07T21:35:40.084Z'
     - snyk > snyk-nuget-plugin > lodash:
@@ -28,3 +26,7 @@ patch:
         patched: '2019-07-07T21:35:40.084Z'
     - snyk > @snyk/dep-graph > graphlib > lodash:
         patched: '2019-07-07T21:35:40.084Z'
+    - '@babel/helper-split-export-declaration > @babel/types > lodash':
+        patched: '2019-07-07T21:49:08.119Z'
+    - snyk > snyk-nuget-plugin > dotnet-deps-parser > lodash:
+        patched: '2019-08-15T18:30:48.913Z'
