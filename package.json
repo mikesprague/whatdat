@@ -51,8 +51,8 @@
     "logrocket": "^1.0.3",
     "register-service-worker": "^1.6.2",
     "rollup": "^1.19.4",
-    "snyk": "^1.216.5",
-    "sweetalert2": "^8.15.3",
+    "snyk": "^1.217.0",
+    "sweetalert2": "^8.16.0",
     "tippy.js": "^4.3.5"
   },
   "devDependencies": {
@@ -82,7 +82,7 @@
     "prettier": "^1.18.2",
     "sass-lint": "^1.13.1",
     "sass-loader": "^7.2.0",
-    "seedrandom": "^3.0.3",
+    "seedrandom": "^2.4.4",
     "style-loader": "^1.0.0",
     "terser-webpack-plugin": "^1.4.1",
     "webpack": "^4.39.2",
