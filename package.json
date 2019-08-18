@@ -52,7 +52,7 @@
     "register-service-worker": "^1.6.2",
     "rollup": "^1.19.4",
     "snyk": "^1.217.0",
-    "sweetalert2": "^8.16.0",
+    "sweetalert2": "^8.16.1",
     "tippy.js": "^4.3.5"
   },
   "devDependencies": {
@@ -87,7 +87,7 @@
     "terser-webpack-plugin": "^1.4.1",
     "webpack": "^4.39.2",
     "webpack-bugsnag-plugins": "^1.4.1",
-    "webpack-cli": "^3.3.6",
+    "webpack-cli": "^3.3.7",
     "webpack-dev-server": "^3.8.0",
     "webpackbar": "^4.0.0",
     "workbox-webpack-plugin": "^4.3.1"

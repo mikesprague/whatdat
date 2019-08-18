@@ -9796,10 +9796,10 @@ svgo@^1.0.0:
     unquote "~1.1.1"
     util.promisify "~1.0.0"
 
-sweetalert2@^8.16.0:
-  version "8.16.0"
-  resolved "https://registry.yarnpkg.com/sweetalert2/-/sweetalert2-8.16.0.tgz#23be9f9d35e6ec012d753166b25c3f2f0e2d3211"
-  integrity sha512-DDHL/TYGZwJPKP+6ZPsPMkaiQH/miyOIfKUB3CIAravUcT+tttOuDFAZP2sqGucOmGMDYWcei0H58Z3baTtSZQ==
+sweetalert2@^8.16.1:
+  version "8.16.1"
+  resolved "https://registry.yarnpkg.com/sweetalert2/-/sweetalert2-8.16.1.tgz#ac5867f06e37754bbaaf97b62f5ab5af0c3305cc"
+  integrity sha512-6xRWaD2dhQDrH+YYjK4fFkA2HhOHHrmknSmQbpkoFd+z409vxZXAXj9MZz1n79bkLLOylgv1pIlrrMMVDv1ujw==
 
 symbol-observable@1.0.1:
   version "1.0.1"
@@ -10490,10 +10490,10 @@ webpack-bugsnag-plugins@^1.4.1:
     bugsnag-sourcemaps "^1.0.7"
     run-parallel-limit "^1.0.3"
 
-webpack-cli@^3.3.6:
-  version "3.3.6"
-  resolved "https://registry.yarnpkg.com/webpack-cli/-/webpack-cli-3.3.6.tgz#2c8c399a2642133f8d736a359007a052e060032c"
-  integrity sha512-0vEa83M7kJtxK/jUhlpZ27WHIOndz5mghWL2O53kiDoA9DIxSKnfqB92LoqEn77cT4f3H2cZm1BMEat/6AZz3A==
+webpack-cli@^3.3.7:
+  version "3.3.7"
+  resolved "https://registry.yarnpkg.com/webpack-cli/-/webpack-cli-3.3.7.tgz#77c8580dd8e92f69d635e0238eaf9d9c15759a91"
+  integrity sha512-OhTUCttAsr+IZSMVwGROGRHvT+QAs8H6/mHIl4SvhAwYywjiylYjpwybGx7WQ9Hkb45FhjtsymkwiRRbGJ1SZQ==
   dependencies:
     chalk "2.4.2"
     cross-spawn "6.0.5"
