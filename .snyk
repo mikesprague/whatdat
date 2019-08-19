@@ -30,3 +30,15 @@ patch:
         patched: '2019-07-07T21:49:08.119Z'
     - fabric > jsdom > request-promise-native > request-promise-core > lodash:
         patched: '2019-08-19T09:46:23.351Z'
+    - snyk > snyk-nuget-plugin > dotnet-deps-parser > lodash:
+        patched: '2019-08-19T14:51:28.444Z'
+    - snyk > inquirer > lodash:
+        patched: '2019-08-19T14:51:28.444Z'
+    - snyk > snyk-config > lodash:
+        patched: '2019-08-19T14:51:28.444Z'
+    - snyk > @snyk/dep-graph > graphlib > lodash:
+        patched: '2019-08-19T14:51:28.444Z'
+    - snyk > snyk-go-plugin > graphlib > lodash:
+        patched: '2019-08-19T14:51:28.444Z'
+    - snyk > snyk-nodejs-lockfile-parser > graphlib > lodash:
+        patched: '2019-08-19T14:51:28.444Z'
