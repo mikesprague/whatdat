@@ -1,16 +1,22 @@
 import * as mobilenet from '@tensorflow-models/mobilenet';
 import * as cocoSsd from '@tensorflow-models/coco-ssd';
+import { fabric } from 'fabric';
 // import * as tracking from 'tracking';
 import { reportError } from './helpers';
 import * as templates from './templates';
 import * as ui from './ui';
 
 export function clearPhoto() {
-  const canvas = document.querySelector('.canvas');
-  const context = canvas.getContext('2d');
+  const canvas = new fabric.Canvas('.canvas');
+  const rect = new fabric.Rect({
+    backgroundColor: '#aaa',
+    top: 0,
+    left: 0,
+    width: canvas.getWidth(),
+    height: canvas.getHeight(),
+  });
   ui.destroyTooltips();
-  context.fillStyle = '#aaa';
-  context.fillRect(0, 0, canvas.width, canvas.height);
+  canvas.add(rect);
 }
 
 export function takePhoto() {
@@ -22,13 +28,13 @@ export function takePhoto() {
 
   canvas.width = playerWidth;
   canvas.height = playerHeight;
-  context.drawImage(player, 0, 0, playerWidth, playerWidth * playerHeight / playerWidth);
+  context.drawImage(player, 0, 0, playerWidth, ((playerWidth * playerHeight) / playerWidth));
   canvas.setAttribute('style', 'width: 100%; height: auto;');
 }
 
 export function stopVideoCamera(videoPlayerSelector) {
   const videoPlayer = document.querySelector(videoPlayerSelector);
-  videoPlayer.srcObject.getVideoTracks().forEach(track => track.stop());
+  videoPlayer.srcObject.getVideoTracks().forEach((track) => track.stop());
 }
 
 export async function startCamera() {
@@ -83,7 +89,7 @@ export async function startCamera() {
     const resultsMarkup = templates.getResultsMarkup(predictions, isMobilenet);
 
     if (!isMobilenet) {
-      predictions.map(prediction => drawBoundingBox(prediction));
+      predictions.map((prediction) => drawBoundingBox(prediction));
       // drawBoundingBox(predictions[0]);
       // predictions.slice(1).map((prediction, true) => {
       //   drawBoundingBox(prediction);
