@@ -86,7 +86,7 @@
     "seedrandom": "^2.4.4",
     "style-loader": "^1.0.0",
     "terser-webpack-plugin": "^1.4.1",
-    "webpack": "^4.39.2",
+    "webpack": "^4.39.3",
     "webpack-bugsnag-plugins": "^1.4.1",
     "webpack-cli": "^3.3.7",
     "webpack-dev-server": "^3.8.0",
