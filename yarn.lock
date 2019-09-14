@@ -3945,10 +3945,10 @@ eslint@^2.7.0:
     text-table "~0.2.0"
     user-home "^2.0.0"
 
-eslint@^6.3.0:
-  version "6.3.0"
-  resolved "https://registry.yarnpkg.com/eslint/-/eslint-6.3.0.tgz#1f1a902f67bfd4c354e7288b81e40654d927eb6a"
-  integrity sha512-ZvZTKaqDue+N8Y9g0kp6UPZtS4FSY3qARxBs7p4f0H0iof381XHduqVerFWtK8DPtKmemqbqCFENWSQgPR/Gow==
+eslint@^6.4.0:
+  version "6.4.0"
+  resolved "https://registry.yarnpkg.com/eslint/-/eslint-6.4.0.tgz#5aa9227c3fbe921982b2eda94ba0d7fae858611a"
+  integrity sha512-WTVEzK3lSFoXUovDHEbkJqCVPEPwbhCq4trDktNI6ygs7aO41d4cDT0JFAT5MivzZeVLWlg7vHL+bgrQv/t3vA==
   dependencies:
     "@babel/code-frame" "^7.0.0"
     ajv "^6.10.0"
@@ -10728,10 +10728,10 @@ webidl-conversions@^4.0.2:
   resolved "https://registry.yarnpkg.com/webidl-conversions/-/webidl-conversions-4.0.2.tgz#a855980b1f0b6b359ba1d5d9fb39ae941faa63ad"
   integrity sha512-YQ+BmxuTgd6UXZW3+ICGfyqRyHXVlD5GtQr5+qjiNW7bF0cqrzX500HVXPBOvgXb5YnzDd+h0zqyv61KUD7+Sg==
 
-webpack-bugsnag-plugins@^1.4.1:
-  version "1.4.1"
-  resolved "https://registry.yarnpkg.com/webpack-bugsnag-plugins/-/webpack-bugsnag-plugins-1.4.1.tgz#2c76f76c9619b4fbe262ae4c098e76c415af1018"
-  integrity sha512-2ywprckxjH+48q+GLNl9xRfB0b8peg5UU2HD8XZZVx3b+n8t5gaKjai43OeB2Tv5zpE6nkgxFZhLNlakKJvzeg==
+webpack-bugsnag-plugins@^1.4.2:
+  version "1.4.2"
+  resolved "https://registry.yarnpkg.com/webpack-bugsnag-plugins/-/webpack-bugsnag-plugins-1.4.2.tgz#7af0fdfe638369f73ff5ab89228b2cb0c255118b"
+  integrity sha512-BXMAUxWrXgH5gLBhg4TACDjmUXFSFIvx2bvrMJpeGspM+57eTFeWrUyV7FSCs0Hdtdd3jSRfe0cSxy3E9TyqGw==
   dependencies:
     bugsnag-build-reporter "^1.0.1"
     bugsnag-sourcemaps "^1.0.7"
@@ -10827,10 +10827,10 @@ webpack-sources@^1.4.0, webpack-sources@^1.4.1, webpack-sources@^1.4.3:
     source-list-map "^2.0.0"
     source-map "~0.6.1"
 
-webpack@^4.39.3:
-  version "4.39.3"
-  resolved "https://registry.yarnpkg.com/webpack/-/webpack-4.39.3.tgz#a02179d1032156b713b6ec2da7e0df9d037def50"
-  integrity sha512-BXSI9M211JyCVc3JxHWDpze85CvjC842EvpRsVTc/d15YJGlox7GIDd38kJgWrb3ZluyvIjgenbLDMBQPDcxYQ==
+webpack@^4.40.2:
+  version "4.40.2"
+  resolved "https://registry.yarnpkg.com/webpack/-/webpack-4.40.2.tgz#d21433d250f900bf0facbabe8f50d585b2dc30a7"
+  integrity sha512-5nIvteTDCUws2DVvP9Qe+JPla7kWPPIDFZv55To7IycHWZ+Z5qBdaBYPyuXWdhggTufZkQwfIK+5rKQTVovm2A==
   dependencies:
     "@webassemblyjs/ast" "1.8.5"
     "@webassemblyjs/helper-module-context" "1.8.5"
