@@ -51,10 +51,10 @@
     "fabric": "^3.4.0",
     "logrocket": "^1.0.3",
     "register-service-worker": "^1.6.2",
-    "rollup": "^1.21.4",
-    "snyk": "^1.228.5",
-    "sweetalert2": "^8.17.6",
-    "tippy.js": "^4.3.5"
+    "rollup": "^1.22.0",
+    "snyk": "^1.228.6",
+    "sweetalert2": "^8.18.0",
+    "tippy.js": "^5.0.0"
   },
   "devDependencies": {
     "@babel/cli": "^7.6.2",
