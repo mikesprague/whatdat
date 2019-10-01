@@ -42,3 +42,7 @@ patch:
         patched: '2019-08-19T14:51:28.444Z'
     - snyk > snyk-nodejs-lockfile-parser > graphlib > lodash:
         patched: '2019-08-19T14:51:28.444Z'
+    - snyk > @snyk/snyk-cocoapods-plugin > @snyk/dep-graph > graphlib > lodash:
+        patched: '2019-10-01T16:23:44.580Z'
+    - snyk > @snyk/snyk-cocoapods-plugin > @snyk/cocoapods-lockfile-parser > @snyk/dep-graph > graphlib > lodash:
+        patched: '2019-10-01T16:23:44.580Z'
