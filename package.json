@@ -21,7 +21,7 @@
     "webpack:dev": "cross-env NODE_ENV=development webpack --config ./webpack.config.js -d --colors --display minimal",
     "webpack:serve": "cross-env NODE_ENV=development webpack-dev-server --port 3000",
     "snyk-protect": "snyk protect",
-    "prepublish": "npm run snyk-protect && yarn snyk-protect"
+    "prepublish": "yarn snyk-protect"
   },
   "author": {
     "name": "Michael Sprague",
@@ -52,7 +52,7 @@
     "logrocket": "^1.0.3",
     "register-service-worker": "^1.6.2",
     "rollup": "^1.22.0",
-    "snyk": "^1.230.2",
+    "snyk": "^1.230.3",
     "sweetalert2": "^8.18.0",
     "tippy.js": "^4.3.5"
   },
