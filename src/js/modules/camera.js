@@ -104,9 +104,13 @@ export async function startCamera() {
 
   const getAdditionalPossibilities = async () => {
     const canvas = document.querySelector('.canvas');
-    const model = await mobilenet.load(2, 1.0);
-    const predictions = await model.classify(canvas, 10);
-    handlePredictions(predictions, true);
+    try {
+      const model = await mobilenet.load(2, 1.0);
+      const predictions = await model.classify(canvas, 10);
+      handlePredictions(predictions, true);
+    } catch (error) {
+      reportError(error);
+    }
   };
 
   const takePhotoClickHandler = async () => {
