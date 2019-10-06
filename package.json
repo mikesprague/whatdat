@@ -54,7 +54,7 @@
     "rollup": "^1.23.0",
     "snyk": "^1.231.0",
     "sweetalert2": "^8.18.0",
-    "tippy.js": "^4.3.5"
+    "tippy.js": "^5.0.2"
   },
   "devDependencies": {
     "@babel/cli": "^7.6.2",
