@@ -51,9 +51,9 @@
     "fabric": "^3.4.0",
     "logrocket": "^1.0.3",
     "register-service-worker": "^1.6.2",
-    "rollup": "^1.25.1",
-    "snyk": "^1.236.1",
-    "sweetalert2": "^8.18.5",
+    "rollup": "^1.25.2",
+    "snyk": "^1.237.1",
+    "sweetalert2": "^8.18.6",
     "tippy.js": "^4.3.5"
   },
   "devDependencies": {
