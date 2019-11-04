@@ -19,14 +19,12 @@ export function initFontAwesomeIcons() {
 
 export function initTooltips() {
   tippy('.has-tooltip', {
-    a11y: false,
     allowHTML: true,
     arrow: false,
     boundary: 'scrollParent',
     distance: -32,
     hideOnClick: true,
-    showOnInit: false,
-    size: 'regular',
+    showOnCreate: false,
     touch: true,
     trigger: 'click', // mouseenter
   });
@@ -34,7 +32,7 @@ export function initTooltips() {
 
 export function destroyTooltips() {
   Array.from(document.querySelectorAll('.tippy-popper'))
-    .map(tooltip => tooltip.remove());
+    .map((tooltip) => tooltip.remove());
 }
 
 export function showTooltip(tooltipElement) {
