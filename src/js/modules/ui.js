@@ -89,7 +89,7 @@ export function showInstallAlert() {
     confirmButtonText: 'Reload for Latest Updates',
     footer: `${releaseNotesLink}`,
     showCancelButton: true,
-    type: 'success',
+    icon: 'success',
   }).then((result) => {
     if (result.value === true) {
       reloadWindow();
@@ -110,7 +110,7 @@ export function showUpdatedToast() {
     });
 
     Toast.fire({
-      type: 'success',
+      icon: 'success',
       title: `Successfully updated (${releaseNotesLink})`,
     });
     localStorage.removeItem('updateInstalled');
