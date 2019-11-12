@@ -9119,10 +9119,10 @@ ripemd160@^2.0.0, ripemd160@^2.0.1:
     hash-base "^3.0.0"
     inherits "^2.0.1"
 
-rollup@^1.26.5:
-  version "1.26.5"
-  resolved "https://registry.yarnpkg.com/rollup/-/rollup-1.26.5.tgz#c492c8bb88b661e7952a864e40bdec209aa1aa03"
-  integrity sha512-c6Pv0yWzjYNpy2DIhLFUnyP6e1UTGownr4IfpJcPY/k186RJjpaGGPRwKQ62KCauctG6dgtHt88pw1EGrPRkuA==
+rollup@^1.27.0:
+  version "1.27.0"
+  resolved "https://registry.yarnpkg.com/rollup/-/rollup-1.27.0.tgz#7afe0da89c967cec5ccea7e919da6c89a1a68666"
+  integrity sha512-yaMna4MJ8LLEHhHl1ilgHakylf0LKeQctDxhngZLQ+W57GnXa5vtH7XKaK8zlAhNEhlWiH5YFVFt+QCDPUmNkw==
   dependencies:
     "@types/estree" "*"
     "@types/node" "*"
@@ -10328,10 +10328,10 @@ svgo@^1.0.0:
     unquote "~1.1.1"
     util.promisify "~1.0.0"
 
-sweetalert2@^9.3.1:
-  version "9.3.1"
-  resolved "https://registry.yarnpkg.com/sweetalert2/-/sweetalert2-9.3.1.tgz#280f0a06bab8f8cb13bd807060708b685efb5ec9"
-  integrity sha512-HI8IjmL8d2ilY7DZ93p37ALrpvA/ycg+5UzIsIF76CQPmSx+d+O97j6abMXWflq7N2VQgKZ2zqwMR27h5ja0fA==
+sweetalert2@^9.3.4:
+  version "9.3.4"
+  resolved "https://registry.yarnpkg.com/sweetalert2/-/sweetalert2-9.3.4.tgz#2fc1fcd8538ea6613cbc80bc49e6d13f1b0150f6"
+  integrity sha512-nyW+SAZUkiKpbKSDE33J9nF5UQnc7IGC1eDHeW80HkhsggvkmQN0Clq7PHXb1roLkBLJryb2evVLDc9jZmptRQ==
 
 symbol-observable@1.0.1:
   version "1.0.1"
