@@ -48,12 +48,12 @@
     "bootstrap": "^4.3.1",
     "bootswatch": "^4.3.1",
     "cssnano": "^4.1.10",
-    "fabric": "^3.4.0",
+    "fabric": "^3.5.1",
     "logrocket": "^1.0.3",
     "register-service-worker": "^1.6.2",
-    "rollup": "^1.27.0",
-    "snyk": "^1.247.1",
-    "sweetalert2": "^9.3.5",
+    "rollup": "^1.27.1",
+    "snyk": "^1.248.0",
+    "sweetalert2": "^9.3.12",
     "tippy.js": "^5.1.1"
   },
   "devDependencies": {
