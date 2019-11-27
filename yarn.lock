@@ -1850,15 +1850,15 @@ boolbase@^1.0.0, boolbase@~1.0.0:
   resolved "https://registry.yarnpkg.com/boolbase/-/boolbase-1.0.0.tgz#68dff5fbe60c51eb37725ea9e3ed310dcc1e776e"
   integrity sha1-aN/1++YMUes3cl6p4+0xDcwed24=
 
-bootstrap@^4.3.1:
-  version "4.3.1"
-  resolved "https://registry.yarnpkg.com/bootstrap/-/bootstrap-4.3.1.tgz#280ca8f610504d99d7b6b4bfc4b68cec601704ac"
-  integrity sha512-rXqOmH1VilAt2DyPzluTi2blhk17bO7ef+zLLPlWvG494pDxcM234pJ8wTc/6R40UWizAIIMgxjvxZg5kmsbag==
+bootstrap@^4.4.0:
+  version "4.4.0"
+  resolved "https://registry.yarnpkg.com/bootstrap/-/bootstrap-4.4.0.tgz#477103fa44d44191971c8ca3e0b51a85ae62ea4d"
+  integrity sha512-dqCYJNs/Fxa3IVQ+v/lC694POCThUjZsA4wwqs8l+yk67B6ww2Ki++WaM6CVGe5+tArBBrknzjjh01/NT5rLjA==
 
-bootswatch@^4.3.1:
-  version "4.3.1"
-  resolved "https://registry.yarnpkg.com/bootswatch/-/bootswatch-4.3.1.tgz#be54748b420a1962dbcf9782605aac092f842e38"
-  integrity sha512-kNdpo/TnhO++aic1IODLIe1V0lx6pXwHMpwXMacpANDnuVDtgU1MUgUbVMC3rSWm4UcbImfwPraNYgjKDT0BtA==
+bootswatch@^4.4.0:
+  version "4.4.0"
+  resolved "https://registry.yarnpkg.com/bootswatch/-/bootswatch-4.4.0.tgz#8918b7bfe0d44df503ba071b9bfec7393b24be27"
+  integrity sha512-Cj/Hz4L/epjDfrxdtqdBvkPWCQDFgZVN+5kkpcBtWkja+PPgeNwTTTjRHmjmD0yelYjnU26Vh2VV0Xwr1p1/lg==
 
 boxen@^1.2.1:
   version "1.3.0"
@@ -9553,10 +9553,10 @@ snyk-try-require@1.3.1, snyk-try-require@^1.1.1, snyk-try-require@^1.3.1:
     lru-cache "^4.0.0"
     then-fs "^2.0.0"
 
-snyk@^1.251.1:
-  version "1.251.1"
-  resolved "https://registry.yarnpkg.com/snyk/-/snyk-1.251.1.tgz#de368cae5501238c5c3f3ed5022930d95c7953c5"
-  integrity sha512-a7AOBfh1iTXypXH2BSCYubtfZ8y85fC7884BMQ99E4YU4ScBJbrSHbQTt0prjkKUaLUlHNFgfoSrfhI/Je+b0A==
+snyk@^1.251.2:
+  version "1.251.2"
+  resolved "https://registry.yarnpkg.com/snyk/-/snyk-1.251.2.tgz#47f7c0e2519914e6fff1fa0cddfdcff45b8d381c"
+  integrity sha512-YMZ7C6gUjvbMD8rbPk0OpdDQ8BB3Z/e0Gt3v1U+sZ6djGDvkP10DQBhz2WdUu4tf1TjRXzocIby9sVZWStET6g==
   dependencies:
     "@snyk/cli-interface" "2.3.0"
     "@snyk/dep-graph" "1.13.1"
