@@ -779,24 +779,24 @@
     pump "^3.0.0"
     stack-generator "^2.0.3"
 
-"@fortawesome/fontawesome-common-types@^0.2.25":
-  version "0.2.25"
-  resolved "https://npm.fontawesome.com/@fortawesome/fontawesome-common-types/-/fontawesome-common-types-0.2.25.tgz#6df015905081f2762e5cfddeb7a20d2e9b16c786"
-  integrity sha512-3RuZPDuuPELd7RXtUqTCfed14fcny9UiPOkdr2i+cYxBoTOfQgxcDoq77fHiiHcgWuo1LoBUpvGxFF1H/y7s3Q==
+"@fortawesome/fontawesome-common-types@^0.2.26":
+  version "0.2.26"
+  resolved "https://npm.fontawesome.com/@fortawesome/fontawesome-common-types/-/0.2.26/fontawesome-common-types-0.2.26.tgz#6e0b13a752676036f8196f8a1500d53a27b4adc1"
+  integrity sha512-CcM/fIFwZlRdiWG/25xE/wHbtyUuCtqoCTrr6BsWw7hH072fR++n4L56KPydAr3ANgMJMjT8v83ZFIsDc7kE+A==
 
-"@fortawesome/fontawesome-svg-core@^1.2.25":
-  version "1.2.25"
-  resolved "https://npm.fontawesome.com/@fortawesome/fontawesome-svg-core/-/fontawesome-svg-core-1.2.25.tgz#24b03391d14f0c6171e8cad7057c687b74049790"
-  integrity sha512-MotKnn53JKqbkLQiwcZSBJVYtTgIKFbh7B8+kd05TSnfKYPFmjKKI59o2fpz5t0Hzl35vVGU6+N4twoOpZUrqA==
+"@fortawesome/fontawesome-svg-core@^1.2.26":
+  version "1.2.26"
+  resolved "https://npm.fontawesome.com/@fortawesome/fontawesome-svg-core/-/1.2.26/fontawesome-svg-core-1.2.26.tgz#671569271d6b532cdea5e3deb8ff16f8b7ac251d"
+  integrity sha512-3Dfd/v2IztP1TxKOxZiB5+4kaOZK9mNy0KU1vVK7nFlPWz3gzxrCWB+AloQhQUoJ8HhGqbzjliK89Vl7PExGbw==
   dependencies:
-    "@fortawesome/fontawesome-common-types" "^0.2.25"
+    "@fortawesome/fontawesome-common-types" "^0.2.26"
 
-"@fortawesome/pro-duotone-svg-icons@^5.11.2":
-  version "5.11.2"
-  resolved "https://npm.fontawesome.com/@fortawesome/pro-duotone-svg-icons/-/pro-duotone-svg-icons-5.11.2.tgz#c565a0f8c39acc3f7b3c2a8b77e636ce13265fb2"
-  integrity sha512-Fqm+V5CqvYG48oBJjAfDIX3SKMqvD6hJ1asE6z/J1RhZtO7Y/4la6DVPxOdGvPu1aJutELa2wmNL100RMG/bvg==
+"@fortawesome/pro-duotone-svg-icons@^5.12.0":
+  version "5.12.0"
+  resolved "https://npm.fontawesome.com/@fortawesome/pro-duotone-svg-icons/-/5.12.0/pro-duotone-svg-icons-5.12.0.tgz#3824d81c86ef4aa72b1debc4322686122f36a6ae"
+  integrity sha512-zGEsIVmxwX9FX+SkwLzDbqcrRjIewyV7WlLl7FEHxEgiU8xvEYrP+ETTATR90/ZRX1cUUXQvrbRwFqbK+/n6cw==
   dependencies:
-    "@fortawesome/fontawesome-common-types" "^0.2.25"
+    "@fortawesome/fontawesome-common-types" "^0.2.26"
 
 "@fullhuman/postcss-purgecss@^1.3.0":
   version "1.3.0"
@@ -927,25 +927,25 @@
     source-map-support "^0.5.7"
     tslib "^1.9.3"
 
-"@tensorflow-models/coco-ssd@^2.0.0":
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/@tensorflow-models/coco-ssd/-/coco-ssd-2.0.0.tgz#6dbba903a86d5fbd2c65532aa44f821c56516fb4"
-  integrity sha512-JexMswea9a5k8//sdImcxdVaofejkzUzJA8cpDBOZSauBkBM34M3c1YoEUrFuJSa5sKxgMu5TwMPWbJ59A7IVA==
+"@tensorflow-models/coco-ssd@^2.0.1":
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/@tensorflow-models/coco-ssd/-/coco-ssd-2.0.1.tgz#99b90d18821ae42caa9c3e6c2dad912f91282287"
+  integrity sha512-+mh5eYXSK7WnQmxVbgFoClwMoQ0Vu8Ac2gyXREaNqpsLTqc2z+ZhcltEXdtHhbL8ZC6eCM7Uq3I9MXzomNsB7w==
 
 "@tensorflow-models/mobilenet@^2.0.4":
   version "2.0.4"
   resolved "https://registry.yarnpkg.com/@tensorflow-models/mobilenet/-/mobilenet-2.0.4.tgz#7f40771fcc650f50febd49be72372d39c15f6f95"
   integrity sha512-fkcxDBldlYitDCV88xETwAQoBIC8xYKdDu80uBDuBZBfNC4k/jeVbZHM28WjvTDsJN7d7dYO4NbIkRAH0XHKSQ==
 
-"@tensorflow/tfjs-converter@1.3.2", "@tensorflow/tfjs-converter@^1.3.2":
-  version "1.3.2"
-  resolved "https://registry.yarnpkg.com/@tensorflow/tfjs-converter/-/tfjs-converter-1.3.2.tgz#9c75b75edbd56c736735f3ea3d3c53d1e1a2751c"
-  integrity sha512-HTGT5sinSzayH/RXwoeebtc5pwTU9E3JzlcLfBa0HZVkkeKadhtzqh3QH+BFuuNsvX691AiIHv4P7SylUu1XQg==
+"@tensorflow/tfjs-converter@1.4.0", "@tensorflow/tfjs-converter@^1.4.0":
+  version "1.4.0"
+  resolved "https://registry.yarnpkg.com/@tensorflow/tfjs-converter/-/tfjs-converter-1.4.0.tgz#c864edd2ec7cc89d3ffd53854e79612fc230ef97"
+  integrity sha512-vdZumj6zHcEALtQlonCBbVwGdEEDcPrF7prgzf4HF82QG4RpM1x/kVdvzsGvfUIPYjRImNn0ZSPC3WaKslNcXw==
 
-"@tensorflow/tfjs-core@1.3.2", "@tensorflow/tfjs-core@^1.3.2":
-  version "1.3.2"
-  resolved "https://registry.yarnpkg.com/@tensorflow/tfjs-core/-/tfjs-core-1.3.2.tgz#7dcf66510e404a6564f7f47cd854eff936b58c5a"
-  integrity sha512-42WlbkbD10F11qN7k+GMjdPB62DGGnz7czkvk+lT501qWUrQI8swTjZfgMijcTWyQSeJuLa97EOL9n/Gn3Yfpw==
+"@tensorflow/tfjs-core@1.4.0", "@tensorflow/tfjs-core@^1.4.0":
+  version "1.4.0"
+  resolved "https://registry.yarnpkg.com/@tensorflow/tfjs-core/-/tfjs-core-1.4.0.tgz#045c91f93cb3ea77473b664c0d1dbad675d7f046"
+  integrity sha512-a7dHhSsBbtaxp8/1UAeYKrjY1bQxsDy/Uhj57+mTuGLAcL8CDrTOXXZzucCgs5nvQErdscp7Gp/2VCcA1xp6XQ==
   dependencies:
     "@types/offscreencanvas" "~2019.3.0"
     "@types/seedrandom" "2.4.27"
@@ -954,28 +954,28 @@
     node-fetch "~2.1.2"
     seedrandom "2.4.3"
 
-"@tensorflow/tfjs-data@1.3.2":
-  version "1.3.2"
-  resolved "https://registry.yarnpkg.com/@tensorflow/tfjs-data/-/tfjs-data-1.3.2.tgz#311c510213b1ba26ebc1d989e21ae0af3feac8be"
-  integrity sha512-1Ed6rb1OAcQc70jQqAN6UYch56p7FHafQ4cDzEDoS1tgfn0Of6Gb3KETa0RJMIpWvlrr/Oa5qwqDk8Tlusn7+Q==
+"@tensorflow/tfjs-data@1.4.0":
+  version "1.4.0"
+  resolved "https://registry.yarnpkg.com/@tensorflow/tfjs-data/-/tfjs-data-1.4.0.tgz#20c3902dc9a00610ec85a5bed9bb0dd60d92b270"
+  integrity sha512-00N/pe5IYkO3aDI9ZmavQ6mwY4VIepCteusnI7DLiCeqBO0NzGjlH3zH1LVlWIBRypW7JNqYbdl3oVvnd2wWwg==
   dependencies:
     "@types/node-fetch" "^2.1.2"
     node-fetch "~2.1.2"
 
-"@tensorflow/tfjs-layers@1.3.2":
-  version "1.3.2"
-  resolved "https://registry.yarnpkg.com/@tensorflow/tfjs-layers/-/tfjs-layers-1.3.2.tgz#1691513bce5d49f95c0aad9ee3a22eda5742828e"
-  integrity sha512-Y+zsoXlXWYopv+u3woMgE18TsEtzcRUVdgMQxuQm1FGRFAltyKxHzVO44b/nVdC59kRHIv0wrLU4G2hSQlprqA==
+"@tensorflow/tfjs-layers@1.4.0":
+  version "1.4.0"
+  resolved "https://registry.yarnpkg.com/@tensorflow/tfjs-layers/-/tfjs-layers-1.4.0.tgz#f4cf6ea7b89b9c612014c7b9a63a4a9563604a92"
+  integrity sha512-PXNOShZWDVW9OzX9botHJdDD6ClHEQtkfaFjoGZ2I2qYC9+WaVgxJPxwToTS2H2trwrf34q6hZ1lAjVlTuK0Gg==
 
-"@tensorflow/tfjs@^1.3.2":
-  version "1.3.2"
-  resolved "https://registry.yarnpkg.com/@tensorflow/tfjs/-/tfjs-1.3.2.tgz#1a7868a68a52a335e84adea9d544cc150bf86116"
-  integrity sha512-2QrKHtM6DraAgWL9DJwluz+/CJ5EbPN9tdNAFGq83fSUm3cNEK37UPsWdQ1QXXBqMczg1uyLEmPgFq6Lsy2/Vg==
+"@tensorflow/tfjs@^1.4.0":
+  version "1.4.0"
+  resolved "https://registry.yarnpkg.com/@tensorflow/tfjs/-/tfjs-1.4.0.tgz#979ba8a751427b1306bd60ed4f871aa776cb55e6"
+  integrity sha512-pvc7arrWZ0NNOpEFVL4e99Bj933ty3tmUR0xLnjKao3psts9xr7w0sfJpuSn98HKjz+dj87UEXZIi0fwsAZdwQ==
   dependencies:
-    "@tensorflow/tfjs-converter" "1.3.2"
-    "@tensorflow/tfjs-core" "1.3.2"
-    "@tensorflow/tfjs-data" "1.3.2"
-    "@tensorflow/tfjs-layers" "1.3.2"
+    "@tensorflow/tfjs-converter" "1.4.0"
+    "@tensorflow/tfjs-core" "1.4.0"
+    "@tensorflow/tfjs-data" "1.4.0"
+    "@tensorflow/tfjs-layers" "1.4.0"
 
 "@types/agent-base@^4.2.0":
   version "4.2.0"
@@ -6326,10 +6326,10 @@ loglevel@^1.6.4:
   resolved "https://registry.yarnpkg.com/loglevel/-/loglevel-1.6.4.tgz#f408f4f006db8354d0577dcf6d33485b3cb90d56"
   integrity sha512-p0b6mOGKcGa+7nnmKbpzR6qloPbrgLcnio++E+14Vo/XffOGwZtRpUhr8dTH/x2oCMmEoIU0Zwm3ZauhvYD17g==
 
-logrocket@^1.0.4:
-  version "1.0.4"
-  resolved "https://registry.yarnpkg.com/logrocket/-/logrocket-1.0.4.tgz#d7b860e4dc2f97434565e746b2980bc97c32bae0"
-  integrity sha512-AGvnUyMtjb59/osDGohfDFPDANshk+0A7ZD+/gF7D3iX/q697aZ+K6J4N+ROLAIlznxx7HfUzzsWilb+J9nyWQ==
+logrocket@^1.0.5:
+  version "1.0.5"
+  resolved "https://registry.yarnpkg.com/logrocket/-/logrocket-1.0.5.tgz#9f4f63bcc1b23fc43d62b36dbfabc4217df6c98c"
+  integrity sha512-zCD03t9TH/FrNlXFxetghwjyDUERbRMBAB5+VQDV4/gbL21KV5MOzpquejEwoudn8cYlmWMxalbfvzWJqwwQxQ==
 
 loose-envify@^1.0.0:
   version "1.4.0"
@@ -8953,10 +8953,10 @@ ripemd160@^2.0.0, ripemd160@^2.0.1:
     hash-base "^3.0.0"
     inherits "^2.0.1"
 
-rollup@^1.27.8:
-  version "1.27.8"
-  resolved "https://registry.yarnpkg.com/rollup/-/rollup-1.27.8.tgz#94288a957af9f4c2380b73a17494d87705997d0f"
-  integrity sha512-EVoEV5rAWl+5clnGznt1KY8PeVkzVQh/R0d2s3gHEkN7gfoyC4JmvIVuCtPbYE8NM5Ep/g+nAmvKXBjzaqTsHA==
+rollup@^1.27.10:
+  version "1.27.10"
+  resolved "https://registry.yarnpkg.com/rollup/-/rollup-1.27.10.tgz#e0814c1401e7658b679d617d3511f0a4ffaea019"
+  integrity sha512-5PjBSKney8zLu7tTn/y4iVBL3OyK+G9rA/wfkcY78bZ9kAMtgNqb8nOfR5KpoDYyt8Vs5o2o8DyDjf9RpwYbAg==
   dependencies:
     "@types/estree" "*"
     "@types/node" "*"
@@ -9583,14 +9583,14 @@ snyk-resolve@1.0.1, snyk-resolve@^1.0.0, snyk-resolve@^1.0.1:
     debug "^3.1.0"
     then-fs "^2.0.0"
 
-snyk-sbt-plugin@2.9.0:
-  version "2.9.0"
-  resolved "https://registry.yarnpkg.com/snyk-sbt-plugin/-/snyk-sbt-plugin-2.9.0.tgz#cdbc3047b8749f71c51522c6cc908f0a5525e129"
-  integrity sha512-R8jfRDkqlSsiSHYNAItKBUKUwb0n5z304Ko8ply/eoNAJMkXbFASDKHRto1v4F4wryJb4Rl1j/vFvIwytqZrww==
+snyk-sbt-plugin@2.9.1:
+  version "2.9.1"
+  resolved "https://registry.yarnpkg.com/snyk-sbt-plugin/-/snyk-sbt-plugin-2.9.1.tgz#41f90f6c318b4657d8bf0cb0ed6856ba0518880f"
+  integrity sha512-+cRFH4uAaoW7NeVLaWmpU236uhe4JRBakNGe+M9UhAswEqDAyFmyzWVU57EAjlzJKLIdh9JPFUvzjntGNs1I1A==
   dependencies:
+    debug "^4.1.1"
     semver "^6.1.2"
     tmp "^0.1.0"
-    tree-kill "^1.2.1"
     tslib "^1.10.0"
 
 snyk-tree@^1.0.0:
@@ -9610,10 +9610,10 @@ snyk-try-require@1.3.1, snyk-try-require@^1.1.1, snyk-try-require@^1.3.1:
     lru-cache "^4.0.0"
     then-fs "^2.0.0"
 
-snyk@^1.256.0:
-  version "1.256.0"
-  resolved "https://registry.yarnpkg.com/snyk/-/snyk-1.256.0.tgz#b04dd4a2d97e3c9b6086c47836ee70ea067438ee"
-  integrity sha512-wG6eTSZ6f4hH3cIOl4F9JE//a6eIv6O4K786/JgFDuf3XPM+zEGoY5dC+Q5yliPAarWcI1CeF1akPpyStiCkoA==
+snyk@^1.258.2:
+  version "1.258.2"
+  resolved "https://registry.yarnpkg.com/snyk/-/snyk-1.258.2.tgz#ef26ee26dc11c141c1b646e219a91b93eb5370f8"
+  integrity sha512-SGVl7Wk82YFhemPuJQZvFkNdSefe6HAQcEbXp4AotwPiYPSP0wLNVuOPlKWakOduBB7/zEAZltRL2+0dv23txQ==
   dependencies:
     "@snyk/cli-interface" "2.3.0"
     "@snyk/dep-graph" "1.13.1"
@@ -9651,7 +9651,7 @@ snyk@^1.256.0:
     snyk-python-plugin "^1.14.0"
     snyk-resolve "1.0.1"
     snyk-resolve-deps "4.4.0"
-    snyk-sbt-plugin "2.9.0"
+    snyk-sbt-plugin "2.9.1"
     snyk-tree "^1.0.0"
     snyk-try-require "1.3.1"
     source-map-support "^0.5.11"
@@ -10177,10 +10177,10 @@ svgo@^1.0.0:
     unquote "~1.1.1"
     util.promisify "~1.0.0"
 
-sweetalert2@^9.4.3:
-  version "9.4.3"
-  resolved "https://registry.yarnpkg.com/sweetalert2/-/sweetalert2-9.4.3.tgz#209e0561a5971deb20cc33dc45a77c1b6d6d79b2"
-  integrity sha512-edh+30p2tlE7CyNsTDVUb6SGO/c9wuCF4qiketagLvsK/xcesrSPvF8u9Ljk83HX26CfOicKWulmxz+Z+MAWVw==
+sweetalert2@^9.5.3:
+  version "9.5.3"
+  resolved "https://registry.yarnpkg.com/sweetalert2/-/sweetalert2-9.5.3.tgz#b280e218dc387a96fa2b6175b50d75421a708f7d"
+  integrity sha512-4wzLUCmVby3NPQC8XHp0HRJgTm5tbAO7OOaqabATNe0U6JN/oyBTS7iJJG9V83MpcP6MLDUEWcGO/Y8i6g2jYw==
 
 symbol-observable@1.0.1:
   version "1.0.1"
@@ -10473,11 +10473,6 @@ tr46@^1.0.1:
   integrity sha1-qLE/1r/SSJUZZ0zN5VujaTtwbQk=
   dependencies:
     punycode "^2.1.0"
-
-tree-kill@^1.2.1:
-  version "1.2.1"
-  resolved "https://registry.yarnpkg.com/tree-kill/-/tree-kill-1.2.1.tgz#5398f374e2f292b9dcc7b2e71e30a5c3bb6c743a"
-  integrity sha512-4hjqbObwlh2dLyW4tcz0Ymw0ggoaVDMveUB9w8kFSQScdRLo0gxO9J7WFcUBo+W3C1TLdFIEwNOWebgZZ0RH9Q==
 
 trim-newlines@^1.0.0:
   version "1.0.0"
