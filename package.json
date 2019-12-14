@@ -51,8 +51,8 @@
     "fabric": "^3.5.1",
     "logrocket": "^1.0.5",
     "register-service-worker": "^1.6.2",
-    "rollup": "^1.27.10",
-    "snyk": "^1.258.2",
+    "rollup": "^1.27.13",
+    "snyk": "^1.260.0",
     "sweetalert2": "^9.5.3",
     "tippy.js": "^5.1.2"
   },
