@@ -22,7 +22,7 @@ export function reloadWindow() {
   window.location.reload(true);
 }
 
-export function reportError(error) {
+export function handleError(error) {
   if (isProduction()) {
     /* eslint-disable no-undef */
     bugsnagClient.notify(error);

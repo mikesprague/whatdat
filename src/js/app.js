@@ -8,7 +8,7 @@ import {
   handleOnline,
   isOnline,
   isProduction,
-  reportError,
+  handleError,
 } from './modules/helpers';
 import { startMarkup } from './modules/templates';
 import {
@@ -55,7 +55,7 @@ register('/service-worker.js', {
     /* eslint-disable no-console */
     console.error('Error during service worker registration:', error);
     /* eslint-enable no-console */
-    reportError(error);
+    handleError(error);
   },
 });
 

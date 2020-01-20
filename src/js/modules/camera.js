@@ -1,7 +1,7 @@
 import * as mobilenet from '@tensorflow-models/mobilenet';
 import * as cocoSsd from '@tensorflow-models/coco-ssd';
 import { fabric } from 'fabric';
-import { reportError } from './helpers';
+import { handleError } from './helpers';
 import * as templates from './templates';
 import * as ui from './ui';
 
@@ -55,7 +55,7 @@ export async function startCamera() {
     player.play();
     player.setAttribute('style', 'width: 100%; height: auto;');
   } catch (error) {
-    reportError(error);
+    handleError(error);
   }
 
   const drawBoundingBox = async (prediction, isHidden = false) => {
@@ -111,7 +111,7 @@ export async function startCamera() {
       const predictions = await model.classify(canvas, 10);
       handlePredictions(predictions, true);
     } catch (error) {
-      reportError(error);
+      handleError(error);
     }
   };
 
