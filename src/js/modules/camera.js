@@ -105,7 +105,7 @@ export async function startCamera() {
     let detections = null;
 
     try {
-      const model = await cocoSsd.load('mobilenet_v2'); // lite_mobilenet_v2
+      const model = await cocoSsd.load('lite_mobilenet_v2'); // mobilenet_v2
       detections = await model.detect(image, 10);
     } catch (error) {
       handleError(error);
