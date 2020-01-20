@@ -104,7 +104,10 @@ export async function startCamera() {
   const getAdditionalPossibilities = async () => {
     const canvas = document.querySelector('.canvas');
     try {
-      const model = await mobilenet.load();
+      const model = await mobilenet.load({
+        version: 2,
+        alpha: 1.00,
+      });
       const predictions = await model.classify(canvas, 10);
       handlePredictions(predictions, true);
     } catch (error) {
