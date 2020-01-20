@@ -32,4 +32,5 @@ export function reportError(error) {
     console.error(error);
     /* eslint-enable no-console */
   }
+  throw new Error(error);
 }
