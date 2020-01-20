@@ -101,18 +101,33 @@ export async function startCamera() {
     ui.initElementEventHandler('.btnStartOver', 'click', startCamera);
   };
 
-  const getAdditionalPossibilities = async () => {
-    const canvas = document.querySelector('.canvas');
+  const detectObjects = async (image) => {
+    let detections = null;
+
+    try {
+      const model = await cocoSsd.load('mobilenet_v2'); // lite_mobilenet_v2
+      detections = await model.detect(image, 10);
+    } catch (error) {
+      handleError(error);
+    }
+
+    return detections;
+  };
+
+  const classifyImage = async (image) => {
+    let classifications = null;
+
     try {
       const model = await mobilenet.load({
         version: 2,
         alpha: 1.00,
       });
-      const predictions = await model.classify(canvas, 10);
-      handlePredictions(predictions, true);
+      classifications = await model.classify(image, 10);
     } catch (error) {
       handleError(error);
     }
+
+    return classifications;
   };
 
   const takePhotoClickHandler = async () => {
@@ -123,17 +138,14 @@ export async function startCamera() {
     ui.showElement('.results');
     ui.disableButton('.btnTakePhoto', '<i class="fad fa-sync fa-spin"></i> identifying ...');
 
-    try {
-      const canvas = document.querySelector('.canvas');
-      const model = await cocoSsd.load('lite_mobilenet_v2'); // mobilenet_v2
-      const predictions = await model.detect(canvas, 10);
-      if (predictions.length) {
-        handlePredictions(predictions);
-      } else {
-        getAdditionalPossibilities();
-      }
-    } catch (error) {
-      reportError(error);
+    const canvas = document.querySelector('.canvas');
+    const predictions = await detectObjects(canvas);
+
+    if (predictions.length) {
+      handlePredictions(predictions);
+    } else {
+      const morePredictions = await classifyImage(canvas);
+      handlePredictions(morePredictions, true);
     }
   };
 
