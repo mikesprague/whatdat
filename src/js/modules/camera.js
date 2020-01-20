@@ -1,7 +1,6 @@
 import * as mobilenet from '@tensorflow-models/mobilenet';
 import * as cocoSsd from '@tensorflow-models/coco-ssd';
 import { fabric } from 'fabric';
-// import * as tracking from 'tracking';
 import { reportError } from './helpers';
 import * as templates from './templates';
 import * as ui from './ui';
@@ -105,7 +104,7 @@ export async function startCamera() {
   const getAdditionalPossibilities = async () => {
     const canvas = document.querySelector('.canvas');
     try {
-      const model = await mobilenet.load(2, 1.0);
+      const model = await mobilenet.load();
       const predictions = await model.classify(canvas, 10);
       handlePredictions(predictions, true);
     } catch (error) {
