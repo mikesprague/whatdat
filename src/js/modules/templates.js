@@ -17,6 +17,14 @@ export const startOverButtonMarkup = `
 export const cameraMarkup = `
   <div class="row">
     <div class="col">
+      <div class="toggleModeSwitch checkbox switcher text-center">
+        <label for="toggleMode">
+          <small class="imageClassificationText text-muted">Image Classification&nbsp;&nbsp;&nbsp;&nbsp;</small>
+          <input type="checkbox" id="toggleMode" value="objectDetection" checked>
+          <span><small></small></span>
+          <small class="objectDetectionText font-weight-bolder">Object Detection</small>
+        </label>
+      </div>
       <button type="button" class="btnTakePhoto btn btn-outline-primary btn-block btn-lg text-center mb-3">
         <i class="fad fa-fw fa-camera"></i> Take Photo
       </button>

@@ -38,6 +38,7 @@ export function stopVideoCamera(videoPlayerSelector) {
 
 export async function startCamera() {
   ui.populateElementWithMarkup('.app', templates.cameraMarkup);
+  ui.initToggleModeSwitch();
   ui.destroyTooltips();
 
   let streaming = false;
@@ -139,13 +140,23 @@ export async function startCamera() {
     ui.disableButton('.btnTakePhoto', '<i class="fad fa-sync fa-spin"></i> identifying ...');
 
     const canvas = document.querySelector('.canvas');
-    const predictions = await detectObjects(canvas);
+    const detectionMode = document.querySelector('#toggleMode').checked ? 'objectDetection' : 'imageClassification';
 
-    if (predictions.length) {
-      handlePredictions(predictions);
-    } else {
-      const morePredictions = await classifyImage(canvas);
-      handlePredictions(morePredictions, true);
+    if (detectionMode === 'objectDetection') {
+      const predictions = await detectObjects(canvas);
+      if (predictions.length) {
+        handlePredictions(predictions);
+      } else {
+        console.log('NO RESULTS');
+      }
+    }
+    if (detectionMode === 'imageClassification') {
+      const predictions = await classifyImage(canvas);
+      if (predictions.length) {
+        handlePredictions(predictions, true);
+      } else {
+        console.log('NO RESULTS');
+      }
     }
   };
 

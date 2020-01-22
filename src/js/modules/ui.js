@@ -116,3 +116,15 @@ export function showUpdatedToast() {
     localStorage.removeItem('updateInstalled');
   }
 }
+
+export function initToggleModeSwitch() {
+  const toggleEl = document.querySelector('#toggleMode');
+  toggleEl.addEventListener('change', () => {
+    const icLabelText = document.querySelector('.imageClassificationText');
+    const odLabelText = document.querySelector('.objectDetectionText');
+    icLabelText.classList.toggle('font-weight-bolder');
+    odLabelText.classList.toggle('font-weight-bolder');
+    icLabelText.classList.toggle('text-muted');
+    odLabelText.classList.toggle('text-muted');
+  });
+}
