@@ -67,6 +67,18 @@ function getResultsTableMarkup(data, isMobilenet = false) {
   return tableRowMarkup;
 }
 
+export function getNoResultsMarkup(detectionMode) {
+  const noResultsString = detectionMode === 'objectDetection' ? 'Sorry, unable to identify any objects' : 'Sorry, unable to classify image';
+  const noResultsMarkup = `
+    <h3 class="lead-1 text-center">${noResultsString}</h3>
+    <div class="center">
+      ${startOverButtonMarkup}
+    </div>
+  `;
+
+  return noResultsMarkup;
+}
+
 export function getResultsMarkup(data, isMobilenet = false) {
   const resultsTableMarkup = getResultsTableMarkup(data, isMobilenet);
   const firstPrediction = `${isMobilenet ? data[0].className.toLowerCase().split(', ')[0] : data[0].class.toLowerCase()}`;

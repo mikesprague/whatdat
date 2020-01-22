@@ -102,6 +102,13 @@ export async function startCamera() {
     ui.initElementEventHandler('.btnStartOver', 'click', startCamera);
   };
 
+  const handleNoResults = (detectionMode) => {
+    const noResultsMarkup = templates.getNoResultsMarkup(detectionMode);
+    ui.hideElement('.btnTakePhoto');
+    ui.populateElementWithMarkup('.results', noResultsMarkup);
+    ui.initElementEventHandler('.btnStartOver', 'click', startCamera);
+  };
+
   const detectObjects = async (image) => {
     let detections = null;
 
@@ -141,21 +148,22 @@ export async function startCamera() {
 
     const canvas = document.querySelector('.canvas');
     const detectionMode = JSON.parse(localStorage.getItem('detectionMode'));
+    let predictions = null;
 
     if (detectionMode === 'objectDetection') {
-      const predictions = await detectObjects(canvas);
+      predictions = await detectObjects(canvas);
       if (predictions.length) {
         handlePredictions(predictions);
       } else {
-        console.log('NO RESULTS');
+        handleNoResults(detectionMode);
       }
     }
     if (detectionMode === 'imageClassification') {
-      const predictions = await classifyImage(canvas);
+      predictions = await classifyImage(canvas);
       if (predictions.length) {
         handlePredictions(predictions, true);
       } else {
-        console.log('NO RESULTS');
+        handleNoResults(detectionMode);
       }
     }
   };
