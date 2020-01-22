@@ -140,7 +140,7 @@ export async function startCamera() {
     ui.disableButton('.btnTakePhoto', '<i class="fad fa-sync fa-spin"></i> identifying ...');
 
     const canvas = document.querySelector('.canvas');
-    const detectionMode = document.querySelector('#toggleMode').checked ? 'objectDetection' : 'imageClassification';
+    const detectionMode = JSON.parse(localStorage.getItem('detectionMode'));
 
     if (detectionMode === 'objectDetection') {
       const predictions = await detectObjects(canvas);

@@ -80,14 +80,14 @@ export function initElementEventHandler(elementSelector, event, eventHandler) {
 
 export function showInstallAlert() {
   const updateMessage = 'Latest Version Installed';
-  const releaseNotesLink = '<a href="https://github.com/mikesprague/whatdat/releases/latest" rel="nofollow" target="_blank">View Release Notes</a>';
+  // const releaseNotesLink = '<a href="https://github.com/mikesprague/whatdat/releases/latest" rel="nofollow" target="_blank">View Release Notes</a>';
   localStorage.setItem('updateInstalled', JSON.stringify(1));
   swal.fire({
     title: 'What Dat?!?',
     text: `${updateMessage}`,
     cancelButtonText: "No thanks, I'll do it later",
     confirmButtonText: 'Reload for Latest Updates',
-    footer: `${releaseNotesLink}`,
+    // footer: `${releaseNotesLink}`,
     showCancelButton: true,
     icon: 'success',
   }).then((result) => {
@@ -126,5 +126,14 @@ export function initToggleModeSwitch() {
     odLabelText.classList.toggle('font-weight-bolder');
     icLabelText.classList.toggle('text-muted');
     odLabelText.classList.toggle('text-muted');
+    if (toggleEl.checked) {
+      localStorage.setItem('detectionMode', JSON.stringify('objectDetection'));
+    } else {
+      localStorage.setItem('detectionMode', JSON.stringify('imageClassification'));
+    }
   });
+  const detectionMode = JSON.parse(localStorage.getItem('detectionMode'));
+  if (detectionMode === 'imageClassification') {
+    toggleEl.click();
+  }
 }
