@@ -7,39 +7,39 @@ patch:
     - snyk > snyk-nodejs-lockfile-parser > lodash:
         patched: '2019-07-07T21:35:40.084Z'
       fabric > jsdom > request-promise-native > request-promise-core > lodash:
-        patched: '2020-01-22T18:36:43.421Z'
+        patched: '2020-01-22T19:23:15.168Z'
     - snyk > lodash:
         patched: '2019-07-07T21:35:40.084Z'
       snyk > inquirer > lodash:
-        patched: '2020-01-22T18:36:43.421Z'
+        patched: '2020-01-22T19:23:15.168Z'
     - snyk > snyk-nuget-plugin > lodash:
         patched: '2019-07-07T21:35:40.084Z'
       snyk > snyk-config > lodash:
-        patched: '2020-01-22T18:36:43.421Z'
+        patched: '2020-01-22T19:23:15.168Z'
     - snyk > @snyk/dep-graph > lodash:
         patched: '2019-07-07T21:35:40.084Z'
       snyk > @snyk/dep-graph > graphlib > lodash:
-        patched: '2020-01-22T18:36:43.421Z'
+        patched: '2020-01-22T19:23:15.168Z'
     - snyk > inquirer > lodash:
         patched: '2019-07-07T21:35:40.084Z'
       snyk > snyk-go-plugin > graphlib > lodash:
-        patched: '2020-01-22T18:36:43.421Z'
+        patched: '2020-01-22T19:23:15.168Z'
     - snyk > snyk-config > lodash:
         patched: '2019-07-07T21:35:40.084Z'
       snyk > snyk-nodejs-lockfile-parser > graphlib > lodash:
-        patched: '2020-01-22T18:36:43.421Z'
+        patched: '2020-01-22T19:23:15.168Z'
     - snyk > snyk-mvn-plugin > lodash:
         patched: '2019-07-07T21:35:40.084Z'
       snyk > snyk-nuget-plugin > dotnet-deps-parser > lodash:
-        patched: '2020-01-22T18:36:43.421Z'
+        patched: '2020-01-22T19:23:15.168Z'
     - snyk > snyk-go-plugin > graphlib > lodash:
         patched: '2019-07-07T21:35:40.084Z'
       snyk > @snyk/snyk-cocoapods-plugin > @snyk/dep-graph > graphlib > lodash:
-        patched: '2020-01-22T18:36:43.421Z'
+        patched: '2020-01-22T19:23:15.168Z'
     - snyk > snyk-nodejs-lockfile-parser > graphlib > lodash:
         patched: '2019-07-07T21:35:40.084Z'
       snyk > @snyk/snyk-cocoapods-plugin > @snyk/cocoapods-lockfile-parser > @snyk/dep-graph > graphlib > lodash:
-        patched: '2020-01-22T18:36:43.421Z'
+        patched: '2020-01-22T19:23:15.168Z'
     - snyk > snyk-php-plugin > @snyk/composer-lockfile-parser > lodash:
         patched: '2019-07-07T21:35:40.084Z'
     - snyk > @snyk/dep-graph > graphlib > lodash:
@@ -64,6 +64,24 @@ patch:
         patched: '2019-10-01T16:23:44.580Z'
     - snyk > @snyk/snyk-cocoapods-plugin > @snyk/cocoapods-lockfile-parser > @snyk/dep-graph > graphlib > lodash:
         patched: '2019-10-01T16:23:44.580Z'
+    - fabric > jsdom > request-promise-native > request-promise-core > lodash:
+        patched: '2020-01-22T18:36:43.421Z'
+    - snyk > inquirer > lodash:
+        patched: '2020-01-22T18:36:43.421Z'
+    - snyk > snyk-config > lodash:
+        patched: '2020-01-22T18:36:43.421Z'
+    - snyk > @snyk/dep-graph > graphlib > lodash:
+        patched: '2020-01-22T18:36:43.421Z'
+    - snyk > snyk-go-plugin > graphlib > lodash:
+        patched: '2020-01-22T18:36:43.421Z'
+    - snyk > snyk-nodejs-lockfile-parser > graphlib > lodash:
+        patched: '2020-01-22T18:36:43.421Z'
+    - snyk > snyk-nuget-plugin > dotnet-deps-parser > lodash:
+        patched: '2020-01-22T18:36:43.421Z'
+    - snyk > @snyk/snyk-cocoapods-plugin > @snyk/dep-graph > graphlib > lodash:
+        patched: '2020-01-22T18:36:43.421Z'
+    - snyk > @snyk/snyk-cocoapods-plugin > @snyk/cocoapods-lockfile-parser > @snyk/dep-graph > graphlib > lodash:
+        patched: '2020-01-22T18:36:43.421Z'
   SNYK-JS-HTTPSPROXYAGENT-469131:
     - snyk > proxy-agent > https-proxy-agent:
         patched: '2019-10-02T13:42:23.455Z'
