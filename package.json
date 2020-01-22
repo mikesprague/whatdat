@@ -52,8 +52,8 @@
     "logrocket": "^1.0.6",
     "register-service-worker": "^1.6.2",
     "rollup": "^1.29.1",
-    "snyk": "^1.279.0",
-    "sweetalert2": "^9.6.1",
+    "snyk": "^1.279.1",
+    "sweetalert2": "^9.7.0",
     "tippy.js": "^5.1.4"
   },
   "devDependencies": {
