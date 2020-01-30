@@ -62,13 +62,19 @@ export async function startCamera() {
   const drawBoundingBox = async (prediction, isHidden = false) => {
     const wrapper = document.querySelector('.canvas-wrapper');
     const div = document.createElement('div');
+    const [
+      left,
+      top,
+      width,
+      height,
+    ] = prediction.bbox;
     div.style.position = 'absolute';
     div.style.border = '2px solid rgb(223, 105, 25)';
     div.style.backgroundColor = 'rgba(255, 255, 255, 0.25)';
-    div.style.left = `${Math.round(prediction.bbox[0])}px`;
-    div.style.top = `${Math.round(prediction.bbox[1])}px`;
-    div.style.width = `${Math.round(prediction.bbox[2])}px`;
-    div.style.height = `${Math.round(prediction.bbox[3])}px`;
+    div.style.left = `${Math.round(left)}px`;
+    div.style.top = `${Math.round(top)}px`;
+    div.style.width = `${Math.round(width)}px`;
+    div.style.height = `${Math.round(height)}px`;
     div.setAttribute('data-tippy-content', `
       <span class='badge badge-primary text-uppercase'>
         ${prediction.class}
