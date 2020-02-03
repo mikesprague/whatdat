@@ -30,7 +30,7 @@
   "repository": "github:mikesprague/whatdat",
   "license": "MIT",
   "engines": {
-    "node": ">= 10.x",
+    "node": ">= 12.x",
     "npm": ">= 6.x",
     "yarn": ">=1.x"
   },
@@ -49,7 +49,7 @@
     "bootswatch": "^4.4.1",
     "cross-env": "^7.0.0",
     "cssnano": "^4.1.10",
-    "fabric": "^3.6.1",
+    "fabric": "^3.6.2",
     "logrocket": "^1.0.6",
     "register-service-worker": "^1.6.2",
     "rollup": "^1.31.0",
