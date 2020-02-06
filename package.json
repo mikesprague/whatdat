@@ -35,7 +35,7 @@
     "yarn": ">=1.x"
   },
   "dependencies": {
-    "@bugsnag/js": "^6.5.0",
+    "@bugsnag/js": "^6.5.2",
     "@fortawesome/fontawesome-svg-core": "^1.2.27",
     "@fortawesome/pro-duotone-svg-icons": "^5.12.1",
     "@fullhuman/postcss-purgecss": "^2.0.6",
