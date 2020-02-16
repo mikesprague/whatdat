@@ -50,6 +50,7 @@
     "cross-env": "^7.0.0",
     "cssnano": "^4.1.10",
     "fabric": "^3.6.2",
+    "html2canvas": "^1.0.0-rc.5",
     "logrocket": "^1.0.6",
     "register-service-worker": "^1.6.2",
     "rollup": "^1.31.1",
