@@ -38,7 +38,7 @@
     "@bugsnag/js": "^6.5.2",
     "@fortawesome/fontawesome-svg-core": "^1.2.27",
     "@fortawesome/pro-duotone-svg-icons": "^5.12.1",
-    "@fullhuman/postcss-purgecss": "^2.0.6",
+    "@fullhuman/postcss-purgecss": "^2.1.0",
     "@tensorflow-models/coco-ssd": "^2.0.1",
     "@tensorflow-models/mobilenet": "^2.0.4",
     "@tensorflow/tfjs": "^1.5.2",
@@ -54,7 +54,7 @@
     "logrocket": "^1.0.6",
     "register-service-worker": "^1.6.2",
     "rollup": "^1.31.1",
-    "snyk": "^1.297.1",
+    "snyk": "^1.297.2",
     "sweetalert2": "^9.8.2",
     "tippy.js": "^5.2.1"
   },
