@@ -21,8 +21,7 @@ export function initTooltips() {
   tippy('.has-tooltip', {
     allowHTML: true,
     arrow: false,
-    boundary: 'scrollParent',
-    distance: -32,
+    offset: [5, -32],
     hideOnClick: true,
     showOnCreate: false,
     touch: true,
@@ -31,7 +30,7 @@ export function initTooltips() {
 }
 
 export function destroyTooltips() {
-  Array.from(document.querySelectorAll('.tippy-popper'))
+  Array.from(document.querySelectorAll('[data-tippy-root]'))
     .map((tooltip) => tooltip.remove());
 }
 
