@@ -42,7 +42,7 @@
     "@tensorflow-models/coco-ssd": "^2.0.1",
     "@tensorflow-models/mobilenet": "^2.0.4",
     "@tensorflow/tfjs": "^1.6.0",
-    "@tensorflow/tfjs-converter": "^1.6.0",
+    "@tensorflow/tfjs-converter": "^1.6.1",
     "@tensorflow/tfjs-core": "^1.6.1",
     "autoprefixer": "^9.7.4",
     "bootstrap": "^4.4.1",
@@ -53,9 +53,9 @@
     "html2canvas": "^1.0.0-rc.5",
     "logrocket": "^1.0.6",
     "register-service-worker": "^1.6.2",
-    "rollup": "^2.0.0",
+    "rollup": "^2.0.2",
     "snyk": "^1.298.1",
-    "sweetalert2": "^9.8.2",
+    "sweetalert2": "^9.9.0",
     "tippy.js": "^6.0.1"
   },
   "devDependencies": {
