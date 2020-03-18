@@ -1090,10 +1090,10 @@
   dependencies:
     "@hapi/hoek" "^8.3.0"
 
-"@popperjs/core@^2.1.0":
-  version "2.1.0"
-  resolved "https://registry.yarnpkg.com/@popperjs/core/-/core-2.1.0.tgz#09a7a352a40508156e1256efdc015593feca28e0"
-  integrity sha512-ntN5t5spqhQv28cLfmmt1dYabsudzR5A7PU15gr/gzcT/gzqAOnYFQPaLPFraDa7ZCJG2eJ1JsO7pgXbYXGIrw==
+"@popperjs/core@^2.1.1":
+  version "2.1.1"
+  resolved "https://registry.yarnpkg.com/@popperjs/core/-/core-2.1.1.tgz#12c572ab88ef7345b43f21883fca26631c223085"
+  integrity sha512-sLqWxCzC5/QHLhziXSCAksBxHfOnQlhPRVgPK0egEw+ktWvG75T2k+aYWVjVh9+WKeT3tlG3ZNbZQvZLmfuOIw==
 
 "@snyk/cli-interface@1.5.0":
   version "1.5.0"
@@ -4370,10 +4370,10 @@ extsprintf@^1.2.0:
   resolved "https://registry.yarnpkg.com/extsprintf/-/extsprintf-1.4.0.tgz#e2689f8f356fad62cca65a3a91c5df5f9551692f"
   integrity sha1-4mifjzVvrWLMplo6kcXfX5VRaS8=
 
-fabric@^3.6.2:
-  version "3.6.2"
-  resolved "https://registry.yarnpkg.com/fabric/-/fabric-3.6.2.tgz#fb0eb36b20a7932b9e44ddf447aa09da4ef3ac70"
-  integrity sha512-LGj/oLg55lYozasrVHHq0prR2cbdKy7TXSByTqCJZ7JgAhJwx7/BbUUZwdlfFXOEDGjb2dBh6Wqv2y/5jFvBEQ==
+fabric@^3.6.3:
+  version "3.6.3"
+  resolved "https://registry.yarnpkg.com/fabric/-/fabric-3.6.3.tgz#c72b148911e4d180747f7bb0f12ad158a4508dfc"
+  integrity sha512-PwJKZG7Zbst+B1PSmt2OddK8UJ9tQ23a9gslodCSrXCzj8S+1RcOaQuA9gbpoQWpXYUB0qsBhdBvAVyOi7oM9g==
   optionalDependencies:
     canvas "^2.6.1"
     jsdom "^15.1.0"
@@ -8607,10 +8607,10 @@ regexpu-core@^4.6.0:
     unicode-match-property-ecmascript "^1.0.4"
     unicode-match-property-value-ecmascript "^1.1.0"
 
-register-service-worker@^1.7.0:
-  version "1.7.0"
-  resolved "https://registry.yarnpkg.com/register-service-worker/-/register-service-worker-1.7.0.tgz#b4b60d87a1d117f119bfd24ece073dcdb85dae64"
-  integrity sha512-sJQIxgodrulyN4d+bTkRnroPNMH3i1J4kP7Wm+vLhTP5CdbDSRr5jCeC9sJ6jyL603IZVbMAZ5HcU0hWCbJQQA==
+register-service-worker@^1.7.1:
+  version "1.7.1"
+  resolved "https://registry.yarnpkg.com/register-service-worker/-/register-service-worker-1.7.1.tgz#6308347ac6c0af0f6c0b22ea5d59d25e836bc932"
+  integrity sha512-IdTfUZ4u8iJL8o1w8es8l6UMGPmkwHolUdT+UmM1UypC80IB4KbpuIlvwWVj8UDS7eJwkEYRcKRgfRX+oTmJsw==
 
 registry-auth-token@^3.0.1:
   version "3.4.0"
@@ -8919,10 +8919,10 @@ rollup@^1.17.0:
     "@types/node" "*"
     acorn "^7.1.0"
 
-rollup@^2.0.6:
-  version "2.0.6"
-  resolved "https://registry.yarnpkg.com/rollup/-/rollup-2.0.6.tgz#865d6bb15a28cff3429ea1dc57236013661cb9de"
-  integrity sha512-P42IlI6a/bxh52ed8hEXXe44LcHfep2f26OZybMJPN1TTQftibvQEl3CWeOmJrzqGbFxOA000QXDWO9WJaOQpA==
+rollup@^2.1.0:
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/rollup/-/rollup-2.1.0.tgz#552e248e397a06b9c6db878c0564ca4ee06729c9"
+  integrity sha512-gfE1455AEazVVTJoeQtcOq/U6GSxwoj4XPSWVsuWmgIxj7sBQNLDOSA82PbdMe+cP8ql8fR1jogPFe8Wg8g4SQ==
   optionalDependencies:
     fsevents "~2.1.2"
 
@@ -9530,10 +9530,10 @@ snyk-try-require@1.3.1, snyk-try-require@^1.1.1, snyk-try-require@^1.3.1:
     lru-cache "^4.0.0"
     then-fs "^2.0.0"
 
-snyk@^1.298.1:
-  version "1.298.1"
-  resolved "https://registry.yarnpkg.com/snyk/-/snyk-1.298.1.tgz#662e128c145b2b98f8d3a359128d3c13f677ea8a"
-  integrity sha512-HTpycsQ4uLAGoPAt9HjX+eLTdHRXOcTzBAzjSIav1UvXzkyPD6kvP8EJJ5PlL/6MHFmoUpn9Io1+OKEUmPtpVA==
+snyk@^1.299.0:
+  version "1.299.0"
+  resolved "https://registry.yarnpkg.com/snyk/-/snyk-1.299.0.tgz#72b6251b7d924b1bc54e237055b549743370b005"
+  integrity sha512-K2dlmwlmJpD7CZE8B8GguwIJmjOWdXzQ7UlcFIscg8y0tP8OT9a1gouLgBaU4uyS5J5wByipGNX1Cpwi6WRt5w==
   dependencies:
     "@snyk/cli-interface" "2.3.2"
     "@snyk/configstore" "^3.2.0-rc1"
@@ -10091,10 +10091,10 @@ svgo@^1.0.0:
     unquote "~1.1.1"
     util.promisify "~1.0.0"
 
-sweetalert2@^9.10.0:
-  version "9.10.0"
-  resolved "https://registry.yarnpkg.com/sweetalert2/-/sweetalert2-9.10.0.tgz#f0a0e45d73141528e80b8c47f997c254fddcd780"
-  integrity sha512-HYLRj1zuXtrMrYh2kzrRNzmcDIuNBsIB7ZN0AZctFaVS433QnnL/ihLoRm0COTqy38KOhYwKK1PMYVK/1rQ0Lg==
+sweetalert2@^9.10.2:
+  version "9.10.2"
+  resolved "https://registry.yarnpkg.com/sweetalert2/-/sweetalert2-9.10.2.tgz#6cad40638fb65907c38942ea01194a8fd4be1f68"
+  integrity sha512-muth00S/u8739EY3JqaqAAw3mZd8DNldQWBpIq5GTo9V+2C7qMBEh3oZOr9DmO39va5D2zx4T3xq4VU5VAnLmg==
 
 symbol-tree@^3.2.2:
   version "3.2.4"
@@ -10281,12 +10281,12 @@ timsort@^0.3.0:
   resolved "https://registry.yarnpkg.com/timsort/-/timsort-0.3.0.tgz#405411a8e7e6339fe64db9a234de11dc31e02bd4"
   integrity sha1-QFQRqOfmM5/mTbmiNN4R3DHgK9Q=
 
-tippy.js@^6.0.3:
-  version "6.0.3"
-  resolved "https://registry.yarnpkg.com/tippy.js/-/tippy.js-6.0.3.tgz#caf7730132c41b835a0cc41d698f4e2858a10f3c"
-  integrity sha512-buQF6HugTA4YeSA/s9xBhu0ferEAx7sRSn45G+Juh3p+Dz3vEKfxtqdg6JUnHIWDCV/r0u8Lrobs9AB4dtYcUQ==
+tippy.js@^6.1.0:
+  version "6.1.0"
+  resolved "https://registry.yarnpkg.com/tippy.js/-/tippy.js-6.1.0.tgz#9c58b94f92f3044d5e861b9d83da3c2a6d3d4323"
+  integrity sha512-cRFydlVZlvo4soQSUfVNbH2K77zDUhDAzaAjxseyn81gGIa+j72y98yDL2yB0n8gas/E+Zlr1iOyR5ckslUFqA==
   dependencies:
-    "@popperjs/core" "^2.1.0"
+    "@popperjs/core" "^2.1.1"
 
 tmp@0.0.33, tmp@^0.0.33:
   version "0.0.33"
