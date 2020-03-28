@@ -41,8 +41,8 @@
     "@fullhuman/postcss-purgecss": "^2.1.0",
     "@tensorflow-models/coco-ssd": "^2.0.1",
     "@tensorflow-models/mobilenet": "^2.0.4",
-    "@tensorflow/tfjs": "^1.7.0",
-    "@tensorflow/tfjs-converter": "^1.7.0",
+    "@tensorflow/tfjs": "^1.7.1",
+    "@tensorflow/tfjs-converter": "^1.7.1",
     "@tensorflow/tfjs-core": "^1.7.1",
     "autoprefixer": "^9.7.5",
     "bootstrap": "^4.4.1",
@@ -55,7 +55,7 @@
     "register-service-worker": "^1.7.1",
     "rollup": "^2.2.0",
     "snyk": "^1.305.0",
-    "sweetalert2": "^9.10.6",
+    "sweetalert2": "^9.10.7",
     "tippy.js": "^6.1.0"
   },
   "devDependencies": {
