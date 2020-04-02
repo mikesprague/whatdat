@@ -9172,9 +9172,9 @@ rollup@^1.31.1:
     acorn "^7.1.0"
 
 rollup@^2.3.1:
-  version "2.3.1"
-  resolved "https://registry.yarnpkg.com/rollup/-/rollup-2.3.1.tgz#844c5cdf88d212ff7e59212088c37eacc521a2f9"
-  integrity sha512-BRjzOauORe+R0U0I6SkMTSG22nYmtztR/TaBl0SvbXgc3VAxBDrZoB6HROiK0S5px1pUBnLnjBkbzmVuwC9Q1Q==
+  version "2.3.2"
+  resolved "https://registry.yarnpkg.com/rollup/-/rollup-2.3.2.tgz#afa68e4f3325bcef4e150d082056bef450bcac60"
+  integrity sha512-p66+fbfaUUOGE84sHXAOgfeaYQMslgAazoQMp//nlR519R61213EPFgrMZa48j31jNacJwexSAR1Q8V/BwGKBA==
   optionalDependencies:
     fsevents "~2.1.2"
 
@@ -9339,10 +9339,10 @@ seedrandom@2.4.3:
   resolved "https://registry.yarnpkg.com/seedrandom/-/seedrandom-2.4.3.tgz#2438504dad33917314bff18ac4d794f16d6aaecc"
   integrity sha1-JDhQTa0zkXMUv/GKxNeU8W1qrsw=
 
-seedrandom@^2.4.4:
-  version "2.4.4"
-  resolved "https://registry.yarnpkg.com/seedrandom/-/seedrandom-2.4.4.tgz#b25ea98632c73e45f58b77cfaa931678df01f9ba"
-  integrity sha512-9A+PDmgm+2du77B5i0Ip2cxOqqHjgNxnBgglxLcX78A2D6c2rTo61z4jnVABpF4cKeDMDG+cmXXvdnqse2VqMA==
+seedrandom@^3.0.5:
+  version "3.0.5"
+  resolved "https://registry.yarnpkg.com/seedrandom/-/seedrandom-3.0.5.tgz#54edc85c95222525b0c7a6f6b3543d8e0b3aa0a7"
+  integrity sha512-8OwmbklUNzwezjGInmZ+2clQmExQPvomqjL7LFqOYqtmuxRgQYqOD3mHaU+MvZn5FLUeVxVfQjwLZW/n/JFuqg==
 
 select-hose@^2.0.0:
   version "2.0.0"
@@ -10352,9 +10352,9 @@ svgo@^1.0.0:
     util.promisify "~1.0.0"
 
 sweetalert2@^9.10.7:
-  version "9.10.7"
-  resolved "https://registry.yarnpkg.com/sweetalert2/-/sweetalert2-9.10.7.tgz#4ce1a518834cd6880283ae04b337293ffc129551"
-  integrity sha512-tHgtmu68qkapnKsCfC3097qjXb5MXWavv/aOW0JyTh+/3fe3pnCphmaCgm1hI5FNkG4OoXJ86XK9PCq5Ig2ilA==
+  version "9.10.8"
+  resolved "https://registry.yarnpkg.com/sweetalert2/-/sweetalert2-9.10.8.tgz#8cb2367c9eb2b2d9c560f47ef6ef943287902924"
+  integrity sha512-OqHgFs0QWbNN4qdOt9hkvDTA1+pHTrw8yNARECQdCpBmTKxC5OttgXmnGE5kXsgrT7h7BlCjDFqSAZ+Qnk3S3A==
 
 symbol-tree@^3.2.2:
   version "3.2.4"
