@@ -1,5 +1,5 @@
 import '../scss/styles.scss';
-import bugsnag from '@bugsnag/js';
+import Bugsnag from '@bugsnag/js';
 import LogRocket from 'logrocket';
 import { register } from 'register-service-worker';
 import { startCamera } from './modules/camera';
@@ -21,9 +21,9 @@ import {
 if (isProduction()) {
   LogRocket.init('skxlwh/whatdat');
 
-  window.bugsnagClient = bugsnag('723fa77654c41aae8632bace87a7939f');
+  window.bugsnagClient = Bugsnag.start('723fa77654c41aae8632bace87a7939f');
 
-  bugsnag.beforeNotify = (data) => {
+  Bugsnag.beforeNotify = (data) => {
     /* eslint-disable no-param-reassign */
     data.metaData.sessionURL = LogRocket.sessionURL;
     /* eslint-enable no-param-reassign */
