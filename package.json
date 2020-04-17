@@ -39,7 +39,7 @@
     "@fortawesome/fontawesome-svg-core": "^1.2.28",
     "@fortawesome/pro-duotone-svg-icons": "^5.13.0",
     "@fullhuman/postcss-purgecss": "^2.1.2",
-    "@tensorflow-models/coco-ssd": "^2.0.2",
+    "@tensorflow-models/coco-ssd": "^2.0.3",
     "@tensorflow-models/mobilenet": "^2.0.4",
     "@tensorflow/tfjs": "^1.7.2",
     "@tensorflow/tfjs-converter": "^1.7.2",
@@ -56,7 +56,7 @@
     "rollup": "^2.6.1",
     "snyk": "^1.305.1",
     "sweetalert2": "^9.10.12",
-    "tippy.js": "^6.1.1"
+    "tippy.js": "^6.2.0"
   },
   "devDependencies": {
     "@babel/cli": "^7.8.4",
