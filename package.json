@@ -53,8 +53,8 @@
     "html2canvas": "^1.0.0-rc.5",
     "logrocket": "^1.0.7",
     "register-service-worker": "^1.7.1",
-    "rollup": "^2.7.1",
-    "snyk": "^1.307.0",
+    "rollup": "^2.7.2",
+    "snyk": "^1.309.0",
     "sweetalert2": "^9.10.12",
     "tippy.js": "^6.2.0"
   },
