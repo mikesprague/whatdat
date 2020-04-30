@@ -53,10 +53,10 @@
     "html2canvas": "^1.0.0-rc.5",
     "logrocket": "^1.0.7",
     "register-service-worker": "^1.7.1",
-    "rollup": "^2.7.3",
-    "snyk": "^1.314.0",
+    "rollup": "^2.7.5",
+    "snyk": "^1.315.1",
     "sweetalert2": "^9.10.12",
-    "tippy.js": "^6.2.2"
+    "tippy.js": "^6.2.3"
   },
   "devDependencies": {
     "@babel/cli": "^7.8.4",
