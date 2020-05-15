@@ -70,29 +70,45 @@ const webpackPlugins = [
     clientsClaim: true,
     skipWaiting: true,
   }),
-  new CopyWebpackPlugin([{
-    from: './src/*.js*',
-    to: './',
-    flatten: true,
-    force: true,
-  }]),
-  new CopyWebpackPlugin([{
-    from: './src/_redirects',
-    to: './',
-    force: true,
-  }]),
-  new CopyWebpackPlugin([{
-    from: './src/images/**/*',
-    to: './images',
-    flatten: true,
-    force: true,
-  }]),
-  new CopyWebpackPlugin([{
-    from: './src/*.html',
-    to: './',
-    force: true,
-    flatten: true,
-  }]),
+  new CopyWebpackPlugin({
+    patterns: [
+      {
+        from: './src/*.js*',
+        to: './',
+        flatten: true,
+        force: true,
+      },
+    ],
+  }),
+  new CopyWebpackPlugin({
+    patterns: [
+      {
+        from: './src/_redirects',
+        to: './',
+        force: true,
+      },
+    ],
+  }),
+  new CopyWebpackPlugin({
+    patterns: [
+      {
+        from: './src/images/**/*',
+        to: './images',
+        flatten: true,
+        force: true,
+      },
+    ],
+  }),
+  new CopyWebpackPlugin({
+    patterns: [
+      {
+        from: './src/*.html',
+        to: './',
+        force: true,
+        flatten: true,
+      },
+    ],
+  }),
 ];
 
 if (mode === 'production') {
