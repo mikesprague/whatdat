@@ -43,7 +43,7 @@
     "@tensorflow-models/mobilenet": "^2.0.4",
     "@tensorflow/tfjs": "^1.7.4",
     "@tensorflow/tfjs-converter": "^1.7.4",
-    "@tensorflow/tfjs-core": "^2.0.0",
+    "@tensorflow/tfjs-core": "^1.7.4",
     "autoprefixer": "^9.8.0",
     "bootstrap": "^4.5.0",
     "bootswatch": "^4.5.0",
