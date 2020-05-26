@@ -85,15 +85,6 @@ const webpackPlugins = [
   new CopyWebpackPlugin({
     patterns: [
       {
-        from: './src/_redirects',
-        to: './',
-        force: true,
-      },
-    ],
-  }),
-  new CopyWebpackPlugin({
-    patterns: [
-      {
         from: './src/images/**/*',
         to: './images',
         flatten: true,
