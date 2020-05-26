@@ -43,7 +43,7 @@
     "@tensorflow-models/mobilenet": "^2.0.4",
     "@tensorflow/tfjs": "^1.7.4",
     "@tensorflow/tfjs-converter": "^1.7.4",
-    "@tensorflow/tfjs-core": "^1.7.4",
+    "@tensorflow/tfjs-core": "^2.0.0",
     "autoprefixer": "^9.8.0",
     "bootstrap": "^4.5.0",
     "bootswatch": "^4.5.0",
@@ -54,7 +54,7 @@
     "logrocket": "^1.0.7",
     "register-service-worker": "^1.7.1",
     "rollup": "^2.10.9",
-    "snyk": "^1.328.0",
+    "snyk": "^1.329.0",
     "sweetalert2": "^9.13.1",
     "tippy.js": "^6.2.3"
   },
