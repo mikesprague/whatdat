@@ -1,5 +1,7 @@
 import * as mobilenet from '@tensorflow-models/mobilenet';
 import * as cocoSsd from '@tensorflow-models/coco-ssd';
+import '@tensorflow/tfjs-backend-cpu';
+import '@tensorflow/tfjs-backend-webgl';
 import { fabric } from 'fabric';
 import { handleError } from './helpers';
 import * as templates from './templates';
