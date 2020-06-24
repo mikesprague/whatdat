@@ -1199,24 +1199,24 @@
   resolved "https://registry.yarnpkg.com/@bugsnag/safe-json-stringify/-/safe-json-stringify-5.0.0.tgz#1c39847968b52f5c08b7c76754406f9d4446b292"
   integrity sha512-EdGnA7n2UmX9Z0e2tIU0biKz8tCgtjbY69KoyH3yiMzm7Q9sriIlN9bZjqhTOKzM0GdLSGrkyKWif08xWKyucA==
 
-"@fortawesome/fontawesome-common-types@^0.2.28":
-  version "0.2.28"
-  resolved "https://npm.fontawesome.com/@fortawesome/fontawesome-common-types/-/0.2.28/fontawesome-common-types-0.2.28.tgz#1091bdfe63b3f139441e9cba27aa022bff97d8b2"
-  integrity sha512-gtis2/5yLdfI6n0ia0jH7NJs5i/Z/8M/ZbQL6jXQhCthEOe5Cr5NcQPhgTvFxNOtURE03/ZqUcEskdn2M+QaBg==
+"@fortawesome/fontawesome-common-types@^0.2.29":
+  version "0.2.29"
+  resolved "https://npm.fontawesome.com/@fortawesome/fontawesome-common-types/-/0.2.29/fontawesome-common-types-0.2.29.tgz#e1a456b643237462d390304cab6975ff3fd68397"
+  integrity sha512-cY+QfDTbZ7XVxzx7jxbC98Oxr/zc7R2QpTLqTxqlfyXDrAJjzi/xUIqAUsygELB62JIrbsWxtSRhayKFkGI7MA==
 
-"@fortawesome/fontawesome-svg-core@^1.2.28":
-  version "1.2.28"
-  resolved "https://npm.fontawesome.com/@fortawesome/fontawesome-svg-core/-/1.2.28/fontawesome-svg-core-1.2.28.tgz#e5b8c8814ef375f01f5d7c132d3c3a2f83a3abf9"
-  integrity sha512-4LeaNHWvrneoU0i8b5RTOJHKx7E+y7jYejplR7uSVB34+mp3Veg7cbKk7NBCLiI4TyoWS1wh9ZdoyLJR8wSAdg==
+"@fortawesome/fontawesome-svg-core@^1.2.29":
+  version "1.2.29"
+  resolved "https://npm.fontawesome.com/@fortawesome/fontawesome-svg-core/-/1.2.29/fontawesome-svg-core-1.2.29.tgz#34ef32824664534f9e4ef37982ebf286b899a189"
+  integrity sha512-xmPmP2t8qrdo8RyKihTkGb09RnZoc+7HFBCnr0/6ZhStdGDSLeEd7ajV181+2W29NWIFfylO13rU+s3fpy3cnA==
   dependencies:
-    "@fortawesome/fontawesome-common-types" "^0.2.28"
+    "@fortawesome/fontawesome-common-types" "^0.2.29"
 
-"@fortawesome/pro-duotone-svg-icons@^5.13.0":
-  version "5.13.0"
-  resolved "https://npm.fontawesome.com/@fortawesome/pro-duotone-svg-icons/-/5.13.0/pro-duotone-svg-icons-5.13.0.tgz#d37942a4ad814da0b286f33d0115cd7d584662a8"
-  integrity sha512-9A6rH9o6k3Deh8upCQx80o39XdUeFNcpaF/IEhJtKzPFwRp5hGFYYJhMcN5Y0F5q7IfBDLcabw+SiDVdteqRfg==
+"@fortawesome/pro-duotone-svg-icons@^5.13.1":
+  version "5.13.1"
+  resolved "https://npm.fontawesome.com/@fortawesome/pro-duotone-svg-icons/-/5.13.1/pro-duotone-svg-icons-5.13.1.tgz#1b9e1c5518d93689044d6cff9e25e020486c7f25"
+  integrity sha512-CrQRD0BVBrsnrmRKdw8kcPVvryfJxLZk7AnOOjtF2oRe47Qs+H+wM+qYo9IzJNhj7r/0Od5V+cSAKTuDKnhAmg==
   dependencies:
-    "@fortawesome/fontawesome-common-types" "^0.2.28"
+    "@fortawesome/fontawesome-common-types" "^0.2.29"
 
 "@fullhuman/postcss-purgecss@^2.3.0":
   version "2.3.0"
@@ -1345,11 +1345,12 @@
   dependencies:
     tslib "^1.9.3"
 
-"@snyk/cli-interface@2.6.0":
-  version "2.6.0"
-  resolved "https://registry.yarnpkg.com/@snyk/cli-interface/-/cli-interface-2.6.0.tgz#e64a00af0304b2055fe786f17325346cacdd4912"
-  integrity sha512-jtk0gf80v4mFyDqaQNokD8GOPMTXpIUL35ewg6jtmuZw41xt56WF9kqCjiiViSRRRYA0RK+RuiVfmJA5pxvMUQ==
+"@snyk/cli-interface@2.8.0":
+  version "2.8.0"
+  resolved "https://registry.yarnpkg.com/@snyk/cli-interface/-/cli-interface-2.8.0.tgz#ee5b45b7c75942163875b29e712c44f9d7f36bb3"
+  integrity sha512-St/G39iJG1zQK15L24kcVYM2gmFc/ylBCcBqU2DMZKJKwOPccKLUO6s+dWIUXMccQ+DFS6TuHPvuAKQNi9C4Yg==
   dependencies:
+    "@snyk/dep-graph" "1.19.0"
     "@snyk/graphlib" "2.1.9-patch"
     tslib "^1.9.3"
 
@@ -1404,7 +1405,7 @@
     source-map-support "^0.5.19"
     tslib "^1.11.1"
 
-"@snyk/dep-graph@^1.17.0", "@snyk/dep-graph@^1.18.2":
+"@snyk/dep-graph@1.19.0", "@snyk/dep-graph@^1.17.0", "@snyk/dep-graph@^1.18.2":
   version "1.19.0"
   resolved "https://registry.yarnpkg.com/@snyk/dep-graph/-/dep-graph-1.19.0.tgz#dfb2699520225e715083f6dd590bb91b55e99ba1"
   integrity sha512-/0phOICMk4hkX2KtZgi+4KNd5G9oYDIlxQDQk+ui2xl4gonPvK6Q5MFzHP7Xet1YY/XoU33ox41i+IO48qZ+zQ==
@@ -1519,14 +1520,6 @@
   resolved "https://registry.yarnpkg.com/@tensorflow-models/mobilenet/-/mobilenet-2.0.4.tgz#7f40771fcc650f50febd49be72372d39c15f6f95"
   integrity sha512-fkcxDBldlYitDCV88xETwAQoBIC8xYKdDu80uBDuBZBfNC4k/jeVbZHM28WjvTDsJN7d7dYO4NbIkRAH0XHKSQ==
 
-"@tensorflow/tfjs-backend-cpu@2.0.0":
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/@tensorflow/tfjs-backend-cpu/-/tfjs-backend-cpu-2.0.0.tgz#26d3ed8a6d814e751adc22e6036e40ed8940b5ac"
-  integrity sha512-eYj8CBjL8v2gHaYdS7JN1swi9kQYOHenMYBkf4khhW83ViZwpPmISyYzun8fy2gBlv28Y7juMmXHSncSDWfI1Q==
-  dependencies:
-    "@types/seedrandom" "2.4.27"
-    seedrandom "2.4.3"
-
 "@tensorflow/tfjs-backend-cpu@2.0.1", "@tensorflow/tfjs-backend-cpu@^2.0.1":
   version "2.0.1"
   resolved "https://registry.yarnpkg.com/@tensorflow/tfjs-backend-cpu/-/tfjs-backend-cpu-2.0.1.tgz#959a5bbc7f956ff37c4fbced2db75cd299ce76c4"
@@ -1535,19 +1528,7 @@
     "@types/seedrandom" "2.4.27"
     seedrandom "2.4.3"
 
-"@tensorflow/tfjs-backend-webgl@2.0.0":
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/@tensorflow/tfjs-backend-webgl/-/tfjs-backend-webgl-2.0.0.tgz#8f53ca3598ff922ee6ad28daf0ccc8089981d105"
-  integrity sha512-Y76LYbq8Z0Nquh2Fk+ToxhbjmLxBGX7vBLeGXi1TwvWJOBgfqroFNk2R6vspaZNd4wKfUMM+CWayPFUHcLCsWg==
-  dependencies:
-    "@tensorflow/tfjs-backend-cpu" "2.0.0"
-    "@types/offscreencanvas" "~2019.3.0"
-    "@types/seedrandom" "2.4.27"
-    "@types/webgl-ext" "0.0.30"
-    "@types/webgl2" "0.0.4"
-    seedrandom "2.4.3"
-
-"@tensorflow/tfjs-backend-webgl@^2.0.1":
+"@tensorflow/tfjs-backend-webgl@2.0.1", "@tensorflow/tfjs-backend-webgl@^2.0.1":
   version "2.0.1"
   resolved "https://registry.yarnpkg.com/@tensorflow/tfjs-backend-webgl/-/tfjs-backend-webgl-2.0.1.tgz#08eaff7fe9a7533b4d62475ec6220e843962af89"
   integrity sha512-Z0MNsbHyRBr2lHu4FKtmBgGGfmBOqB0zwN69d2uSEEvy/IsgtrGAwBVbB/Vv3hEK35RmgsaknKGergNugm23FQ==
@@ -1559,24 +1540,12 @@
     "@types/webgl2" "0.0.4"
     seedrandom "2.4.3"
 
-"@tensorflow/tfjs-converter@2.0.0", "@tensorflow/tfjs-converter@^2.0.0":
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/@tensorflow/tfjs-converter/-/tfjs-converter-2.0.0.tgz#6242c618202f04d88fa308d68a2dfcdd81ec020c"
-  integrity sha512-IFjjx2qe7M2UwwYJvCm2+OgpC+kooCWEjC8mOOoFV/o+g9/Q0RMohRDvffiqUuYx5Usi/vbjhlUBccsy/MhE3g==
+"@tensorflow/tfjs-converter@2.0.1", "@tensorflow/tfjs-converter@^2.0.1":
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/@tensorflow/tfjs-converter/-/tfjs-converter-2.0.1.tgz#0696455e6b6ed14e6f5f9cd937f8f2015a16569f"
+  integrity sha512-AI4oUZ3Tv8l7fXeuLNJ3/vIp8shMo/VmtBlhIJye8i5FwMqSlZf984q3Jk6ES4lOxUdkmDehILf7uVNQX2Yb/w==
 
-"@tensorflow/tfjs-core@2.0.0":
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/@tensorflow/tfjs-core/-/tfjs-core-2.0.0.tgz#c18e963d0332255dc37d6ff58fa0076402ae00d0"
-  integrity sha512-GB02Lyjp7NLKbjCOW6S3Vx2CkkUwtJFt8fY7Zaoyy/ANB4Iw8eiHJV0308CClrFfjA+UKU3TrO+bOQfeCJaEUw==
-  dependencies:
-    "@types/offscreencanvas" "~2019.3.0"
-    "@types/seedrandom" "2.4.27"
-    "@types/webgl-ext" "0.0.30"
-    "@types/webgl2" "0.0.4"
-    node-fetch "~2.1.2"
-    seedrandom "2.4.3"
-
-"@tensorflow/tfjs-core@^2.0.1":
+"@tensorflow/tfjs-core@2.0.1", "@tensorflow/tfjs-core@^2.0.1":
   version "2.0.1"
   resolved "https://registry.yarnpkg.com/@tensorflow/tfjs-core/-/tfjs-core-2.0.1.tgz#c64928423028e9e1821f7205367b1ff1f57ae3af"
   integrity sha512-LCmEXeGFgR3ai+ywGDYBqt4aCOSzEBlVKEflF1gAT22YcQuYh+/X4f58jY3yXfC+cn/FfIJFc2uj8b+D0MNWLQ==
@@ -1588,30 +1557,30 @@
     node-fetch "~2.1.2"
     seedrandom "2.4.3"
 
-"@tensorflow/tfjs-data@2.0.0":
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/@tensorflow/tfjs-data/-/tfjs-data-2.0.0.tgz#1bc7ac2fea26f40fa0fc9f4c2225ea262dd9bc7c"
-  integrity sha512-anr2udw2FPsX7oZwEuHYk5iaJQlxIe8EmTePYCNb80o77rZ+0Yu7RoOIUipjrW5zIh6OdkjfvGvg0tdZ35jiIA==
+"@tensorflow/tfjs-data@2.0.1":
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/@tensorflow/tfjs-data/-/tfjs-data-2.0.1.tgz#e891cb30fd933398eb8f328af2535720c3a34b84"
+  integrity sha512-eg0XmDE/v3It3pTO+g8hVjaO8V/wZVK0wvQx/QshIk/OmzI3aWeJPf1x081UBhTNv6Pi/DyfaN1NZs0IGYFQbQ==
   dependencies:
     "@types/node-fetch" "^2.1.2"
     node-fetch "~2.1.2"
 
-"@tensorflow/tfjs-layers@2.0.0":
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/@tensorflow/tfjs-layers/-/tfjs-layers-2.0.0.tgz#cdd2aa013350d88091e2e840a298a272356cb4e3"
-  integrity sha512-3jcXVDVbHvkDOSXbvtOgxB1WfRc1asNKOrnNrSfsQhB590DkCUH0QzKSInCe3GyoFhbUZhUwIDz0aFW+GdGgeQ==
+"@tensorflow/tfjs-layers@2.0.1":
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/@tensorflow/tfjs-layers/-/tfjs-layers-2.0.1.tgz#4b48841fe1b2831dabcb06fd7cb69c98c92a4596"
+  integrity sha512-ih7/KyhC2Ci/31UfB9frYbqUW59Zj5UVp22apyscyIqrRdBXhVtJIUnd4O5OXis0j9BOdzAQnBoOAa8S/T8JsA==
 
-"@tensorflow/tfjs@^2.0.0":
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/@tensorflow/tfjs/-/tfjs-2.0.0.tgz#7c014dd91648ab8c95cdc4261b163402493b60f5"
-  integrity sha512-+c3llrY54NgMBXJnhTkDS5t0us/zHynwuDQiVcMfjD9pBDa3fC7RLcpLrYl/cFGAdhH8XdjcjvqFjWze7S5IcQ==
+"@tensorflow/tfjs@^2.0.1":
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/@tensorflow/tfjs/-/tfjs-2.0.1.tgz#f72193c9433080c31efe0d48b77b21c4fae74ade"
+  integrity sha512-XMI8gH1k0ushRR7hWAUXoy0WiAil2R7zOU6oz9AMioXTFK2cEn08xgpTXS7KLZUS4CnXN4NHOKbYn3/Dp+CSTA==
   dependencies:
-    "@tensorflow/tfjs-backend-cpu" "2.0.0"
-    "@tensorflow/tfjs-backend-webgl" "2.0.0"
-    "@tensorflow/tfjs-converter" "2.0.0"
-    "@tensorflow/tfjs-core" "2.0.0"
-    "@tensorflow/tfjs-data" "2.0.0"
-    "@tensorflow/tfjs-layers" "2.0.0"
+    "@tensorflow/tfjs-backend-cpu" "2.0.1"
+    "@tensorflow/tfjs-backend-webgl" "2.0.1"
+    "@tensorflow/tfjs-converter" "2.0.1"
+    "@tensorflow/tfjs-core" "2.0.1"
+    "@tensorflow/tfjs-data" "2.0.1"
+    "@tensorflow/tfjs-layers" "2.0.1"
     core-js "3"
     regenerator-runtime "^0.13.5"
 
@@ -2319,17 +2288,17 @@ atob@^2.1.2:
   resolved "https://registry.yarnpkg.com/atob/-/atob-2.1.2.tgz#6d9517eb9e030d2436666651e86bd9f6f13533c9"
   integrity sha512-Wm6ukoaOGJi/73p/cl2GvLjTI5JM1k/O14isD73YML8StrH/7/lRFgmg8nICZgD3bZZvjwCGxtMOD3wWNAu8cg==
 
-autoprefixer@^9.8.0:
-  version "9.8.0"
-  resolved "https://registry.yarnpkg.com/autoprefixer/-/autoprefixer-9.8.0.tgz#68e2d2bef7ba4c3a65436f662d0a56a741e56511"
-  integrity sha512-D96ZiIHXbDmU02dBaemyAg53ez+6F5yZmapmgKcjm35yEe1uVDYI8hGW3VYoGRaG290ZFf91YxHrR518vC0u/A==
+autoprefixer@^9.8.4:
+  version "9.8.4"
+  resolved "https://registry.yarnpkg.com/autoprefixer/-/autoprefixer-9.8.4.tgz#736f1012673a70fa3464671d78d41abd54512863"
+  integrity sha512-84aYfXlpUe45lvmS+HoAWKCkirI/sw4JK0/bTeeqgHYco3dcsOn0NqdejISjptsYwNji/21dnkDri9PsYKk89A==
   dependencies:
     browserslist "^4.12.0"
-    caniuse-lite "^1.0.30001061"
-    chalk "^2.4.2"
+    caniuse-lite "^1.0.30001087"
+    colorette "^1.2.0"
     normalize-range "^0.1.2"
     num2fraction "^1.2.2"
-    postcss "^7.0.30"
+    postcss "^7.0.32"
     postcss-value-parser "^4.1.0"
 
 aws-sign2@~0.7.0:
@@ -2932,10 +2901,15 @@ caniuse-db@^1.0.30001059:
   resolved "https://registry.yarnpkg.com/caniuse-db/-/caniuse-db-1.0.30001067.tgz#2cefe72e07490f2737b537f88e0dc42cf83c3fd8"
   integrity sha512-idoz9VRtF3ycVF7NdeOkyHhmGBLZq3i4ib54v5LGEp/gnt/Vo0A2VWwF5zIigb/pIMzeCMqOMx2ioFfNh3P3EQ==
 
-caniuse-lite@^1.0.0, caniuse-lite@^1.0.30001043, caniuse-lite@^1.0.30001061:
+caniuse-lite@^1.0.0, caniuse-lite@^1.0.30001043:
   version "1.0.30001066"
   resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30001066.tgz#0a8a58a10108f2b9bf38e7b65c237b12fd9c5f04"
   integrity sha512-Gfj/WAastBtfxLws0RCh2sDbTK/8rJuSeZMecrSkNGYxPcv7EzblmDGfWQCFEQcSqYE2BRgQiJh8HOD07N5hIw==
+
+caniuse-lite@^1.0.30001087:
+  version "1.0.30001088"
+  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30001088.tgz#23a6b9e192106107458528858f2c0e0dba0d9073"
+  integrity sha512-6eYUrlShRYveyqKG58HcyOfPgh3zb2xqs7NvT2VVtP3hEUeeWvc3lqhpeMTxYWBBeeaT9A4bKsrtjATm66BTHg==
 
 canvas@^2.6.1:
   version "2.6.1"
@@ -3230,6 +3204,11 @@ color@^3.0.0:
   dependencies:
     color-convert "^1.9.1"
     color-string "^1.5.2"
+
+colorette@^1.2.0:
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/colorette/-/colorette-1.2.0.tgz#45306add826d196e8c87236ac05d797f25982e63"
+  integrity sha512-soRSroY+OF/8OdA3PTQXwaDJeMc7TfknKKrxeSCencL2a4+Tx5zhxmmv7hdpCjhKBjehzp8+bwe/T68K0hpIjw==
 
 combined-stream@^1.0.6, combined-stream@^1.0.8, combined-stream@~1.0.6:
   version "1.0.8"
@@ -6920,10 +6899,10 @@ loglevel@^1.6.8:
   resolved "https://registry.yarnpkg.com/loglevel/-/loglevel-1.6.8.tgz#8a25fb75d092230ecd4457270d80b54e28011171"
   integrity sha512-bsU7+gc9AJ2SqpzxwU3+1fedl8zAntbtC5XYlt3s2j1hJcn2PsXSmgN8TaLG/J1/2mod4+cE/3vNL70/c1RNCA==
 
-logrocket@^1.0.7:
-  version "1.0.7"
-  resolved "https://registry.yarnpkg.com/logrocket/-/logrocket-1.0.7.tgz#fe17dbdfc861481cd274fbda533d552de7800a3a"
-  integrity sha512-v6HWEQIsyG+3FkldB7vIAgHh7/qpsiz2Br4bLK5SHBvjqRrHs/Fp+Jr8oiA2GYq0UurAtCu51U8SWft5+OCKtg==
+logrocket@^1.0.8:
+  version "1.0.8"
+  resolved "https://registry.yarnpkg.com/logrocket/-/logrocket-1.0.8.tgz#45a1517257bc534a6e8c2397e3fa95f44c96c73d"
+  integrity sha512-klyJQaxanFZlDR5sd+/nyc4eBb4VY8fcYXlQMoNkks0Ftw4uu8LV6lGwSCtctWTYDIA4kLzaC3s7Vt8XIUEw9Q==
 
 loose-envify@^1.0.0:
   version "1.4.0"
@@ -8647,7 +8626,7 @@ postcss@7.0.32, postcss@^7.0.32:
     source-map "^0.6.1"
     supports-color "^6.1.0"
 
-postcss@^7.0.0, postcss@^7.0.1, postcss@^7.0.14, postcss@^7.0.16, postcss@^7.0.27, postcss@^7.0.30, postcss@^7.0.5, postcss@^7.0.6:
+postcss@^7.0.0, postcss@^7.0.1, postcss@^7.0.14, postcss@^7.0.16, postcss@^7.0.27, postcss@^7.0.5, postcss@^7.0.6:
   version "7.0.31"
   resolved "https://registry.yarnpkg.com/postcss/-/postcss-7.0.31.tgz#332af45cb73e26c0ee2614d7c7fb02dfcc2bd6dd"
   integrity sha512-a937VDHE1ftkjk+8/7nj/mrjtmkn69xxzJgRETXdAUU+IgOYPQNJF17haGWbeDxSyk++HA14UA98FurvPyBJOA==
@@ -9431,10 +9410,10 @@ rollup@^1.31.1:
     "@types/node" "*"
     acorn "^7.1.0"
 
-rollup@^2.16.1:
-  version "2.16.1"
-  resolved "https://registry.yarnpkg.com/rollup/-/rollup-2.16.1.tgz#97805e88071e2c6727bd0b64904976d14495c873"
-  integrity sha512-UYupMcbFtoWLB6ZtL4hPZNUTlkXjJfGT33Mmhz3hYLNmRj/cOvX2B26ZxDQuEpwtLdcyyyraBGQ7EfzmMJnXXg==
+rollup@^2.18.0:
+  version "2.18.0"
+  resolved "https://registry.yarnpkg.com/rollup/-/rollup-2.18.0.tgz#f03801e5dd01415e5675dcf61c824ea493ca0392"
+  integrity sha512-LhuQQp3WpnHo3HlKCRrdMXpB6jdLsGOoXXSfMjbv74s5VdV3WZhkYJT0Z6w/EH3UgPH+g/S9T4GJrKW/5iD8TA==
   optionalDependencies:
     fsevents "~2.1.2"
 
@@ -9895,10 +9874,10 @@ snyk-config@^3.0.0:
     lodash.merge "^4.6.2"
     nconf "^0.10.0"
 
-snyk-docker-plugin@3.12.1:
-  version "3.12.1"
-  resolved "https://registry.yarnpkg.com/snyk-docker-plugin/-/snyk-docker-plugin-3.12.1.tgz#2ac293264ecb844a95ab22d5638c3cbd7489c263"
-  integrity sha512-L7NqxD9k3eIcNF+yGzP1OJBkHLfBeVqnm8nUPAnFlXLUdiG+IpxdWSeXwODWXPG0rRUZL0G1bWhp7+9ibk4y7w==
+snyk-docker-plugin@3.12.3:
+  version "3.12.3"
+  resolved "https://registry.yarnpkg.com/snyk-docker-plugin/-/snyk-docker-plugin-3.12.3.tgz#3b451139ac3b59c896d3c2703113da7c975f650f"
+  integrity sha512-Ysv7ZDvXFt6K11f1m6wJaqYS3yM7c8YhzOIPoEmrYZW+4tL+Al5DiyKaAQBudbfYEA7xa6S6qGqE3QRitHZ5nQ==
   dependencies:
     "@snyk/rpm-parser" "^2.0.0"
     debug "^4.1.1"
@@ -9930,12 +9909,12 @@ snyk-go-plugin@1.14.2:
     tmp "0.1.0"
     tslib "^1.10.0"
 
-snyk-gradle-plugin@3.4.0:
-  version "3.4.0"
-  resolved "https://registry.yarnpkg.com/snyk-gradle-plugin/-/snyk-gradle-plugin-3.4.0.tgz#9a01b07f3dc68fe7c7ff203a151042b32ec7dab0"
-  integrity sha512-J/yABmPJstHir++eFw65amm0Y0C7b9WH+tW4Tm90Lo3dj+p/9JDMuVimzHXpkwmkIZI2RPd58igs5XdSDFh6Aw==
+snyk-gradle-plugin@3.5.0:
+  version "3.5.0"
+  resolved "https://registry.yarnpkg.com/snyk-gradle-plugin/-/snyk-gradle-plugin-3.5.0.tgz#6e3280ef8b4965978fa7cd4664480b23234e1049"
+  integrity sha512-zOHr3802bDKCcSAFfoEvt/wGSaOSGRm6yQjikdo1RTz7jTeQnSMJxCFYTOhfpu9Tka4d5q0TsdI/2VLFAvPKhA==
   dependencies:
-    "@snyk/cli-interface" "2.3.2"
+    "@snyk/cli-interface" "2.8.0"
     "@snyk/dep-graph" "^1.17.0"
     "@types/debug" "^4.1.4"
     chalk "^3.0.0"
@@ -10107,12 +10086,12 @@ snyk-try-require@1.3.1, snyk-try-require@^1.1.1, snyk-try-require@^1.3.1:
     lru-cache "^4.0.0"
     then-fs "^2.0.0"
 
-snyk@^1.341.1:
-  version "1.341.1"
-  resolved "https://registry.yarnpkg.com/snyk/-/snyk-1.341.1.tgz#7d73780dfe2bba0c00123c58d927e977860de650"
-  integrity sha512-5B1zlRcY6FLj4SiNlrwicg2iPw8sBhuzKVKiaXuzumZUhBDqAf3d9B7qW0LVjWO1yZ2LSfcSe110+8jnl0e95Q==
+snyk@^1.348.1:
+  version "1.348.1"
+  resolved "https://registry.yarnpkg.com/snyk/-/snyk-1.348.1.tgz#c2eeaa1fd37a0ed8a6ae8a614780d5a006083402"
+  integrity sha512-jDOUUoJzemIrhIQuUerS1drMY+Ijq1WtE+K2yLhKUgYo6tJnCpqSwIuuJREjeiQ2Q7zRmjlT+iD5owKdEaJR1w==
   dependencies:
-    "@snyk/cli-interface" "2.6.0"
+    "@snyk/cli-interface" "2.8.0"
     "@snyk/dep-graph" "1.18.3"
     "@snyk/gemfile" "1.2.0"
     "@snyk/graphlib" "2.1.9-patch"
@@ -10136,9 +10115,9 @@ snyk@^1.341.1:
     proxy-from-env "^1.0.0"
     semver "^6.0.0"
     snyk-config "3.1.0"
-    snyk-docker-plugin "3.12.1"
+    snyk-docker-plugin "3.12.3"
     snyk-go-plugin "1.14.2"
-    snyk-gradle-plugin "3.4.0"
+    snyk-gradle-plugin "3.5.0"
     snyk-module "3.1.0"
     snyk-mvn-plugin "2.17.1"
     snyk-nodejs-lockfile-parser "1.22.0"
@@ -10712,10 +10691,10 @@ svgo@^1.0.0:
     unquote "~1.1.1"
     util.promisify "~1.0.0"
 
-sweetalert2@^9.15.1:
-  version "9.15.1"
-  resolved "https://registry.yarnpkg.com/sweetalert2/-/sweetalert2-9.15.1.tgz#d0c2da861a1945626c9c145b48611c1bf0f68ba9"
-  integrity sha512-RQiw9kPSyH2VUx+B6ShdFwJBeyztLZd66d8QhhdgSnqm1KO2gGy81fTkVYY5JSYvZSt+KwG0fAxmCwfyW82RZQ==
+sweetalert2@^9.15.2:
+  version "9.15.2"
+  resolved "https://registry.yarnpkg.com/sweetalert2/-/sweetalert2-9.15.2.tgz#d26f1e6dee91d9ff57b3b98b3d92a0d6c3fa6fc1"
+  integrity sha512-evJfoa49s5ZzSmVc62tslNkzlQoCg2GHjB3MQxawfESppvY5AlXKLGQ3nNKxHXKdodKmIHbkl39DgUhcOK7LgQ==
 
 symbol-tree@^3.2.2:
   version "3.2.4"
