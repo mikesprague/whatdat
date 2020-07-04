@@ -39,7 +39,7 @@
     "@fortawesome/fontawesome-svg-core": "^1.2.29",
     "@fortawesome/pro-duotone-svg-icons": "^5.13.1",
     "@fullhuman/postcss-purgecss": "^2.3.0",
-    "@tensorflow-models/coco-ssd": "^2.0.3",
+    "@tensorflow-models/coco-ssd": "^2.0.4",
     "@tensorflow-models/mobilenet": "^2.0.4",
     "@tensorflow/tfjs": "^2.0.1",
     "@tensorflow/tfjs-backend-cpu": "^2.0.1",
@@ -53,12 +53,12 @@
     "cssnano": "^4.1.10",
     "fabric": "^3.6.3",
     "html2canvas": "^1.0.0-rc.5",
-    "logrocket": "^1.0.8",
+    "logrocket": "^1.0.9",
     "register-service-worker": "^1.7.1",
-    "rollup": "^2.18.0",
-    "snyk": "^1.348.1",
+    "rollup": "^2.18.2",
+    "snyk": "^1.360.0",
     "sweetalert2": "^9.15.2",
-    "tippy.js": "^6.2.3"
+    "tippy.js": "^6.2.4"
   },
   "devDependencies": {
     "@babel/cli": "^7.10.4",
