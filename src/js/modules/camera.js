@@ -152,7 +152,7 @@ export async function startCamera() {
     ui.hideElement('.player');
     ui.showElement('.canvas');
     ui.showElement('.results');
-    ui.disableButton('.btnTakePhoto', '<i class="fad fa-sync fa-spin"></i> identifying ...');
+    ui.disableButton('.btnTakePhoto', '<i class="fa-duotone fa-rotate fa-spin"></i> identifying ...');
 
     const canvas = document.querySelector('.canvas');
     const detectionMode = JSON.parse(localStorage.getItem('detectionMode'));
