@@ -1,14 +1,10 @@
 const path = require('path');
-const WebPackBar = require('webpackbar');
 const WorkboxPlugin = require('workbox-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
 const TerserPlugin = require('terser-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
-const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const CompressionPlugin = require('compression-webpack-plugin');
-const purgecss = require('@fullhuman/postcss-purgecss');
-const cssnano = require('cssnano');
-const autoprefixer = require('autoprefixer');
 
 const mode = process.env.NODE_ENV;
 
@@ -25,23 +21,6 @@ const webpackRules = [
       },
       {
         loader: 'postcss-loader',
-        options: {
-          sourceMap: true,
-          plugins() {
-            return [
-              autoprefixer(),
-              cssnano({
-                preset: 'default',
-              }),
-              purgecss({
-                content: ['./src/*.html', './src/js/modules/templates.js'],
-                fontFace: true,
-                whitelistPatterns: [/tippy/, /badge/, /badge-pill/, /bg-white/, /text-primary/],
-                whitelistPatternsChildren: [/tippy/, /badge/, /badge-pill/],
-              }),
-            ];
-          },
-        },
       },
       {
         loader: 'sass-loader',
@@ -61,23 +40,21 @@ const webpackRules = [
 ];
 
 const webpackPlugins = [
-  new WebPackBar(),
   new MiniCssExtractPlugin({
     filename: './css/styles.css',
-    chunkFilename: './css/[id].css',
+    chunkFilename: './css/[id].[chunkhash].css',
   }),
   new WorkboxPlugin.GenerateSW({
     cleanupOutdatedCaches: true,
-    exclude: [/\._redirects$/, /\.map$/, /^manifest.*\.js(?:on)?$/],
     clientsClaim: true,
+    exclude: [/\._redirects$/, /\.map$/, /^manifest.*\.js(?:on)?$/],
     skipWaiting: true,
   }),
   new CopyWebpackPlugin({
     patterns: [
       {
-        from: './src/*.js*',
-        to: './',
-        flatten: true,
+        from: './src/manifest.json',
+        to: './[name][ext]',
         force: true,
       },
     ],
@@ -86,8 +63,7 @@ const webpackPlugins = [
     patterns: [
       {
         from: './src/images/**/*',
-        to: './images',
-        flatten: true,
+        to: './images/[name][ext]',
         force: true,
       },
     ],
@@ -96,9 +72,8 @@ const webpackPlugins = [
     patterns: [
       {
         from: './src/*.html',
-        to: './',
+        to: './[name][ext]',
         force: true,
-        flatten: true,
       },
     ],
   }),
@@ -106,13 +81,7 @@ const webpackPlugins = [
 
 if (mode === 'production') {
   webpackPlugins.push(
-    new CompressionPlugin({
-      filename: '[path].gz[query]',
-      algorithm: 'gzip',
-      test: /\.js$|\.css$|\.html$/,
-      threshold: 10240,
-      minRatio: 0.8,
-    }),
+    new CompressionPlugin(),
   );
 }
 
@@ -122,24 +91,27 @@ module.exports = {
   ],
   devtool: 'source-map',
   output: {
-    filename: './js/bundle.js',
-    chunkFilename: './js/[name].bundle.js',
+    filename: './js/[name].js',
+    chunkFilename: './js/[id].[chunkhash].js',
     path: path.resolve(__dirname, 'dist'),
   },
   mode,
   module: {
     rules: webpackRules,
   },
+  devServer: {
+    contentBase: path.join(__dirname, './'),
+    open: false,
+    port: 4000,
+    publicPath: 'http://localhost:4000/',
+    stats: 'minimal',
+  },
   optimization: {
-    splitChunks: {
-      chunks: 'all',
-    },
     minimizer: [
       new TerserPlugin({
         parallel: true,
-        sourceMap: true,
       }),
-      new OptimizeCSSAssetsPlugin(),
+      new CssMinimizerPlugin(),
     ],
   },
   plugins: webpackPlugins,
