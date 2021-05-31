@@ -2,6 +2,7 @@ import {
   faCamera,
   faSync,
   faWifiSlash,
+  faRotate,
 } from '@fortawesome/pro-duotone-svg-icons';
 import { library, dom } from '@fortawesome/fontawesome-svg-core';
 import swal from 'sweetalert2';
@@ -13,6 +14,7 @@ export function initFontAwesomeIcons() {
     faCamera,
     faSync,
     faWifiSlash,
+    faRotate,
   );
   dom.watch();
 }
