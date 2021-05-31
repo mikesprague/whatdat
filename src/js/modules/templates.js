@@ -1,6 +1,6 @@
 export const startMarkup = `
   <div class="text-center">
-    <button class="btnStartApp btn btn-large btn-danger mb-5 mt-5"><i class="fad fa-camera"></i> Start</button>
+    <button class="btnStartApp btn btn-lg btn-danger mb-5 mt-5"><i class="fad fa-camera"></i> Start</button>
   </div>
   <p class="text-center">
     <em>
@@ -11,7 +11,11 @@ export const startMarkup = `
 `;
 
 export const startOverButtonMarkup = `
-  <button type="button" class="btnStartOver btn btn-outline-primary btn-block btn-lg text-center mb-2 mt-3">Start Over</button>
+  <div class="d-grid gap-2">
+    <button type="button" class="btnStartOver btn btn-outline-primary w-100 btn-lg text-center mb-2 mt-3">
+      Start Over
+    </button>
+  </div>
 `;
 
 export const cameraMarkup = `
@@ -25,9 +29,11 @@ export const cameraMarkup = `
           <small class="objectDetectionText font-weight-bolder">Object Detection</small>
         </label>
       </div>
-      <button type="button" class="btnTakePhoto btn btn-outline-primary btn-block btn-lg text-center mb-3">
-        <i class="fad fa-fw fa-camera"></i> Take Photo
-      </button>
+      <div class="d-grid gap-2">
+        <button type="button" class="btnTakePhoto btn btn-outline-primary btn-lg text-center mb-3 mt-3 w-100">
+          <i class="fad fa-fw fa-camera"></i> Take Photo
+        </button>
+      </div>
       <div class="results d-none mb-2"></div>
       <video class="player img-fluid center" autoplay title="Tap/click to take photo"></video>
       <div class="canvas-wrapper">
