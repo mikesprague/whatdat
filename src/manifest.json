@@ -34,6 +34,11 @@
       "sizes": "128x128"
     },
     {
+      "src": "./images/whatdat-icon-144.png",
+      "type": "image/png",
+      "sizes": "144x144"
+    },
+    {
       "src": "./images/whatdat-icon-512.png",
       "type": "image/png",
       "sizes": "512x512"
@@ -43,6 +48,9 @@
   "scope": "/",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#2b3e50",
-  "theme_color": "#d9534f"
+  "lang": "en-US",
+  "dir": "auto",
+  "orientation": "natural",
+  "background_color": "#0f2537",
+  "theme_color": "#2b3e50"
 }
