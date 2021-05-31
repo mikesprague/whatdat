@@ -71,7 +71,7 @@ export async function startCamera() {
       height,
     ] = prediction.bbox;
     div.style.position = 'absolute';
-    div.style.border = '2px solid rgb(223, 105, 25)';
+    div.style.border = '2px solid #4c9be8';
     div.style.backgroundColor = 'rgba(255, 255, 255, 0.25)';
     div.style.left = `${Math.round(left)}px`;
     div.style.top = `${Math.round(top)}px`;
