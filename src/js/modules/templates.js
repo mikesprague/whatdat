@@ -4,8 +4,9 @@ export const startMarkup = `
   </div>
   <p class="text-center">
     <em>
-      <strong>PLEASE NOTE:</strong> What Dat?!? uses your devices's camera. You will be asked for permission if this is your first
-      time using the app - this app will NOT work if you don't approve camera access.
+      <strong>PLEASE NOTE:</strong> What Dat?!? uses your devices's camera. You will
+      be asked for permission if this is your first time using the app - this app
+      will NOT work if you don't approve camera access.
     </em>
   </p>
 `;
@@ -47,7 +48,7 @@ export const cameraMarkup = `
 function getResultsTableMarkup(data, isMobilenet = false) {
   let tableRowMarkup = '';
   if (isMobilenet) {
-    tableRowMarkup = data.map(prediction => `
+    tableRowMarkup = data.map((prediction) => `
       <tr class="objectPrediction" data-bbox="">
         <td>
           ${prediction.className}
@@ -58,7 +59,7 @@ function getResultsTableMarkup(data, isMobilenet = false) {
       </tr>
     `).join('\n');
   } else {
-    tableRowMarkup = data.length ? data.map(prediction => `
+    tableRowMarkup = data.length ? data.map((prediction) => `
       <tr class="objectPrediction" data-bbox="${prediction.bbox.join()}">
         <td>
           ${prediction.class}
@@ -74,7 +75,9 @@ function getResultsTableMarkup(data, isMobilenet = false) {
 }
 
 export function getNoResultsMarkup(detectionMode) {
-  const noResultsString = detectionMode === 'objectDetection' ? 'Sorry, unable to identify any objects' : 'Sorry, unable to classify image';
+  const noResultsString = detectionMode === 'objectDetection'
+    ? 'Sorry, unable to identify any objects'
+    : 'Sorry, unable to classify image';
   const noResultsMarkup = `
     <h3 class="lead-1 text-center">${noResultsString}</h3>
     <div class="center">
@@ -90,10 +93,14 @@ export function getResultsMarkup(data, isMobilenet = false) {
   const firstPrediction = `${isMobilenet ? data[0].className.toLowerCase().split(', ')[0] : data[0].class.toLowerCase()}`;
   const startsWithVowel = firstPrediction.split('')[0].search(/[aeiou]/);
   const resultsMarkup = `
-    <h2 class="lead-1 text-center">${isMobilenet ? 'dat might be' : "dat's"} ${startsWithVowel === -1 ? 'a' : 'an'} ${firstPrediction}!</h2>
+    <h2 class="lead-1 text-center">
+      ${isMobilenet ? 'dat might be' : "dat's"} ${startsWithVowel === -1 ? 'a' : 'an'} ${firstPrediction}!
+    </h2>
     <div class="center">
     <details>
-      <summary class="text-muted text-center">All ${isMobilenet ? 'classifications' : 'objects identified'}<!--<br><small>(tap/click on a row to highlight object)</small>--></summary>
+      <summary class="text-muted text-center">
+        All ${isMobilenet ? 'classifications' : 'objects identified'}
+      </summary>
       <table class="table table-striped table-bordered table-hover">
         <thead>
           <tr>
