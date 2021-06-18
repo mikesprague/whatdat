@@ -62,6 +62,15 @@ const webpackPlugins = [
   new CopyWebpackPlugin({
     patterns: [
       {
+        from: './src/CNAME',
+        to: './[name][ext]',
+        force: true,
+      },
+    ],
+  }),
+  new CopyWebpackPlugin({
+    patterns: [
+      {
         from: './src/images/**/*',
         to: './images/[name][ext]',
         force: true,
