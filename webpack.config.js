@@ -47,7 +47,7 @@ const webpackPlugins = [
   new WorkboxPlugin.GenerateSW({
     cleanupOutdatedCaches: true,
     clientsClaim: true,
-    exclude: [/\._redirects$/, /\.map$/, /^manifest.*\.js(?:on)?$/],
+    exclude: [/\.CNAME$/, /\._redirects$/, /\.map$/, /^manifest.*\.js(?:on)?$/],
     skipWaiting: true,
   }),
   new CopyWebpackPlugin({
