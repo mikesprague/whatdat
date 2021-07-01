@@ -7265,14 +7265,12 @@ min-indent@^1.0.0:
   resolved "https://registry.yarnpkg.com/min-indent/-/min-indent-1.0.1.tgz#a63f681673b30571fbe8bc25686ae746eefa9869"
   integrity sha512-I9jwMn07Sy/IwOj3zVkVik2JTvgpaykDZEigL6Rx6N9LbMywwUSMtxET+7lVoDLLd3O3IXwJwvuuns8UB/HeAg==
 
-mini-css-extract-plugin@^1.6.2:
-  version "1.6.2"
-  resolved "https://registry.yarnpkg.com/mini-css-extract-plugin/-/mini-css-extract-plugin-1.6.2.tgz#83172b4fd812f8fc4a09d6f6d16f924f53990ca8"
-  integrity sha512-WhDvO3SjGm40oV5y26GjMJYjd2UMqrLAGKy5YS2/3QKJy2F7jgynuHTir/tgUUOiNQu5saXHdc8reo7YuhhT4Q==
+mini-css-extract-plugin@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/mini-css-extract-plugin/-/mini-css-extract-plugin-2.0.0.tgz#e3492a2dcd218a6103e4dec5e3a88b55157012ea"
+  integrity sha512-LzJaninAMkfVAUDldZ4lUidAeS8GD0w8tSUbZLscYXWmdTOjYuEoiIhwKvwHX6+42D2cRAl35pA9DHtvAv71JQ==
   dependencies:
-    loader-utils "^2.0.0"
     schema-utils "^3.0.0"
-    webpack-sources "^1.1.0"
 
 minimalistic-assert@^1.0.0:
   version "1.0.1"
@@ -8250,10 +8248,10 @@ postcss-discard-overridden@^5.0.1:
   resolved "https://registry.yarnpkg.com/postcss-discard-overridden/-/postcss-discard-overridden-5.0.1.tgz#454b41f707300b98109a75005ca4ab0ff2743ac6"
   integrity sha512-Y28H7y93L2BpJhrdUR2SR2fnSsT+3TVx1NmVQLbcnZWwIUpJ7mfcTC6Za9M2PG6w8j7UQRfzxqn8jU2VwFxo3Q==
 
-postcss-loader@^6.1.0:
-  version "6.1.0"
-  resolved "https://registry.yarnpkg.com/postcss-loader/-/postcss-loader-6.1.0.tgz#13c800a00b3c7d434a1319a73d85e2df0714cdde"
-  integrity sha512-yA/cXBfACkthZNA2hQxOnaReVfQ6uLmvbEDQzNafpbK40URZJvP/28dL1DG174Gvz3ptkkHbbwDBCh+gXR94CA==
+postcss-loader@^6.1.1:
+  version "6.1.1"
+  resolved "https://registry.yarnpkg.com/postcss-loader/-/postcss-loader-6.1.1.tgz#58dd0a3accd9bc87cc52eff75244db578d11301a"
+  integrity sha512-lBmJMvRh1D40dqpWKr9Rpygwxn8M74U9uaCSeYGNKLGInbk9mXBt1ultHf2dH9Ghk6Ue4UXlXWwGMH9QdUJ5ug==
   dependencies:
     cosmiconfig "^7.0.0"
     klona "^2.0.4"
@@ -9209,10 +9207,10 @@ rollup@^2.43.1:
   optionalDependencies:
     fsevents "~2.3.2"
 
-rollup@^2.52.3:
-  version "2.52.3"
-  resolved "https://registry.yarnpkg.com/rollup/-/rollup-2.52.3.tgz#062fc3c85f67736d6758749310cfee64836c4e2a"
-  integrity sha512-QF3Sju8Kl2z0osI4unyOLyUudyhOMK6G0AeqJWgfiyigqLAlnNrfBcDWDx+f1cqn+JU2iIYVkDrgQ6/KtwEfrg==
+rollup@^2.52.6:
+  version "2.52.6"
+  resolved "https://registry.yarnpkg.com/rollup/-/rollup-2.52.6.tgz#7c7546d170dead0e7db0b6c709f7f34398498a8e"
+  integrity sha512-H+Xudmwf8KO+xji8njQNoIQRp8l+iQge/NdUR20JngTxVYdEEnlpkMvQ71YGLl3+xZcPecmdj4q2lrClKaPdRA==
   optionalDependencies:
     fsevents "~2.3.2"
 
@@ -11291,7 +11289,7 @@ webpack-merge@^5.7.3:
     clone-deep "^4.0.1"
     wildcard "^2.0.0"
 
-webpack-sources@^1.1.0, webpack-sources@^1.4.3:
+webpack-sources@^1.4.3:
   version "1.4.3"
   resolved "https://registry.yarnpkg.com/webpack-sources/-/webpack-sources-1.4.3.tgz#eedd8ec0b928fbf1cbfe994e22d2d890f330a933"
   integrity sha512-lgTS3Xhv1lCOKo7SA5TjKXMjpSM4sBjNV5+q2bqesbSPs5FjGmU6jjtBSkX9b4qW87vDIsCIlUPOEhbZrMdjeQ==
