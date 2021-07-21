@@ -88,7 +88,7 @@
     "postcss": "^8.3.5",
     "postcss-loader": "^6.1.1",
     "prettier": "^2.3.2",
-    "rollup": "^2.53.2",
+    "rollup": "^2.53.3",
     "sass-lint": "^1.13.1",
     "sass-loader": "^12.1.0",
     "seedrandom": "^2.4.3",
