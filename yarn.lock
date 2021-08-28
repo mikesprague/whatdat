@@ -3975,10 +3975,10 @@ extsprintf@^1.2.0:
   resolved "https://registry.yarnpkg.com/extsprintf/-/extsprintf-1.4.0.tgz#e2689f8f356fad62cca65a3a91c5df5f9551692f"
   integrity sha1-4mifjzVvrWLMplo6kcXfX5VRaS8=
 
-fabric@^4.5.1:
-  version "4.5.1"
-  resolved "https://registry.yarnpkg.com/fabric/-/fabric-4.5.1.tgz#dcdc93caf257ee40dd4ab7ce60ce089873ea19c6"
-  integrity sha512-s0ywa4WQh/QortuhlVkWOj692udzwI8cYWcLTlel/Jbhk3gevyB0fF/Rvo9in/bGV0c4TFl3cMiu6+wYwpfxdQ==
+fabric@^4.6.0:
+  version "4.6.0"
+  resolved "https://registry.yarnpkg.com/fabric/-/fabric-4.6.0.tgz#bd11c2baf165db2c97e4d05740d931586cb26bbb"
+  integrity sha512-MhJXCD/ZugOGV5aPHIG0MY1q2EfrlzC2sasrAHj0HHXN50JTe1bHFrlRdkXBijCJ0dG81fGu/A/Pct9DyuwCzQ==
   optionalDependencies:
     canvas "^2.6.1"
     jsdom "^15.2.1"
@@ -7967,10 +7967,10 @@ snapdragon@^0.8.1:
     source-map-resolve "^0.5.0"
     use "^3.1.0"
 
-snyk@^1.691.0:
-  version "1.691.0"
-  resolved "https://registry.yarnpkg.com/snyk/-/snyk-1.691.0.tgz#36ada1fc1cac06945a83d8f6db2408acd0434dc7"
-  integrity sha512-xBBhgc8y7qAzLTbBwLeYOlDNw+2yArmOom25m1HDIZ47rbspWV4tob0enfcjP0EhxYgxQNPQXkh2QO/+jP+IxQ==
+snyk@^1.694.0:
+  version "1.694.0"
+  resolved "https://registry.yarnpkg.com/snyk/-/snyk-1.694.0.tgz#c83bd4fc1d48f9a87a2daf53b5543ad12071bf23"
+  integrity sha512-jt9E7rHg3tGuR5Bh6RySh3fe1GPBU+rCVpgH+sS1FiOO4P6omRcXiEGhyMY76KroC7H6zAl7UKpl3wamVfaBVQ==
 
 sockjs-client@^1.5.0:
   version "1.5.1"
