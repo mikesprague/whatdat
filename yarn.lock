@@ -1174,7 +1174,7 @@
   resolved "https://registry.yarnpkg.com/@tensorflow-models/mobilenet/-/mobilenet-2.1.0.tgz#58583f0793a7091eda370aa441d09d94b808aeb1"
   integrity sha512-JjqT9ijHDFA2FEpUGWg7H2lQ0GrMuE2VmiCRBYmUew6b4JKht8LXDjG5HxZh95YH6c/25sZWTpGeHbquloH+hw==
 
-"@tensorflow/tfjs-backend-cpu@3.9.0", "@tensorflow/tfjs-backend-cpu@^3.8.0":
+"@tensorflow/tfjs-backend-cpu@3.9.0", "@tensorflow/tfjs-backend-cpu@^3.9.0":
   version "3.9.0"
   resolved "https://registry.yarnpkg.com/@tensorflow/tfjs-backend-cpu/-/tfjs-backend-cpu-3.9.0.tgz#27ee581a4765039eb0e84d9d473b6d5f2769c813"
   integrity sha512-PUv5B3wdQsA8cysk+oUhA0NqMoo/lwP8EazC/axQc8/72Dc6kU8uw/5qZtE5P4xXSqkNSlh2ifFm+8nH/6B+iA==
@@ -1182,7 +1182,7 @@
     "@types/seedrandom" "2.4.27"
     seedrandom "2.4.3"
 
-"@tensorflow/tfjs-backend-webgl@3.9.0", "@tensorflow/tfjs-backend-webgl@^3.8.0":
+"@tensorflow/tfjs-backend-webgl@3.9.0", "@tensorflow/tfjs-backend-webgl@^3.9.0":
   version "3.9.0"
   resolved "https://registry.yarnpkg.com/@tensorflow/tfjs-backend-webgl/-/tfjs-backend-webgl-3.9.0.tgz#103630e23d4325492bfbe2ff65b58c24ad852377"
   integrity sha512-oUnyQFF9aCnNZpul9AnJwrt8noDJdMmxgq2+e/0DpEMBERcywtVj9qkKCccMaVFsdQV1lQxpV3kjC3vbFMDWKg==
@@ -1194,12 +1194,12 @@
     "@types/webgl2" "0.0.5"
     seedrandom "2.4.3"
 
-"@tensorflow/tfjs-converter@3.9.0", "@tensorflow/tfjs-converter@^3.8.0":
+"@tensorflow/tfjs-converter@3.9.0", "@tensorflow/tfjs-converter@^3.9.0":
   version "3.9.0"
   resolved "https://registry.yarnpkg.com/@tensorflow/tfjs-converter/-/tfjs-converter-3.9.0.tgz#e00709002cbe04ff5cc43358d4a5662795513071"
   integrity sha512-ftegwQlGkyDCxZGhAVfMyWWXqpNhnyESvNY3oFAUV4eN6i/mmBTCSOQ5AX5VR5lr7PNYPWGO5sJ10Q5HeTPfgw==
 
-"@tensorflow/tfjs-core@3.9.0", "@tensorflow/tfjs-core@^3.8.0":
+"@tensorflow/tfjs-core@3.9.0", "@tensorflow/tfjs-core@^3.9.0":
   version "3.9.0"
   resolved "https://registry.yarnpkg.com/@tensorflow/tfjs-core/-/tfjs-core-3.9.0.tgz#5ca2356a14a58263840a6e3caee2467780db9450"
   integrity sha512-wQ+VMsbvCne2OsogiNtRP8Mc01LnRGvAYQ0SGaDa4+1uwY2jsMk5GZjG66JQvf/Ppw8wyvKF170eh0yyCBgfcg==
@@ -1225,7 +1225,7 @@
   resolved "https://registry.yarnpkg.com/@tensorflow/tfjs-layers/-/tfjs-layers-3.9.0.tgz#0e05116bcd7f55eb39cff322e9940fa46c9fbda2"
   integrity sha512-25I20Oy17YZ3y0x/pabeiN6/vai0vqMQ85/Bp0GLOpcN2kmOLcItdWOAqFW5YPI2nrTqnpNQyk9zhmIh8f6X4w==
 
-"@tensorflow/tfjs@^3.8.0":
+"@tensorflow/tfjs@^3.9.0":
   version "3.9.0"
   resolved "https://registry.yarnpkg.com/@tensorflow/tfjs/-/tfjs-3.9.0.tgz#ff3bcbfcb51800ea6791d7a7a020d354909d2c71"
   integrity sha512-TyykXiZ6r9rMoXbQZaAkOKJJUrJHQVAjH/K6XRCPpOG//Hf15ZW97ZODskEByj77yNMw4smFUWCFhprhY2PgDQ==
@@ -7821,7 +7821,7 @@ snapdragon@^0.8.1:
     source-map-resolve "^0.5.0"
     use "^3.1.0"
 
-snyk@^1.694.0:
+snyk@^1.695.0:
   version "1.695.0"
   resolved "https://registry.yarnpkg.com/snyk/-/snyk-1.695.0.tgz#9d20eb49806581344f1c4a477eac72083e0e9f57"
   integrity sha512-Jzt6W21zuka7ZiGZf+XdOHsnTY702uU58NP1dBqAsyGqO2U7lVOVBvKjVQC9EURZPLALHI99dvFiVlTduelbDw==
