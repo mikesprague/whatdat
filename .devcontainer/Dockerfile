@@ -44,7 +44,7 @@ COPY starship.toml  /root/.config/starship.toml
 # set some shell aliases/options and set some git aliases/options
 RUN echo '\nalias la="ls -lah"\nalias cl="clear"\nalias npmgls="npm -g ls --depth=0"' >> ~/.zshrc \
   && echo '\nalias aptupdate="apt update && apt upgrade"' >> ~/.zshrc \
-  && echo '\nalias alias ncud="ncu --dep dev -u && yarn"\nalias ncup="ncu --dep prod -u && yarn"' >> ~/.zshrc \
+  && echo '\nalias ncud="ncu --dep dev -u && yarn"\nalias ncup="ncu --dep prod -u && yarn"' >> ~/.zshrc \
   && echo '\n\nexport LS_COLORS="su=00:sg=00:ca=00:ow=01;36;40"' >> ~/.zshrc \
   && echo '\nzstyle ":completion:*" list-colors "${(@s.:.)LS_COLORS}"' >> ~/.zshrc \
   && echo '\n\neval "$(gh completion --shell zsh)"\n' >> ~/.zshrc \
