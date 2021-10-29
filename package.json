@@ -1,6 +1,6 @@
 {
   "name": "whatdat.app",
-  "version": "0.10.48",
+  "version": "0.10.49",
   "description": "What Dat?!?",
   "main": "src/index.html",
   "private": true,
@@ -16,7 +16,7 @@
     "ver:minor": "yarn ver:bump --minor && yarn ver:tag && yarn ver:publish",
     "ver:major": "yarn ver:bump --major && yarn ver:tag && yarn ver:publish",
     "ver:publish": "git push --all && git push --tags",
-    "ver:tag": "APP_VERSION=$(node -e 'console.log(process.env.npm_package_version)') && git add package.json && git commit -m \":bookmark: Bump version v$APP_VERSION\" && git tag $APP_VERSION -s -m \"Bump version v$APP_VERSION\"",
+    "ver:tag": "APP_VERSION=$(node -e 'console.log(process.env.npm_package_version)') && git add package.json && git commit -m \":bookmark: Bump version v$APP_VERSION\" && git tag $APP_VERSION -m \"Bump version v$APP_VERSION\"",
     "webpack": "cross-env NODE_ENV=production webpack --color",
     "webpack:dev": "cross-env NODE_ENV=development webpack --color",
     "webpack:serve": "cross-env NODE_ENV=development webpack serve",
