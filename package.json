@@ -19,9 +19,7 @@
     "ver:tag": "APP_VERSION=$(node -e 'console.log(process.env.npm_package_version)') && git add package.json && git commit -m \":bookmark: Bump version v$APP_VERSION\" && git tag $APP_VERSION -m \"Bump version v$APP_VERSION\"",
     "webpack": "cross-env NODE_ENV=production webpack --color",
     "webpack:dev": "cross-env NODE_ENV=development webpack --color",
-    "webpack:serve": "cross-env NODE_ENV=development webpack serve",
-    "snyk-protect": "snyk protect",
-    "prepublish": "yarn snyk-protect"
+    "webpack:serve": "cross-env NODE_ENV=development webpack serve"
   },
   "author": {
     "name": "Michael Sprague",
