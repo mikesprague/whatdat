@@ -1,8 +1,7 @@
 const path = require('path');
+const { ESBuildMinifyPlugin } = require('esbuild-loader')
 const WorkboxPlugin = require('workbox-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
-const TerserPlugin = require('terser-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const CompressionPlugin = require('compression-webpack-plugin');
 
@@ -28,13 +27,23 @@ const webpackRules = [
           sourceMap: true,
         },
       },
+       {
+        loader: 'esbuild-loader',
+        options: {
+          loader: 'css',
+          minify: true
+        }
+      },
     ],
   },
   {
     test: /\.(js)$/,
     exclude: [/node_modules/],
     use: [{
-      loader: 'babel-loader',
+      loader: 'esbuild-loader',
+      options: {
+        target: 'esnext'
+      },
     }],
   },
 ];
@@ -108,19 +117,11 @@ module.exports = {
   module: {
     rules: webpackRules,
   },
-  devServer: {
-    contentBase: path.join(__dirname, './'),
-    open: false,
-    port: 4000,
-    publicPath: 'http://localhost:4000/',
-    stats: 'minimal',
-  },
   optimization: {
     minimizer: [
-      new TerserPlugin({
-        parallel: true,
+      new ESBuildMinifyPlugin({
+        target: 'es2015',
       }),
-      new CssMinimizerPlugin(),
     ],
   },
   plugins: webpackPlugins,

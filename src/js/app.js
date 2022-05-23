@@ -62,7 +62,7 @@ register('/service-worker.js', {
 function initApp() {
   if (isOnline()) {
     populateElementWithMarkup('.app', startMarkup);
-    initElementEventHandler('.btnStartApp', 'click', startCamera);
+    initElementEventHandler('.btn-start-app', 'click', startCamera);
     const detectionMode = JSON.parse(localStorage.getItem('detectionMode'));
     if (!detectionMode) {
       localStorage.setItem('detectionMode', JSON.stringify('objectDetection'));

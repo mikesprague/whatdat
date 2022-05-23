@@ -1,6 +1,6 @@
 export const startMarkup = `
   <div class="text-center">
-    <button class="btnStartApp btn btn-lg btn-primary mb-5 mt-5"><i class="fad fa-camera"></i> Start</button>
+    <button class="btn-start-app btn btn-lg btn-primary mb-5 mt-5"><i class="fad fa-camera"></i> Start</button>
   </div>
   <p class="text-center">
     <em>
