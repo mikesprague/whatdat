@@ -1,7 +1,7 @@
 # This is a basic workflow to help you get started with Actions
 name: Production Build
 
-# Controls when the action will run. 
+# Controls when the action will run.
 on:
   # Triggers the workflow on push or pull request events but only for the main branch
   push:
@@ -23,16 +23,14 @@ jobs:
     steps:
       - name: Checkout Repo
         uses: actions/checkout@v2
-      - name: Install Dependencies (yarn)
-        run: yarn
+      - name: Install Dependencies (npm)
+        run: npm install
         env:
           FONT_AWESOME_TOKEN: ${{secrets.FONT_AWESOME_TOKEN}}
-          SNYK_TOKEN: ${{secrets.SNYK_TOKEN}}
       - name: Build Site (webpack)
-        run: yarn build
+        run: npm run build
         env:
           FONT_AWESOME_TOKEN: ${{secrets.FONT_AWESOME_TOKEN}}
-          SNYK_TOKEN: ${{secrets.SNYK_TOKEN}}
       - name: Deploy Site (gh pages)
         uses: crazy-max/ghaction-github-pages@v2
         with:
