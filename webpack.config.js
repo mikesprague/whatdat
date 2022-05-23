@@ -1,5 +1,5 @@
 const path = require('path');
-const { ESBuildMinifyPlugin } = require('esbuild-loader')
+const { ESBuildMinifyPlugin } = require('esbuild-loader');
 const WorkboxPlugin = require('workbox-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
@@ -27,12 +27,12 @@ const webpackRules = [
           sourceMap: true,
         },
       },
-       {
+      {
         loader: 'esbuild-loader',
         options: {
           loader: 'css',
-          minify: true
-        }
+          minify: true,
+        },
       },
     ],
   },
@@ -42,7 +42,7 @@ const webpackRules = [
     use: [{
       loader: 'esbuild-loader',
       options: {
-        target: 'esnext'
+        target: 'esnext',
       },
     }],
   },
