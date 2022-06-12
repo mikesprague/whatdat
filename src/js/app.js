@@ -1,7 +1,7 @@
-import '../scss/styles.scss';
 import Bugsnag from '@bugsnag/js';
 import LogRocket from 'logrocket';
 import { register } from 'register-service-worker';
+
 import { startCamera } from './modules/camera';
 import {
   handleOffline,
@@ -17,6 +17,9 @@ import {
   initFontAwesomeIcons,
   showInstallAlert,
 } from './modules/ui';
+
+import '../scss/styles.scss';
+import 'tippy.js/dist/tippy.css';
 
 if (isProduction()) {
   LogRocket.init('skxlwh/whatdat');
