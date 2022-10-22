@@ -46,7 +46,7 @@ jobs:
           FONT_AWESOME_TOKEN: ${{secrets.FONT_AWESOME_TOKEN}}
           SNYK_TOKEN: ${{secrets.SNYK_TOKEN}}
       - name: 🏗️ Setup Pages
-        uses: actions/configure-pages@v1
+        uses: actions/configure-pages@v2
       - name: 📦 Create and Upload artifact
         uses: actions/upload-pages-artifact@v1
         with:
