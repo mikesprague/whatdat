@@ -109,11 +109,8 @@ module.exports = {
     rules: webpackRules,
   },
   devServer: {
-    contentBase: path.join(__dirname, './'),
     open: false,
     port: 4000,
-    publicPath: 'http://localhost:4000/',
-    stats: 'minimal',
   },
   optimization: {
     minimizer: [
