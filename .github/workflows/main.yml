@@ -16,9 +16,21 @@ on:
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   build_and_deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Repo
@@ -33,10 +45,12 @@ jobs:
         env:
           FONT_AWESOME_TOKEN: ${{secrets.FONT_AWESOME_TOKEN}}
           SNYK_TOKEN: ${{secrets.SNYK_TOKEN}}
-      - name: Deploy Site (gh pages)
-        uses: crazy-max/ghaction-github-pages@v2
+      - name: 🏗️ Setup Pages
+        uses: actions/configure-pages@v1
+      - name: 📦 Create and Upload artifact
+        uses: actions/upload-pages-artifact@v1
         with:
-          target_branch: gh-pages
-          build_dir: dist
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          path: 'dist/'
+      - name: 🚀 Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@main
