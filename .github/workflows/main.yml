@@ -34,23 +34,29 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Repo
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
+      
       - name: Install Dependencies (yarn)
         run: yarn
         env:
           FONT_AWESOME_TOKEN: ${{secrets.FONT_AWESOME_TOKEN}}
           SNYK_TOKEN: ${{secrets.SNYK_TOKEN}}
+      
       - name: Build Site (webpack)
         run: yarn build
         env:
           FONT_AWESOME_TOKEN: ${{secrets.FONT_AWESOME_TOKEN}}
           SNYK_TOKEN: ${{secrets.SNYK_TOKEN}}
+      
       - name: 🏗️ Setup Pages
-        uses: actions/configure-pages@v1
+        uses: actions/configure-pages@v2
+      
       - name: 📦 Create and Upload artifact
         uses: actions/upload-pages-artifact@v1
         with:
           path: 'dist/'
+      
       - name: 🚀 Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@main
+
