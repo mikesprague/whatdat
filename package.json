@@ -65,7 +65,7 @@
     "@babel/preset-env": "^7.20.2",
     "@babel/runtime": "^7.20.1",
     "@popperjs/core": "^2.11.6",
-    "@typescript-eslint/eslint-plugin": "^5.43.0",
+    "@typescript-eslint/eslint-plugin": "^5.44.0",
     "@typescript-eslint/parser": "^5.43.0",
     "autoprefixer": "^10.4.13",
     "babel-loader": "^9.1.0",
