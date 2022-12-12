@@ -45,7 +45,7 @@
     "@tensorflow/tfjs-converter": "^4.1.0",
     "@tensorflow/tfjs-core": "^4.1.0",
     "bootstrap": "^5.2.3",
-    "bootswatch": "^5.2.2",
+    "bootswatch": "^5.2.3",
     "cross-env": "^7.0.3",
     "fabric": "^5.2.4",
     "html2canvas": "^1.4.1",
