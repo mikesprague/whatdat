@@ -34,7 +34,7 @@ jobs:
         uses: actions/checkout@v3
 
       - name: Install Dependencies (npm)
-        run: npm install
+        run: npm install --force
         env:
           FONT_AWESOME_TOKEN: ${{secrets.FONT_AWESOME_TOKEN}}
           SNYK_TOKEN: ${{secrets.SNYK_TOKEN}}
