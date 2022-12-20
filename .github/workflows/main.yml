@@ -27,7 +27,7 @@ concurrency:
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-  build_and_deploy:
+  build:
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
@@ -48,15 +48,18 @@ jobs:
           FONT_AWESOME_TOKEN: ${{secrets.FONT_AWESOME_TOKEN}}
           SNYK_TOKEN: ${{secrets.SNYK_TOKEN}}
       
-      - name: 🏗️ Setup Pages
-        uses: actions/configure-pages@v2
-      
-      - name: 📦 Create and Upload artifact
-        uses: actions/upload-pages-artifact@v1
+      - name: 📦 Create and upload build artifact
+        uses: actions/upload-artifact@v3
         with:
+          name: whatdat-artifact
           path: 'dist/'
-      
-      - name: 🚀 Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@main
+          retention-days: 1
+
+  call-deploy-workflow:
+    needs: [build]
+    uses: mikesprague/reusable-workflows/.github/workflows/pages-deploy.yml@main
+    secrets:
+      REPO_TOKEN: ${{ secrets.GITHUB_TOKEN}}
+    with:
+      artifact-name: whatdat-artifact
 
