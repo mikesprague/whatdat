@@ -39,7 +39,7 @@ jobs:
           FONT_AWESOME_TOKEN: ${{secrets.FONT_AWESOME_TOKEN}}
           SNYK_TOKEN: ${{secrets.SNYK_TOKEN}}
 
-      - name: Build Site (webpack)
+      - name: Build Site (vite)
         run: npm run build
         env:
           FONT_AWESOME_TOKEN: ${{secrets.FONT_AWESOME_TOKEN}}

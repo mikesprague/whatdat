@@ -1,7 +1,7 @@
-@import "~bootswatch/dist/superhero/variables";
-@import "~bootstrap/scss/bootstrap";
-@import "~bootswatch/dist/superhero/bootswatch";
-@import "~tippy.js/dist/tippy";
+@import "../../node_modules/bootswatch/dist/superhero/variables";
+@import "../../node_modules/bootstrap/scss/bootstrap";
+@import "../../node_modules/bootswatch/dist/superhero/bootswatch";
+@import "../../node_modules/tippy.js/dist/tippy.css";
 
 .btnStartApp {
   font-size: 3.75em;

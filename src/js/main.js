@@ -1,7 +1,6 @@
-import '../scss/styles.scss';
+import { registerSW } from 'virtual:pwa-register';
 import Bugsnag from '@bugsnag/js';
 import LogRocket from 'logrocket';
-import { register } from 'register-service-worker';
 import { startCamera } from './modules/camera';
 import {
   handleOffline,
@@ -18,6 +17,8 @@ import {
   showInstallAlert,
 } from './modules/ui';
 
+import '../scss/styles.scss';
+
 if (isProduction()) {
   LogRocket.init('skxlwh/whatdat');
 
@@ -31,33 +32,29 @@ if (isProduction()) {
   };
 }
 
-window.addEventListener('offline', () => {
-  handleOffline();
-}, false);
-
-window.addEventListener('online', () => {
-  handleOnline();
-}, false);
-
-register('/service-worker.js', {
-  updated() { // updated(registration)
-    // /* eslint-disable no-console */
-    // console.log('What Dat?!? has been updated to the latest version.');
-    // /* eslint-enable no-console */
+registerSW({
+  onNeedRefresh() {
     showInstallAlert();
+    // window.location.reload(true);
   },
-  offline() {
-    /* eslint-disable no-console */
-    console.info('No internet connection found. App is currently offline.');
-    /* eslint-enable no-console */
-  },
-  error(error) {
-    /* eslint-disable no-console */
-    console.error('Error during service worker registration:', error);
-    /* eslint-enable no-console */
-    handleError(error);
-  },
+  immediate: true,
 });
+
+window.addEventListener(
+  'offline',
+  () => {
+    handleOffline();
+  },
+  false,
+);
+
+window.addEventListener(
+  'online',
+  () => {
+    handleOnline();
+  },
+  false,
+);
 
 function initApp() {
   if (isOnline()) {
@@ -71,8 +68,4 @@ function initApp() {
   initFontAwesomeIcons();
 }
 
-document.onreadystatechange = (() => {
-  if (document.readyState === 'interactive') {
-    initApp();
-  }
-});
+initApp();
