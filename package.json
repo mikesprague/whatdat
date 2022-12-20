@@ -1,6 +1,6 @@
 {
   "name": "whatdat.app",
-  "version": "0.11.27",
+  "version": "0.12.0",
   "description": "What Dat?!?",
   "type": "module",
   "private": true,
