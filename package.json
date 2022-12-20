@@ -2,21 +2,21 @@
   "name": "whatdat.app",
   "version": "0.11.27",
   "description": "What Dat?!?",
-  "main": "src/index.html",
+  "type": "module",
   "private": true,
   "scripts": {
-    "build": "yarn clean && yarn webpack",
-    "build:dev": "yarn clean && yarn webpack:dev",
+    "build": "npm run clean && npm run webpack",
+    "build:dev": "npm run clean && npm run webpack:dev",
     "clean": "rm -rf ./dist > /dev/null 2>&1",
-    "serve": "yarn webpack:serve",
-    "start": "yarn serve",
+    "serve": "npm run webpack:serve",
+    "start": "npm run serve",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "ver:bump": "yarn version --no-git-tag-version",
-    "ver:patch": "yarn ver:bump --patch && yarn ver:tag && yarn ver:publish",
-    "ver:minor": "yarn ver:bump --minor && yarn ver:tag && yarn ver:publish",
-    "ver:major": "yarn ver:bump --major && yarn ver:tag && yarn ver:publish",
+    "ver:bump": "npm version --git-tag-version false",
+    "ver:patch": "npm run ver:bump -- patch && npm run ver:tag && npm run ver:publish",
+    "ver:minor": "npm run ver:bump -- minor && npm run ver:tag && npm run ver:publish",
+    "ver:major": "npm run ver:bump -- major && npm run ver:tag && npm run ver:publish",
     "ver:publish": "git push --all && git push --tags",
-    "ver:tag": "APP_VERSION=$(node -e 'console.log(process.env.npm_package_version)') && git add package.json && git commit -m \":bookmark: Bump version v$APP_VERSION\" && git tag $APP_VERSION -m \"Bump version v$APP_VERSION\"",
+    "ver:tag": "APP_VERSION=$(node -e 'console.log(process.env.npm_package_version)') && git add package.json package-lock.json && git commit -m \"chore(release): bump version v$APP_VERSION\" && git tag $APP_VERSION -m \"chore(release): v$APP_VERSION\"",
     "webpack": "cross-env NODE_ENV=production webpack --color",
     "webpack:dev": "cross-env NODE_ENV=development webpack --color",
     "webpack:serve": "cross-env NODE_ENV=development webpack serve"
@@ -28,9 +28,8 @@
   "repository": "github:mikesprague/whatdat",
   "license": "MIT",
   "engines": {
-    "node": ">= 12.x",
-    "npm": ">= 6.x",
-    "yarn": ">=1.x"
+    "node": ">= 16.x",
+    "npm": ">= 8.x"
   },
   "dependencies": {
     "@bugsnag/js": "^7.18.0",
@@ -39,11 +38,11 @@
     "@fullhuman/postcss-purgecss": "^5.0.0",
     "@tensorflow-models/coco-ssd": "^2.2.2",
     "@tensorflow-models/mobilenet": "^2.1.0",
-    "@tensorflow/tfjs": "^4.1.0",
-    "@tensorflow/tfjs-backend-cpu": "^4.1.0",
-    "@tensorflow/tfjs-backend-webgl": "^4.1.0",
-    "@tensorflow/tfjs-converter": "^4.1.0",
-    "@tensorflow/tfjs-core": "^4.1.0",
+    "@tensorflow/tfjs": "^3.1.0",
+    "@tensorflow/tfjs-backend-cpu": "^3.1.0",
+    "@tensorflow/tfjs-backend-webgl": "^3.1.0",
+    "@tensorflow/tfjs-converter": "^3.1.0",
+    "@tensorflow/tfjs-core": "^3.3.0",
     "bootstrap": "^5.2.3",
     "bootswatch": "^5.2.3",
     "cross-env": "^7.0.3",
@@ -74,6 +73,7 @@
     "css-loader": "^6.7.3",
     "css-minimizer-webpack-plugin": "^4.2.2",
     "cssnano": "^5.1.14",
+    "cz-conventional-changelog": "^3.3.0",
     "eslint": "^8.30.0",
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-plugin-compat": "^4.0.2",
@@ -138,14 +138,19 @@
       "security"
     ],
     "parserOptions": {
-      "parser": "babel-parser",
-      "ecmaVersion": 8,
+      "parser": "@babel/eslint-parser",
+      "ecmaVersion": 11,
       "sourceType": "module",
       "ecmaFeatures": {
         "impliedStrict": true,
         "modules": true
       }
     },
+    "ignorePatterns": [
+      "dist/",
+      ".history/",
+      "node_modules/"
+    ],
     "rules": {
       "curly": "error",
       "object-curly-newline": "error",
@@ -185,5 +190,10 @@
     "semi": true,
     "tabWidth": 2,
     "printWidth": 120
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
   }
 }
