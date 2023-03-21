@@ -38,7 +38,7 @@
     "@tensorflow/tfjs-backend-cpu": "^4.3.0",
     "@tensorflow/tfjs-backend-webgl": "^4.3.0",
     "@tensorflow/tfjs-converter": "^4.3.0",
-    "@tensorflow/tfjs-core": "^4.2.0",
+    "@tensorflow/tfjs-core": "^4.3.0",
     "bootstrap": "^5.2.3",
     "bootswatch": "^5.2.3",
     "fabric": "^5.3.0",
