@@ -39,7 +39,7 @@
     "@tensorflow/tfjs-backend-webgl": "^4.6.0",
     "@tensorflow/tfjs-converter": "^4.6.0",
     "@tensorflow/tfjs-core": "^4.6.0",
-    "bootstrap": "^5.2.3",
+    "bootstrap": "^5.3.0",
     "bootswatch": "^5.2.3",
     "fabric": "^5.3.0",
     "html2canvas": "^1.4.1",
