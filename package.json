@@ -43,7 +43,7 @@
     "bootswatch": "^5.3.0",
     "fabric": "^5.3.0",
     "html2canvas": "^1.4.1",
-    "logrocket": "^4.0.3",
+    "logrocket": "^4.0.4",
     "sweetalert2": "^11.7.16",
     "tippy.js": "^6.3.7"
   },
