@@ -36,7 +36,7 @@
     "@tensorflow-models/mobilenet": "^2.1.0",
     "@tensorflow/tfjs": "^4.9.0",
     "@tensorflow/tfjs-backend-cpu": "^4.9.0",
-    "@tensorflow/tfjs-backend-webgl": "^4.8.0",
+    "@tensorflow/tfjs-backend-webgl": "^4.9.0",
     "@tensorflow/tfjs-converter": "^4.9.0",
     "@tensorflow/tfjs-core": "^4.8.0",
     "bootstrap": "^5.3.0",
