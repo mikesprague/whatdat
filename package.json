@@ -32,7 +32,7 @@
     "@bugsnag/js": "^7.21.0",
     "@fortawesome/fontawesome-svg-core": "^6.4.0",
     "@fortawesome/pro-duotone-svg-icons": "^6.4.0",
-    "@tensorflow-models/coco-ssd": "^2.2.2",
+    "@tensorflow-models/coco-ssd": "^2.2.3",
     "@tensorflow-models/mobilenet": "^2.1.1",
     "@tensorflow/tfjs": "^4.10.0",
     "@tensorflow/tfjs-backend-cpu": "^4.10.0",
