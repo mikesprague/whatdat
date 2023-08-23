@@ -14,4 +14,14 @@ updates:
       time: "10:00"
       timezone: "America/New_York"
     target-branch: "main"
+    groups:
+      tensorflow:
+        patterns:
+          - "@tensorflow*"
+      fontawesome:
+        patterns:
+          - "@fortawesome*"
+      babel:
+        patterns:
+          - "@babel*"
 
