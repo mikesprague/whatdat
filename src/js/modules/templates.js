@@ -48,7 +48,9 @@ export const cameraMarkup = `
 function getResultsTableMarkup(data, isMobilenet = false) {
   let tableRowMarkup = '';
   if (isMobilenet) {
-    tableRowMarkup = data.map((prediction) => `
+    tableRowMarkup = data
+      .map(
+        (prediction) => `
       <tr class="objectPrediction" data-bbox="">
         <td>
           ${prediction.className}
@@ -57,9 +59,14 @@ function getResultsTableMarkup(data, isMobilenet = false) {
           ${Math.round(prediction.probability * 100)}%
         </td>
       </tr>
-    `).join('\n');
+    `
+      )
+      .join('\n');
   } else {
-    tableRowMarkup = data.length ? data.map((prediction) => `
+    tableRowMarkup = data.length
+      ? data
+          .map(
+            (prediction) => `
       <tr class="objectPrediction" data-bbox="${prediction.bbox.join()}">
         <td>
           ${prediction.class}
@@ -68,16 +75,20 @@ function getResultsTableMarkup(data, isMobilenet = false) {
           ${Math.round(prediction.score * 100)}%
         </td>
       </tr>
-    `).join('\n') : '';
+    `
+          )
+          .join('\n')
+      : '';
   }
 
   return tableRowMarkup;
 }
 
 export function getNoResultsMarkup(detectionMode) {
-  const noResultsString = detectionMode === 'objectDetection'
-    ? 'Sorry, unable to identify any objects'
-    : 'Sorry, unable to classify image';
+  const noResultsString =
+    detectionMode === 'objectDetection'
+      ? 'Sorry, unable to identify any objects'
+      : 'Sorry, unable to classify image';
   const noResultsMarkup = `
     <h3 class="lead-1 text-center">${noResultsString}</h3>
     <div class="center">
@@ -90,11 +101,17 @@ export function getNoResultsMarkup(detectionMode) {
 
 export function getResultsMarkup(data, isMobilenet = false) {
   const resultsTableMarkup = getResultsTableMarkup(data, isMobilenet);
-  const firstPrediction = `${isMobilenet ? data[0].className.toLowerCase().split(', ')[0] : data[0].class.toLowerCase()}`;
+  const firstPrediction = `${
+    isMobilenet
+      ? data[0].className.toLowerCase().split(', ')[0]
+      : data[0].class.toLowerCase()
+  }`;
   const startsWithVowel = firstPrediction.split('')[0].search(/[aeiou]/);
   const resultsMarkup = `
     <h2 class="lead-1 text-center">
-      ${isMobilenet ? 'dat might be' : "dat's"} ${startsWithVowel === -1 ? 'a' : 'an'} ${firstPrediction}!
+      ${isMobilenet ? 'dat might be' : "dat's"} ${
+    startsWithVowel === -1 ? 'a' : 'an'
+  } ${firstPrediction}!
     </h2>
     <div class="center">
     <details>

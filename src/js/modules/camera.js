@@ -1,5 +1,5 @@
-import * as mobilenet from '@tensorflow-models/mobilenet';
 import * as cocoSsd from '@tensorflow-models/coco-ssd';
+import * as mobilenet from '@tensorflow-models/mobilenet';
 import '@tensorflow/tfjs-backend-cpu';
 import '@tensorflow/tfjs-backend-webgl';
 import { fabric } from 'fabric';
@@ -29,7 +29,13 @@ export function takePhoto() {
 
   canvas.width = playerWidth;
   canvas.height = playerHeight;
-  context.drawImage(player, 0, 0, playerWidth, ((playerWidth * playerHeight) / playerWidth));
+  context.drawImage(
+    player,
+    0,
+    0,
+    playerWidth,
+    (playerWidth * playerHeight) / playerWidth
+  );
   canvas.setAttribute('style', 'width: 100%; height: auto;');
 }
 
@@ -53,7 +59,9 @@ export async function startCamera() {
         facingMode: 'environment',
       },
     };
-    const userMediaStream = await navigator.mediaDevices.getUserMedia(mediaDeviceConstraints);
+    const userMediaStream = await navigator.mediaDevices.getUserMedia(
+      mediaDeviceConstraints
+    );
     player.srcObject = userMediaStream;
     player.play();
     player.setAttribute('style', 'width: 100%; height: auto;');
@@ -64,12 +72,7 @@ export async function startCamera() {
   const drawBoundingBox = async (prediction, isHidden = false) => {
     const wrapper = document.querySelector('.canvas-wrapper');
     const div = document.createElement('div');
-    const [
-      left,
-      top,
-      width,
-      height,
-    ] = prediction.bbox;
+    const [left, top, width, height] = prediction.bbox;
     div.style.position = 'absolute';
     div.style.border = '2px solid #4c9be8';
     div.style.backgroundColor = 'rgba(255, 255, 255, 0.25)';
@@ -77,12 +80,17 @@ export async function startCamera() {
     div.style.top = `${Math.round(top)}px`;
     div.style.width = `${Math.round(width)}px`;
     div.style.height = `${Math.round(height)}px`;
-    div.setAttribute('data-tippy-content', `
+    div.setAttribute(
+      'data-tippy-content',
+      `
       <span class='badge badge-primary text-uppercase'>
         ${prediction.class}
-        <span class='bg-white text-primary' style='margin-left: .35em; padding: 0 .5em;'>${Math.round(prediction.score * 100)}%</span>
+        <span class='bg-white text-primary' style='margin-left: .35em; padding: 0 .5em;'>${Math.round(
+          prediction.score * 100
+        )}%</span>
       </span>
-    `);
+    `
+    );
     div.classList.add('has-tooltip');
     div.classList.add('identified-object');
     if (isHidden) {
@@ -136,7 +144,7 @@ export async function startCamera() {
     try {
       const model = await mobilenet.load({
         version: 2,
-        alpha: 1.00,
+        alpha: 1.0,
       });
       classifications = await model.classify(image, 10);
     } catch (error) {
@@ -152,7 +160,10 @@ export async function startCamera() {
     ui.hideElement('.player');
     ui.showElement('.canvas');
     ui.showElement('.results');
-    ui.disableButton('.btnTakePhoto', '<i class="fad fa-fw fa-rotate fa-spin"></i> identifying ...');
+    ui.disableButton(
+      '.btnTakePhoto',
+      '<i class="fad fa-fw fa-rotate fa-spin"></i> identifying ...'
+    );
 
     const canvas = document.querySelector('.canvas');
     const detectionMode = JSON.parse(localStorage.getItem('detectionMode'));

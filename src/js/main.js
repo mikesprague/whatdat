@@ -1,19 +1,20 @@
-import { registerSW } from 'virtual:pwa-register';
 import Bugsnag from '@bugsnag/js';
 import LogRocket from 'logrocket';
+import { registerSW } from 'virtual:pwa-register';
+
 import { startCamera } from './modules/camera';
 import {
+  handleError,
   handleOffline,
   handleOnline,
   isOnline,
   isProduction,
-  handleError,
 } from './modules/helpers';
 import { startMarkup } from './modules/templates';
 import {
-  populateElementWithMarkup,
   initElementEventHandler,
   initFontAwesomeIcons,
+  populateElementWithMarkup,
   showInstallAlert,
 } from './modules/ui';
 
@@ -45,7 +46,7 @@ window.addEventListener(
   () => {
     handleOffline();
   },
-  false,
+  false
 );
 
 window.addEventListener(
@@ -53,7 +54,7 @@ window.addEventListener(
   () => {
     handleOnline();
   },
-  false,
+  false
 );
 
 function initApp() {

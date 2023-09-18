@@ -1,21 +1,16 @@
+import { dom, library } from '@fortawesome/fontawesome-svg-core';
 import {
   faCamera,
+  faRotate,
   faSync,
   faWifiSlash,
-  faRotate,
 } from '@fortawesome/pro-duotone-svg-icons';
-import { library, dom } from '@fortawesome/fontawesome-svg-core';
 import swal from 'sweetalert2';
 import tippy from 'tippy.js';
 import { reloadWindow } from './helpers';
 
 export function initFontAwesomeIcons() {
-  library.add(
-    faCamera,
-    faSync,
-    faWifiSlash,
-    faRotate,
-  );
+  library.add(faCamera, faSync, faWifiSlash, faRotate);
   dom.watch();
 }
 
@@ -32,8 +27,9 @@ export function initTooltips() {
 }
 
 export function destroyTooltips() {
-  Array.from(document.querySelectorAll('[data-tippy-root]'))
-    .map((tooltip) => tooltip.remove());
+  Array.from(document.querySelectorAll('[data-tippy-root]')).map((tooltip) =>
+    tooltip.remove()
+  );
 }
 
 export function showTooltip(tooltipElement) {
@@ -83,25 +79,28 @@ export function showInstallAlert() {
   const updateMessage = 'Latest Version Installed';
   // const releaseNotesLink = '<a href="https://github.com/mikesprague/whatdat/releases/latest" rel="nofollow" target="_blank">View Release Notes</a>';
   localStorage.setItem('updateInstalled', JSON.stringify(1));
-  swal.fire({
-    title: 'What Dat?!?',
-    text: `${updateMessage}`,
-    cancelButtonText: "No thanks, I'll do it later",
-    confirmButtonText: 'Reload for Latest Updates',
-    // footer: `${releaseNotesLink}`,
-    showCancelButton: true,
-    icon: 'success',
-  }).then((result) => {
-    if (result.value === true) {
-      reloadWindow();
-    }
-  });
+  swal
+    .fire({
+      title: 'What Dat?!?',
+      text: `${updateMessage}`,
+      cancelButtonText: "No thanks, I'll do it later",
+      confirmButtonText: 'Reload for Latest Updates',
+      // footer: `${releaseNotesLink}`,
+      showCancelButton: true,
+      icon: 'success',
+    })
+    .then((result) => {
+      if (result.value === true) {
+        reloadWindow();
+      }
+    });
 }
 
 export function showUpdatedToast() {
   const hasUpdated = JSON.parse(localStorage.getItem('updateInstalled'));
   if (hasUpdated) {
-    const releaseNotesLink = '<a href="https://github.com/mikesprague/whatdat/releases/latest" rel="nofollow" target="_blank">view changelog</a>';
+    const releaseNotesLink =
+      '<a href="https://github.com/mikesprague/whatdat/releases/latest" rel="nofollow" target="_blank">view changelog</a>';
     const Toast = swal.mixin({
       toast: true,
       position: 'top-end',
@@ -130,7 +129,10 @@ export function initToggleModeSwitch() {
     if (toggleEl.checked) {
       localStorage.setItem('detectionMode', JSON.stringify('objectDetection'));
     } else {
-      localStorage.setItem('detectionMode', JSON.stringify('imageClassification'));
+      localStorage.setItem(
+        'detectionMode',
+        JSON.stringify('imageClassification')
+      );
     }
   });
   const detectionMode = JSON.parse(localStorage.getItem('detectionMode'));
