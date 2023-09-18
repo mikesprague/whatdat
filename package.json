@@ -1,6 +1,6 @@
 {
   "name": "whatdat.app",
-  "version": "0.13.4",
+  "version": "0.13.5",
   "description": "What Dat?!?",
   "private": true,
   "type": "module",
@@ -65,8 +65,14 @@
     "vite-plugin-pwa": "0.16.5"
   },
   "browserslist": {
-    "development": ["last 1 version"],
-    "production": ["> 1%", "last 2 versions", "not ie <= 10"]
+    "development": [
+      "last 1 version"
+    ],
+    "production": [
+      "> 1%",
+      "last 2 versions",
+      "not ie <= 10"
+    ]
   },
   "config": {
     "commitizen": {
