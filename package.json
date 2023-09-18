@@ -29,121 +29,48 @@
     "npm": ">= 8.x"
   },
   "dependencies": {
-    "@bugsnag/js": "^7.21.0",
-    "@fortawesome/fontawesome-svg-core": "^6.4.2",
-    "@fortawesome/pro-duotone-svg-icons": "^6.4.2",
-    "@tensorflow-models/coco-ssd": "^2.2.3",
-    "@tensorflow-models/mobilenet": "^2.1.1",
-    "@tensorflow/tfjs": "^4.11.0",
-    "@tensorflow/tfjs-backend-cpu": "^4.11.0",
-    "@tensorflow/tfjs-backend-webgl": "^4.11.0",
-    "@tensorflow/tfjs-converter": "^4.11.0",
-    "@tensorflow/tfjs-core": "^4.11.0",
-    "bootstrap": "^5.3.2",
-    "bootswatch": "^5.3.1",
-    "fabric": "^5.3.0",
-    "html2canvas": "^1.4.1",
-    "logrocket": "^5.0.1",
-    "sweetalert2": "^11.7.28",
-    "tippy.js": "^6.3.7"
+    "@bugsnag/js": "7.21.0",
+    "@fortawesome/fontawesome-svg-core": "6.4.2",
+    "@fortawesome/pro-duotone-svg-icons": "6.4.2",
+    "@tensorflow-models/coco-ssd": "2.2.3",
+    "@tensorflow-models/mobilenet": "2.1.1",
+    "@tensorflow/tfjs": "4.11.0",
+    "@tensorflow/tfjs-backend-cpu": "4.11.0",
+    "@tensorflow/tfjs-backend-webgl": "4.11.0",
+    "@tensorflow/tfjs-converter": "4.11.0",
+    "@tensorflow/tfjs-core": "4.11.0",
+    "bootstrap": "5.3.2",
+    "bootswatch": "5.3.1",
+    "fabric": "5.3.0",
+    "html2canvas": "1.4.1",
+    "logrocket": "5.0.1",
+    "sweetalert2": "11.7.28",
+    "tippy.js": "6.3.7"
   },
   "devDependencies": {
-    "@babel/eslint-parser": "^7.22.15",
-    "@babel/eslint-plugin": "^7.22.10",
-    "@babel/preset-env": "^7.22.20",
-    "@fullhuman/postcss-purgecss": "^5.0.0",
-    "autoprefixer": "^10.4.15",
-    "cross-env": "^7.0.3",
-    "cssnano": "^6.0.1",
-    "cz-conventional-changelog": "^3.3.0",
-    "eslint": "^8.49.0",
-    "eslint-config-airbnb-base": "^15.0.0",
-    "eslint-plugin-compat": "^4.2.0",
-    "eslint-plugin-html": "^7.1.0",
-    "eslint-plugin-import": "^2.28.1",
-    "eslint-plugin-markdown": "^3.0.1",
-    "eslint-plugin-prettier": "^5.0.0",
-    "eslint-plugin-security": "^1.7.1",
-    "postcss": "^8.4.29",
-    "prettier": "^3.0.3",
-    "prettier-eslint": "^15.0.1",
-    "prettier-stylelint": "^0.4.2",
-    "sass": "^1.67.0",
-    "seedrandom": "^3.0.5",
-    "stylelint": "^15.10.3",
-    "stylelint-config-standard": "^34.0.0",
-    "stylelint-config-standard-scss": "^11.0.0",
-    "stylelint-prettier": "^4.0.2",
-    "vite": "^4.4.9",
-    "vite-plugin-pwa": "^0.16.5"
-  },
-  "babel": {
-    "presets": [
-      "@babel/preset-env"
-    ]
+    "@biomejs/biome": "1.2.2",
+    "@fullhuman/postcss-purgecss": "5.0.0",
+    "autoprefixer": "10.4.15",
+    "cross-env": "7.0.3",
+    "cssnano": "6.0.1",
+    "cz-git": "1.7.1",
+    "postcss": "8.4.29",
+    "prettier": "3.0.3",
+    "sass": "1.67.0",
+    "seedrandom": "3.0.5",
+    "stylelint": "15.10.3",
+    "stylelint-config-standard": "34.0.0",
+    "stylelint-config-standard-scss": "11.0.0",
+    "vite": "4.4.9",
+    "vite-plugin-pwa": "0.16.5"
   },
   "browserslist": {
-    "development": [
-      "last 1 version"
-    ],
-    "production": [
-      "> 1%",
-      "last 2 versions",
-      "not ie <= 10"
-    ]
-  },
-  "eslintConfig": {
-    "settings": {
-      "jest": {
-        "version": 28
-      }
-    },
-    "env": {
-      "browser": true,
-      "commonjs": true,
-      "es6": true,
-      "node": true
-    },
-    "extends": [
-      "eslint:recommended",
-      "prettier",
-      "stylelint"
-    ],
-    "plugins": [
-      "babel",
-      "compat",
-      "html",
-      "import",
-      "prettier"
-    ],
-    "parserOptions": {
-      "parser": "@babel/eslint-parser",
-      "ecmaVersion": 11,
-      "sourceType": "module",
-      "ecmaFeatures": {
-        "impliedStrict": true,
-        "modules": true
-      }
-    },
-    "rules": {
-      "node/no-unpublished-import": "warn",
-      "node/no-missing-import": "warn"
-    },
-    "ignorePatterns": [
-      "dist/",
-      ".history/",
-      "node_modules/"
-    ]
-  },
-  "prettier": {
-    "singleQuote": true,
-    "trailingComma": "all",
-    "semi": true,
-    "tabWidth": 2
+    "development": ["last 1 version"],
+    "production": ["> 1%", "last 2 versions", "not ie <= 10"]
   },
   "config": {
     "commitizen": {
-      "path": "./node_modules/cz-conventional-changelog"
+      "path": "./node_modules/cz-git"
     }
   }
 }

@@ -21,7 +21,3 @@ updates:
       fontawesome:
         patterns:
           - "@fortawesome*"
-      babel:
-        patterns:
-          - "@babel*"
-
