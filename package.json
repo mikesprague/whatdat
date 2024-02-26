@@ -52,7 +52,7 @@
     "@fullhuman/postcss-purgecss": "5.0.0",
     "autoprefixer": "10.4.17",
     "cross-env": "7.0.3",
-    "cssnano": "6.0.4",
+    "cssnano": "6.0.5",
     "cz-git": "1.8.0",
     "postcss": "8.4.35",
     "prettier": "3.2.5",
