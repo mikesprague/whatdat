@@ -40,7 +40,7 @@
     "@tensorflow/tfjs-converter": "4.17.0",
     "@tensorflow/tfjs-core": "4.17.0",
     "bootstrap": "5.3.3",
-    "bootswatch": "5.3.2",
+    "bootswatch": "5.3.3",
     "fabric": "5.3.0",
     "html2canvas": "1.4.1",
     "logrocket": "8.0.1",
