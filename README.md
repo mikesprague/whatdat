@@ -4,7 +4,3 @@
 # What Dat ?!?
 
 ## Work in Progress
-
-
-## License
-[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fmikesprague%2Fwhatdat.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2Fmikesprague%2Fwhatdat?ref=badge_large)
