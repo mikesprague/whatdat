@@ -29,7 +29,7 @@
     "npm": ">= 8.x"
   },
   "dependencies": {
-    "@bugsnag/js": "7.22.7",
+    "@bugsnag/js": "7.23.0",
     "@fortawesome/fontawesome-svg-core": "6.5.2",
     "@fortawesome/pro-duotone-svg-icons": "6.5.2",
     "@tensorflow-models/coco-ssd": "2.2.3",
