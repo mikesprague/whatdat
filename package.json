@@ -44,7 +44,7 @@
     "fabric": "6.4.3",
     "html2canvas": "1.4.1",
     "logrocket": "9.0.0",
-    "sweetalert2": "11.14.3",
+    "sweetalert2": "11.14.4",
     "tippy.js": "6.3.7"
   },
   "devDependencies": {
