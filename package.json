@@ -54,7 +54,7 @@
     "cross-env": "7.0.3",
     "cssnano": "7.0.6",
     "cz-git": "1.11.0",
-    "postcss": "8.4.48",
+    "postcss": "8.4.49",
     "prettier": "3.3.3",
     "sass": "1.80.6",
     "seedrandom": "3.0.5",
