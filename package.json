@@ -30,8 +30,8 @@
   },
   "dependencies": {
     "@bugsnag/js": "8.1.2",
-    "@fortawesome/fontawesome-svg-core": "6.7.1",
-    "@fortawesome/pro-duotone-svg-icons": "6.7.1",
+    "@fortawesome/fontawesome-svg-core": "6.7.2",
+    "@fortawesome/pro-duotone-svg-icons": "6.7.2",
     "@tensorflow-models/coco-ssd": "2.2.3",
     "@tensorflow-models/mobilenet": "2.1.1",
     "@tensorflow/tfjs": "4.22.0",
