@@ -41,7 +41,7 @@
     "@tensorflow/tfjs-core": "4.22.0",
     "bootstrap": "5.3.5",
     "bootswatch": "5.3.5",
-    "fabric": "6.6.2",
+    "fabric": "6.6.4",
     "html2canvas": "1.4.1",
     "logrocket": "9.0.2",
     "sweetalert2": "11.17.2",
