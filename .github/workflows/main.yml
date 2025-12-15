@@ -46,7 +46,7 @@ jobs:
           SNYK_TOKEN: ${{secrets.SNYK_TOKEN}}
 
       - name: 📦 Create and upload build artifact
-        uses: actions/upload-artifact@v5
+        uses: actions/upload-artifact@v6
         with:
           name: whatdat-artifact
           path: 'dist/'
