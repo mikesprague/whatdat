@@ -25,9 +25,10 @@
   "repository": "github:mikesprague/whatdat",
   "license": "MIT",
   "engines": {
-    "node": ">= 16.x",
-    "npm": ">= 8.x"
+    "node": ">= 24.x",
+    "npm": ">= 11.x"
   },
+  "packageManager": "npm@11.10.0",
   "dependencies": {
     "@bugsnag/js": "8.8.1",
     "@fortawesome/fontawesome-svg-core": "7.2.0",
@@ -64,6 +65,10 @@
     "vite": "7.3.1",
     "vite-plugin-pwa": "1.2.0"
   },
+  "overrides": {
+    "@isaacs/brace-expansion": "5.0.1",
+    "ajv": "8.18.0"
+  },
   "browserslist": {
     "development": [
       "last 1 version"
@@ -78,5 +83,9 @@
     "commitizen": {
       "path": "./node_modules/cz-git"
     }
+  },
+  "volta": {
+    "node": "25.6.1",
+    "npm": "11.10.0"
   }
 }
