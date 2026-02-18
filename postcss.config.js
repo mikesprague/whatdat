@@ -1,3 +1,7 @@
+import autoprefixer from 'autoprefixer';
+import cssnano from 'cssnano';
+import purgeCSSPlugin from '@fullhuman/postcss-purgecss';
+
 const cssSafelistClassArray = [
   /tippy/,
   /badge/,
@@ -6,10 +10,6 @@ const cssSafelistClassArray = [
   /text-primary/,
   /primary/,
 ];
-
-import { purgeCSSPlugin } from '@fullhuman/postcss-purgecss';
-import autoprefixer from 'autoprefixer';
-import cssnano from 'cssnano';
 
 export default {
   plugins: [

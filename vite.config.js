@@ -4,6 +4,14 @@ import { version } from './package.json';
 
 export default defineConfig({
   root: 'src',
+  css: {
+    preprocessorOptions: {
+      scss: {
+        quietDeps: true,
+        silenceDeprecations: ['import'],
+      },
+    },
+  },
   build: {
     outDir: '../dist',
     rollupOptions: {
