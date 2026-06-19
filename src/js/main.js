@@ -4,7 +4,6 @@ import { registerSW } from 'virtual:pwa-register';
 
 import { startCamera } from './modules/camera';
 import {
-  handleError,
   handleOffline,
   handleOnline,
   isOnline,

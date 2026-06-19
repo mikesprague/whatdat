@@ -110,8 +110,8 @@ export function getResultsMarkup(data, isMobilenet = false) {
   const resultsMarkup = `
     <h2 class="lead-1 text-center">
       ${isMobilenet ? 'dat might be' : "dat's"} ${
-    startsWithVowel === -1 ? 'a' : 'an'
-  } ${firstPrediction}!
+        startsWithVowel === -1 ? 'a' : 'an'
+      } ${firstPrediction}!
     </h2>
     <div class="center">
     <details>

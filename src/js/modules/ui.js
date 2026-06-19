@@ -7,6 +7,7 @@ import {
 } from '@fortawesome/pro-duotone-svg-icons';
 import swal from 'sweetalert2';
 import tippy from 'tippy.js';
+
 import { reloadWindow } from './helpers';
 
 export function initFontAwesomeIcons() {
