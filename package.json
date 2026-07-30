@@ -62,7 +62,7 @@
     "postcss": "8.5.25",
     "sass": "1.102.0",
     "seedrandom": "3.0.5",
-    "vite": "8.1.5",
+    "vite": "8.2.0",
     "vite-plugin-pwa": "1.3.0"
   },
   "overrides": {
