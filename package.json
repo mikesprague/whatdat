@@ -33,7 +33,7 @@
   },
   "packageManager": "npm@12.0.2",
   "dependencies": {
-    "@bugsnag/js": "8.10.0",
+    "@bugsnag/js": "9.0.0",
     "@fortawesome/fontawesome-svg-core": "7.3.1",
     "@fortawesome/pro-duotone-svg-icons": "7.3.1",
     "@tensorflow-models/coco-ssd": "2.2.3",
