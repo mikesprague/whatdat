@@ -58,7 +58,7 @@
     "cssnano": "9.1.1",
     "cz-git": "1.14.0",
     "oxfmt": "0.71.0",
-    "oxlint": "1.85.0",
+    "oxlint": "1.86.0",
     "postcss": "8.5.28",
     "sass": "1.105.0",
     "seedrandom": "3.0.5",
