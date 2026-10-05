@@ -55,7 +55,7 @@
     "@fullhuman/postcss-purgecss": "8.0.0",
     "autoprefixer": "10.6.1",
     "cross-env": "10.1.0",
-    "cssnano": "9.1.1",
+    "cssnano": "9.2.0",
     "cz-git": "1.14.0",
     "oxfmt": "0.71.0",
     "oxlint": "1.86.0",
