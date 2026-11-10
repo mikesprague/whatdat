@@ -60,7 +60,7 @@
     "oxfmt": "0.77.0",
     "oxlint": "1.92.0",
     "postcss": "8.5.32",
-    "sass": "1.108.0",
+    "sass": "1.108.1",
     "seedrandom": "3.0.5",
     "vite": "8.3.6",
     "vite-plugin-pwa": "2.0.0"
